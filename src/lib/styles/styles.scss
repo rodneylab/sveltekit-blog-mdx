@@ -1,0 +1,397 @@
+/* Based on styles.css provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
+@charset "UTF-8";
+
+@use 'sass:math';
+
+/* SCSS Custom Properties Definitions */
+// Widths
+$max-width-none: 'none';
+$max-width-xs: 20rem;
+$max-width-sm: 24rem;
+$max-width-md: 28rem;
+$max-width-lg: 32rem;
+$max-width-xl: 36rem;
+$max-width-2xl: 42rem;
+$max-width-3xl: 48rem;
+$max-width-4xl: 56rem;
+$max-width-full: '100%';
+$max-width-wrapper: $max-width-2xl;
+$desktop-breakpoint: 42rem;
+
+// Spacing
+$spacing-px: 0.0625rem;
+$spacing-px-2: 0.125rem;
+$spacing-0: 0;
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-5: 1.25rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-10: 2.5rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
+$spacing-20: 5rem;
+$spacing-24: 6rem;
+$spacing-32: 8rem;
+
+// Fonts
+$font-family-serif: 'Source Sans Pro', 'Lustria', 'Noto Serif', 'Merriweather', 'Georgia', 'Cambria',
+	'Times New Roman', 'Times', serif;
+$font-body: $font-family-serif;
+$font-heading: 'Lora', $font-family-serif;
+
+// Font Weight
+// check imported weights and styles in gatsby-browser.jsx
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+// $font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+// Font Size
+$font-size-root: 16px;
+$font-size-0: 0.8rem;
+$font-size-1: 1rem;
+$font-size-2: 1.25rem;
+$font-size-3: 1.563rem;
+$font-size-4: 1.953rem;
+$font-size-5: 2.441rem;
+$font-size-6: 3.052rem;
+$font-size-7: 3.815rem;
+
+// $mobile-font-size-root: 16px;
+$mobile-font-size-0: 0.8889rem;
+$mobile-font-size-1: 1rem;
+$mobile-font-size-2: 1.125rem;
+$mobile-font-size-3: 1.266rem;
+$mobile-font-size-4: 1.424rem;
+$mobile-font-size-5: 1.602rem;
+$mobile-font-size-6: 1.802rem;
+$mobile-font-size-7: 3.815rem;
+
+// Line Height
+$line-height-none: 1;
+$line-height-tight: 1.3;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Colours
+$color-theme-1: #d62828; // maximum red
+$color-theme-2: #5cc8ff; // maya blue
+$color-theme-3: #fff275; // corn
+$color-theme-4: #1b4079; // dark cornflower blue
+
+$color-primary: #005b99;
+$color-text: #0d1821; // rich black FOGRA 29
+$color-heading: $color-theme-4;
+$color-heading-black: $color-theme-4;
+$color-accent: #fdfffc; // baby powder
+$color-success: #2ec4b6; // tiffany blue
+$color-danger: #e71d36; // rose madder
+
+/* HTML elements */
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: $line-height-normal;
+	font-size: $font-size-root;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: $font-body;
+	font-size: $font-size-1;
+	color: $color-text;
+	text-rendering: optimizeLegibility;
+}
+
+footer {
+	padding: $spacing-6 $spacing-0;
+}
+
+hr {
+	background: $color-accent;
+	height: 1px;
+	border: 0;
+}
+
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// check imported weights and styles in gatsby-browser.jsx
+	font-family: $font-heading;
+	margin: $spacing-12 0 $spacing-6;
+	line-height: $line-height-tight;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $font-weight-bold;
+	color: $color-heading;
+}
+
+h1 {
+	margin-top: 0;
+	font-weight: $font-weight-black;
+	font-size: $font-size-6;
+	font-style: italic;
+	color: $color-heading-black;
+}
+
+h2 {
+	font-size: $font-size-5;
+	font-weight: $font-weight-semibold;
+	color: $color-heading;
+}
+
+h3 {
+	font-size: $font-size-4;
+}
+
+h4 {
+	font-size: $font-size-3;
+}
+
+h5 {
+	font-size: $font-size-2;
+}
+
+h6 {
+	font-size: $font-size-1;
+}
+
+/* Prose */
+p {
+	line-height: $line-height-relaxed;
+	$baseline-multiplier: 0.179;
+	$x-height-multiplier: 0.35;
+	margin: $spacing-0 $spacing-0 $spacing-4 $spacing-0;
+	padding: $spacing-0;
+}
+
+ul,
+ol {
+	margin-left: $spacing-0;
+	margin-right: $spacing-0;
+	padding: $spacing-0;
+	margin-bottom: $spacing-8;
+	list-style-position: inside;
+	list-style-image: none;
+}
+
+li p {
+	display: inline;
+}
+
+ul li,
+ol li {
+	padding-left: $spacing-0;
+	margin-bottom: math.div($spacing-8, 2);
+}
+
+li > p {
+	margin-bottom: math.div($spacing-8, 2);
+}
+
+li *:last-child {
+	margin-bottom: $spacing-0;
+}
+
+li > ul {
+	margin-left: $spacing-8;
+	margin-top: math.div($spacing-8, 2);
+}
+
+blockquote {
+	color: $color-theme-4;
+	margin-left: calc(#{-1 + $spacing-6});
+	margin-right: $spacing-8;
+	padding: $spacing-0 $spacing-0 $spacing-0 $spacing-6;
+	border-left: $spacing-1 solid $color-primary;
+	font-size: $font-size-2;
+	font-style: italic;
+	margin-bottom: $spacing-8;
+}
+
+blockquote > :last-child {
+	margin-bottom: $spacing-0;
+}
+
+blockquote > ul,
+blockquote > ol {
+	list-style-position: inside;
+}
+
+table {
+	width: 100%;
+	margin-bottom: $spacing-8;
+	border-collapse: collapse;
+	border-spacing: 0.25rem;
+}
+
+table thead tr th {
+	border-bottom: 1px solid $color-accent;
+}
+
+/* Link */
+a {
+	color: $color-theme-4;
+}
+
+h1 > a {
+	color: inherit;
+	text-decoration: none;
+}
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+/* Custom classes */
+.global-wrapper {
+	margin: $spacing-0 auto;
+	max-width: $max-width-wrapper;
+	padding: $spacing-10 $spacing-5;
+}
+
+.global-header {
+	margin-bottom: $spacing-12;
+}
+
+.post-list-item {
+	margin-bottom: $spacing-8;
+	margin-top: $spacing-8;
+}
+
+.post-list-item p {
+	margin-bottom: $spacing-0;
+}
+
+.post-list-item h2 {
+	font-size: $font-size-4;
+	color: $color-primary;
+	margin-bottom: $spacing-2;
+	margin-top: $spacing-0;
+}
+
+.post-list-item header {
+	margin-bottom: $spacing-4;
+}
+
+.bio {
+	display: flex;
+	margin-bottom: $spacing-16;
+}
+
+.global-wrapper[data-is-root-path='true'] .bio {
+	margin-bottom: $spacing-20;
+}
+
+.bio p {
+	margin-bottom: $spacing-0;
+}
+
+.bio-avatar {
+	margin-right: $spacing-4;
+	margin-bottom: $spacing-0;
+	min-width: 50px;
+	border-radius: 100%;
+}
+
+.blog-post header h1 {
+	margin: $spacing-0 $spacing-0 $spacing-4 $spacing-0;
+}
+
+.blog-post header p {
+	font-size: $font-size-2;
+	font-family: $font-heading;
+}
+
+.blog-post-nav ul {
+	margin: $spacing-0;
+}
+
+.gatsby-highlight {
+	margin-bottom: $spacing-8;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	word-wrap: normal !important;
+}
+
+figure {
+	margin-bottom: $spacing-6;
+	padding-bottom: $spacing-6;
+}
+
+figure figcaption {
+	margin-top: $spacing-2;
+}
+
+/* Media queries */
+@media (max-width: $desktop-breakpoint) {
+	h1 {
+		font-size: $mobile-font-size-6;
+	}
+
+	h2 {
+		font-size: $mobile-font-size-5;
+	}
+
+	h3 {
+		font-size: $mobile-font-size-4;
+	}
+
+	h4 {
+		font-size: $mobile-font-size-3;
+	}
+
+	h5 {
+		font-size: $mobile-font-size-2;
+	}
+
+	h6 {
+		font-size: $mobile-font-size-1;
+	}
+
+	blockquote {
+		padding: $spacing-0 $spacing-0 $spacing-0 $spacing-4;
+		margin-left: $spacing-0;
+	}
+	ul,
+	ol {
+		list-style-position: inside;
+	}
+}

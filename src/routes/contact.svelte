@@ -25,38 +25,62 @@
 <Card>
 	<h1>Contact me</h1>
 	<p>I would love to hear from you. Please get in touch!</p>
-	<ul>
-		<li>
-			<EmailIcon />
-			{contactEmail}
-		</li>
-		<li>
-			<FacebookIcon /><ExternalLink
-				aria-label="D M Rodney Lab on Facebook Messenger"
-				href={`https://m.me.${facebookPageName}`}
-			>
-				{facebookPageName}
-			</ExternalLink>
-		</li>
-		<li>
-			<TwitterIcon /><ExternalLink
-				aria-label="D M Rodney Lab on Twitter"
-				href={`https://twitter.com/messages/compose?recipient-id=${twitterUserId}`}
-			>
-				@{twitterUsername}
-			</ExternalLink>
-		</li>
-		<li>
-			<TelegramIcon /><ExternalLink
-				aria-label="Message Rodney Lab on Telegram"
-				href={`https://t.me/${telegramUsername}`}
-			>
-				{telegramUsername}
-			</ExternalLink>
-		</li>
-		<li>
-			<WireIcon />
-			{wireUsername}
-		</li>
-	</ul></Card
+	<div class="contact-details">
+		<ul>
+			<li>
+				<EmailIcon />
+				<span class="contact-address">{contactEmail}</span>
+			</li>
+			<li>
+				<FacebookIcon /><ExternalLink
+					aria-label="D M Rodney Lab on Facebook Messenger"
+					href={`https://m.me.${facebookPageName}`}
+				>
+					<span class="contact-address"> {facebookPageName}</span>
+				</ExternalLink>
+			</li>
+			<li>
+				<TwitterIcon /><ExternalLink
+					aria-label="D M Rodney Lab on Twitter"
+					href={`https://twitter.com/messages/compose?recipient-id=${twitterUserId}`}
+				>
+					<span class="contact-address">@{twitterUsername}</span>
+				</ExternalLink>
+			</li>
+			<li>
+				<TelegramIcon /><ExternalLink
+					aria-label="Message Rodney Lab on Telegram"
+					href={`https://t.me/${telegramUsername}`}
+				>
+					<span class="contact-address">{telegramUsername}</span>
+				</ExternalLink>
+			</li>
+			<li>
+				<WireIcon />
+				<span class="contact-address">{wireUsername}</span>
+			</li>
+		</ul>
+	</div></Card
 >
+
+<style lang="scss">
+	.contact-details {
+		list-style-type: none;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			li {
+				display: flex;
+				padding-left: $spacing-2;
+				font-size: $font-size-2;
+			}
+		}
+	}
+
+	.contact-address {
+		margin-left: $spacing-2;
+	}
+</style>

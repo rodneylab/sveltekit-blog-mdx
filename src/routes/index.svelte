@@ -33,7 +33,7 @@
 <SEO {title} {metadescription} />
 <header>
 	<h1>Climate &mdash; Sveltekit Starter</h1>
-	<h2>SvelteKit Starter for MDsveX (Markdown in Svelte) Blog</h2>
+	<h2>SvelteKit MDsveX (Markdown for Svelte) Blog</h2>
 </header>
 <Card>
 	<h2>About me</h2>
@@ -44,3 +44,9 @@
 	</p>
 </Card>
 <BlogRoll {posts} />
+
+<style lang="scss">
+	header > h2 {
+		font-size: $font-size-3;
+	}
+</style>

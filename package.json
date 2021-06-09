@@ -9,18 +9,23 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@fontsource/lato": "^4.4.5",
+		"@fontsource/lora": "^4.4.5",
+		"@fontsource/source-sans-pro": "^4.4.5",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
+		"dayjs": "^1.10.5",
 		"eslint": "^7.28.0",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-svelte3": "^3.2.0",
 		"mdsvex": "^0.9.7",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
-		"svelte": "^3.34.0"
+		"sass": "^1.34.1",
+		"svelte": "^3.34.0",
+		"svelte-feather-icons": "^3.4.1",
+		"svelte-preprocess": "^4.7.3"
 	},
 	"type": "module",
-	"dependencies": {
-		"svelte-feather-icons": "^3.4.1"
-	}
+	"dependencies": {}
 }
