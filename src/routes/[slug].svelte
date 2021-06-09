@@ -21,7 +21,12 @@
 </script>
 
 <script>
+	import BannerImage from '$lib/components/BannerImage.svelte';
+
 	export let post;
+
+	const { body, featuredImage, featuredImageAlt } = post;
 </script>
 
-<article>{@html post.body}</article>
+<BannerImage alt={featuredImageAlt} image={featuredImage} />
+<article>{@html body}</article>

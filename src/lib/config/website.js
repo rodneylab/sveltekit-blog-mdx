@@ -14,7 +14,9 @@ const website = {
 	tiktokUsername: import.meta.env.VITE_TIKTOK_USERNAME,
 	twitterUsername: import.meta.env.VITE_TWITTER_USERNAME,
 	twitterUserId: import.meta.env.VITE_TWITTER_ID,
-	wireUsername: import.meta.env.VITE_WIRE_USERNAME
+	wireUsername: import.meta.env.VITE_WIRE_USERNAME,
+	imgixDomain: import.meta.env.VITE_IMGIX_DOMAIN,
+	imgixSecureToken: import.meta.env.VITE_IMGIX_SECURE_TOKEN
 };
 
 export { website as default };

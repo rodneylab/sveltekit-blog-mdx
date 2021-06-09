@@ -38,8 +38,14 @@ export const getPosts = async (postsContent, body = false) => {
 export const getPost = async (content, body = true) => {
 	const transformedContent = await compile(content);
 
-	const { datePublished, postTitle, seoMetaDescription } = transformedContent.data.fm;
-	let result = { datePublished, postTitle, seoMetaDescription };
+	const {
+		datePublished,
+		featuredImage,
+		featuredImageAlt,
+		postTitle,
+		seoMetaDescription
+	} = transformedContent.data.fm;
+	let result = { datePublished, featuredImage, featuredImageAlt, postTitle, seoMetaDescription };
 	if (body) {
 		result = { ...result, body: transformedContent.code };
 	}

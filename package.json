@@ -12,6 +12,7 @@
 		"@fontsource/lato": "^4.4.5",
 		"@fontsource/lora": "^4.4.5",
 		"@fontsource/source-sans-pro": "^4.4.5",
+		"@imgix/js-core": "^3.1.3",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
 		"dayjs": "^1.10.5",

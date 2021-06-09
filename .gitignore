@@ -1,4 +1,6 @@
 # SveltKit Files
+build/
+functions/
 /.svelte-kit
 
 # Dependency directories
