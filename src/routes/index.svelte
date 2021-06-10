@@ -26,8 +26,8 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 	export let posts;
 
-	let title = '';
-	let metadescription = '';
+	let title = 'Home';
+	let metadescription = 'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
 </script>
 
 <SEO {title} {metadescription} />
