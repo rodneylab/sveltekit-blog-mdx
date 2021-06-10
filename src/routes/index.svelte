@@ -2,6 +2,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
+	export const prerender = true;
 	export async function load({ fetch }) {
 		const url = `./index.json`;
 		const response = await fetch(url);
