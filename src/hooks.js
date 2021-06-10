@@ -29,14 +29,14 @@ const directives = {
 	]
 };
 
-let CSP = Object.entries(directives)
+const csp = Object.entries(directives)
 	.map(([key, arr]) => key + ' ' + arr.join(' '))
 	.join('; ');
 
 export async function handle({ request, resolve }) {
 	const response = await resolve(request);
 	console.log('handle', { ...response.headers });
-
+	return {};
 	return {
 		...response,
 		headers: {
@@ -45,15 +45,15 @@ export async function handle({ request, resolve }) {
 			'Referrer-Policy': 'no-referrer',
 			'Permissions-Policy':
 				'accelerometer=(), autoplay=(), camera=(), document-domain=(), encrypted-media=(), fullscreen=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()',
-			'X-Content-Type-Options': `nosniff`,
-			'Content-Security-Policy-Report-Only': CSP,
-			'Expect-CT': `max-age=86400, report-uri=\"https://sentry.io/api/${
+			'X-Content-Type-Options': 'nosniff',
+			'Content-Security-Policy-Report-Only': csp,
+			'Expect-CT': `max-age=86400, report-uri="https://sentry.io/api/${
 				import.meta.env.VITE_SENTRY_PROJECT_ID
-			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}\"`,
+			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"`,
 			'Report-To': `{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${
 				import.meta.env.VITE_SENTRY_PROJECT_ID
 			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`,
-			'Strict-Transport-Security': "max-age=31536000; includeSubDomains; preload"
+			'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
 		}
 	};
 }
