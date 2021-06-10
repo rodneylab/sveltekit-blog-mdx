@@ -11,7 +11,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		files: {
-			serviceWorker: 'src/service-worker'
+			hooks: 'src/hooks'
 		},
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte'
