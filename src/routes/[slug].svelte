@@ -27,8 +27,13 @@
 
 	export let post;
 
-	const { body, featuredImage, featuredImageAlt } = post;
+	const { body, featuredImage, featuredImageAlt, featuredImageSrc, featuredImageSrcset } = post;
 </script>
 
-<BannerImage alt={featuredImageAlt} image={featuredImage} />
+<BannerImage
+	alt={featuredImageAlt}
+	image={featuredImage}
+	{featuredImageSrc}
+	{featuredImageSrcset}
+/>
 <article>{@html body}</article>

@@ -40,10 +40,20 @@ export const getPost = async (content, body = true) => {
 		datePublished,
 		featuredImage,
 		featuredImageAlt,
+		featuredImageSrc,
+		featuredImageSrcset,
 		postTitle,
 		seoMetaDescription
 	} = transformedContent.data.fm;
-	let result = { datePublished, featuredImage, featuredImageAlt, postTitle, seoMetaDescription };
+	let result = {
+		datePublished,
+		featuredImage,
+		featuredImageAlt,
+		featuredImageSrc,
+		featuredImageSrcset,
+		postTitle,
+		seoMetaDescription
+	};
 	if (body) {
 		result = { ...result, body: transformedContent.code };
 	}

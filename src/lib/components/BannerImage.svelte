@@ -6,17 +6,20 @@
 
 	export let image;
 	export let alt;
+	export let featuredImageSrc;
+	export let featuredImageSrcset;
 
 	const client = new ImgixClient({
 		domain: imgixDomain,
 		secureURLToken: imgixSecureToken
 	});
 
-	const src = client.buildURL(image, { w: 672, h: 448 });
+	// const src = client.buildURL(image, { w: 672, h: 448 });
+	const src = featuredImageSrc;
 	const sizes = '(max-width: 672px) calc(100vw - 32px), 672px';
-	const srcset = client.buildSrcSet(image, { auto: 'format' }, { maxWidth: 1344 });
+	// const srcset = client.buildSrcSet(image, { auto: 'format' }, { maxWidth: 1344 });
+	const srcset = featuredImageSrcset;
 </script>
-
 <picture>
 	<source {sizes} {srcset} />
 	<img loading="eager" decoding="async" {src} {alt} width="672" height="448" />
