@@ -39,7 +39,7 @@
 		</h3>
 		<p>{dateString}</p>
 		<p>{seoMetaDescription}</p>
-		<span id={idString} aria-hidden>Read more {H_ELLIPSIS_ENTITY}</span>
+		<span id={idString} aria-hidden="true">Read more {H_ELLIPSIS_ENTITY}</span>
 	</div>
 </div>
 
