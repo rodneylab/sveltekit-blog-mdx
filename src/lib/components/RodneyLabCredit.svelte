@@ -23,7 +23,7 @@
 	.container {
 		display: 'flex';
 		align-items: 'center';
-		color: '#032539';
+		color: #032539;
 		font-family: 'Lato';
 	}
 
