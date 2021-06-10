@@ -22,7 +22,7 @@
 
 	const date = dayjs(datePublished);
 	const dateString = `${date.format('D')} ${date.format('MMM')}`;
-	const idString = `blog-post-summary-${slug.slice(0, -1)}`;
+	const idString = `blog-post-summary-${slug}`;
 </script>
 
 <div
