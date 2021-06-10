@@ -30,14 +30,12 @@ export const getPosts = async (postsContent, body = false) => {
 		}
 		return resultElement;
 	});
-
 	result = await Promise.all(result);
 	return result.sort((a, b) => Date.parse(b.datePublished) - Date.parse(a.datePublished));
 };
 
 export const getPost = async (content, body = true) => {
 	const transformedContent = await compile(content);
-
 	const {
 		datePublished,
 		featuredImage,
