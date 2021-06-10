@@ -53,7 +53,7 @@ export async function handle({ request, resolve }) {
 			'Report-To': `{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${
 				import.meta.env.VITE_SENTRY_PROJECT_ID
 			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`,
-			'Strict-Transport-Security': "max-age=31536000; includeSubDomains; preload'"
+			'Strict-Transport-Security': "max-age=31536000; includeSubDomains; preload"
 		}
 	};
 }
