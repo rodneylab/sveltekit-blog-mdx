@@ -1,6 +1,6 @@
-<!-- <script>
+<script>
 	import '$lib/styles/index.scss';
-</script> -->
+</script>
 
 <section class="container">
 	<div class="content">
