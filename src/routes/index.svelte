@@ -13,10 +13,10 @@
 			};
 		}
 
-		return {
-			status: response.status,
-			error: new Error(`Could not load ${url}`)
-		};
+		// return {
+		// 	status: response.status,
+		// 	error: new Error(`Could not load ${url}`)
+		// };
 	}
 </script>
 
