@@ -10,8 +10,7 @@ export async function get({ params }) {
 	const article = articles.find((element) => element.slug === slug);
 	const post = await getPost(article.content, true);
 
-	if (!post) {
-		return { body: ''};
+	if (post) {
+		return { body: JSON.stringify({ post }) };
 	}
-	return { body: JSON.stringify({ post }) };
 }

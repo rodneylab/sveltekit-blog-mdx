@@ -3,7 +3,8 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ page, fetch }) {
-		const url = `/${page.params.slug}.json`;
+		const { slug } = page.params;
+		const url = `/${slug}.json`;
 		const res = await fetch(url);
 
 		if (res.ok) {
