@@ -8,7 +8,7 @@ const rootDomain = import.meta.env.VITE_DOMAIN; // or your server IP for dev
 const directives = {
 	'base-uri': ["'self'"],
 	'child-src': ["'self'"],
-	'connect-src': ["'self'"],
+	'connect-src': ["'self'", 'ws://localhost:*'],
 	'img-src': ["'self'", 'data:', import.meta.env.VITE_IMGIX_DOMAIN],
 	'font-src': ["'self'", 'data:'],
 	'form-action': ["'self'"],
@@ -18,7 +18,7 @@ const directives = {
 	'media-src': ["'self'", 'data:'],
 	'object-src': ["'none'"],
 	'style-src': ["'self'", "'unsafe-inline'"],
-	'default-src': ["'self'", rootDomain, 'ws://' + rootDomain],
+	'default-src': ["'self'", rootDomain, `ws://${rootDomain}`],
 	'script-src': ["'self'", "'unsafe-inline'"],
 	'worker-src': ["'self'"],
 	'report-to': ["'csp-endpoint'"],
