@@ -46,7 +46,7 @@ export async function handle({ request, resolve }) {
 			'Permissions-Policy':
 				'accelerometer=(), autoplay=(), camera=(), document-domain=(), encrypted-media=(), fullscreen=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()',
 			'X-Content-Type-Options': `nosniff`,
-			'Content-Security-Policy': CSP,
+			'Content-Security-Policy-Report-Only': CSP,
 			'Expect-CT': `max-age=86400, report-uri=\"https://sentry.io/api/${
 				import.meta.env.VITE_SENTRY_PROJECT_ID
 			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}\"`,
