@@ -2,6 +2,7 @@
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
+	export const prerender = true;
 	export async function load({ page, fetch }) {
 		const { slug } = page.params;
 		const url = `/${slug}.json`;
