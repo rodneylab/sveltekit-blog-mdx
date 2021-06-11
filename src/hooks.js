@@ -21,6 +21,7 @@ const directives = {
 	'default-src': ["'self'", rootDomain, `ws://${rootDomain}`],
 	'script-src': ["'self'", "'unsafe-inline'"],
 	'worker-src': ["'self'"],
+	// remove report-to & report-uri if you do not want to use Sentry reporting
 	'report-to': ["'csp-endpoint'"],
 	'report-uri': [
 		`https://sentry.io/api/${import.meta.env.VITE_SENTRY_PROJECT_ID}/security/?sentry_key=${
@@ -45,14 +46,19 @@ export async function handle({ request, resolve }) {
 			'Permissions-Policy':
 				'accelerometer=(), autoplay=(), camera=(), document-domain=(), encrypted-media=(), fullscreen=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()',
 			'X-Content-Type-Options': 'nosniff',
+			/* Switch from Content-Security-Policy-Report-Only to Content-Security-Policy once you are satisifed policy is what you want
+			 * on switch comment out the Report-Only line
+			 */
 			'Content-Security-Policy-Report-Only': csp,
+			// 'Content-Security-Policy': csp,
+			'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+			// remove/change lines below if you do not want to use sentry for reporting
 			'Expect-CT': `max-age=86400, report-uri="https://sentry.io/api/${
 				import.meta.env.VITE_SENTRY_PROJECT_ID
 			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"`,
 			'Report-To': `{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${
 				import.meta.env.VITE_SENTRY_PROJECT_ID
-			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`,
-			'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+			}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`
 		}
 	};
 }
