@@ -16,7 +16,7 @@
 
 See the [Sveltekit Blog Starter blog post on the Rodney Lab site](https://rodneylab.com/sveltekit-blog-starter/) for some explanation of what's inside and how to customise. Please drop questions into a comment at the bottom of that page. Here's the quick start:
 
-Everything you need to build a Svelte blog site, powered by [`sveltekit-blog-mdx`](https://github.com/rodneylab/sveltekit-blog-mdx.git);
+Everything you need to build a Svelte blog site, powered by [`sveltekit-blog-mdx`](https://github.com/rodneylab/sveltekit-blog-mdx.git).
 
 ## Creating a project
 
