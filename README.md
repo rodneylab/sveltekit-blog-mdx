@@ -1,3 +1,15 @@
+<img src="./images/rodneylab-github-sveltekit-blog-mdx.png" alt="Rodney Lab sveltekit-blog-mdx Github banner">
+
+<p align="center">
+  <a aria-label="Open Rodney Lab site" href="https://rodneylab.com" rel="nofollow noopener noreferrer">
+    <img alt="Rodney Lab logo" src="https://rodneylab.com/assets/icon.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby 3 Starter Climate
+</h1>
+
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8d9d4d4d-6fdf-439c-944f-7a73791b676d/deploy-status)](https://app.netlify.com/sites/zealous-jackson-f2037b/deploys)
 
 # sveltekit-blog-mdx
@@ -12,7 +24,9 @@ If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
 git clone https://github.com/rodneylab/sveltekit-blog-mdx.git && cd $_
-pnpm install
+git clone https://github.com/rodneylab/sveltekit-blog-mdx.git
+cd sveltekit-blog-mdx
+npm install
 npm run dev
 ```
 
@@ -23,3 +37,70 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+## What's inside?
+
+```
+.
+├── README.md
+├── jsconfig.json
+├── netlify.toml
+├── package.json
+├── src
+│   ├── app.html
+│   ├── content
+│   │   └── blog
+│   │       ├── best-medium-format-camera-for-starting-out
+│   │       ├── folding-camera
+│   │       └── twin-lens-reflex-camera
+│   ├── hooks.js
+│   ├── lib
+│   │   ├── components
+│   │   │   ├── BannerImage.svelte
+│   │   │   ├── ...
+│   │   ├── config
+│   │   │   └── website.js
+│   │   ├── constants
+│   │   │   └── entities.js
+│   │   ├── styles
+│   │   └── utilities
+│   │       └── blog.js
+│   └── routes
+│       ├── [slug].json.js
+│       ├── [slug].svelte
+│       ├── __layout.svelte
+│       ├── contact.svelte
+│       ├── index.json.js
+│       └── index.svelte
+└── svelte.config.js
+```
+
+### `src/content`
+
+- The `src/content/blog` is where we need to put our blog posts. Just clean out the sample content and replace it with your views on the world! There is a separate folder for each post, which allows you to keep images, video and other related media specific to a post better organised. We set the browser path for the based based on this folder name, so keep that in mind when naming the folders. Write the actual post in a file called `index.md` within post's folder. Although the file has an `.md` extension, you can write Svelte in it.
+
+### `src`
+
+- `hooks.js` we define Content Security Policy (CSP) and other HTTP security headers in here. More on this later.
+
+### `src/components`
+
+- `src/lib/components` these are the components we use in pages.
+
+### `src/lib`
+
+- `src/lib/config/website.js` for convenience we define properties for the site here such as the site title, contact email addresses and social media accounts. Some properties feed from environment variables. See a post on <a aria-label="Read recent Rodney Lab post on Getting Started with Svelte Kit" href="https://rodneylab.com/getting-started-with-sveltekit/#sveltekitEnvironmentVariables">getting started with SvelteKit for more on environment variables in SvelteKit</a>.
+
+- `src/lib/styles` does what you expect! We use SCSS for styling and source self-hosted fonts in the layouts.
+
+### `src/utilities`
+
+- `src/utilities/blog.js` this file contains some code for helping us transform the markdown in blog posts to Svelte. As well as that they help extract fields in the frontmatter (this is the metadata we include at the top fo the blog post `index.md` files).
+
+### `src/routes`
+
+- `src/routes/[slug].json.js` this is essentially a template for blog post data. One of these file is generated at build for each blog post. It is used to extract data needed in the Svelte file used to generate the post's HTML.
+
+- `src/routes/[slug].svelte` similarly to the previous file, one of these is generated for each blog post. This time it is the Svelte code which SvelteKit uses to generate the HTML for our blog posts.
+
+I mention most of the other files in the <a aria-label="Read recent Rodney Lab post on Getting Started with Svelte Kit" href="https://rodneylab.com/getting-started-with-sveltekit/">Getting Started with SvelteKit blog post</a>, but let me know if I have missed anything which needs more explanation.
