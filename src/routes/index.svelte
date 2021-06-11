@@ -39,7 +39,7 @@
   <h2>SvelteKit MDsveX (Markdown for Svelte) Blog</h2>
 </header>
 <Card>
-  <h2>About me</h2>
+  <h2><span>About me</span></h2>
   <p>
     I live and breathe analogue photography. I show you my favourite analogue film cameras on this
     site. Hopefully if you are not into analogue photography yet, some of my enthusiasm will rub off

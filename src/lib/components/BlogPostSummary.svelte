@@ -57,7 +57,6 @@
     margin: $spacing-0 auto;
     padding: $spacing-4;
 
-    h2,
     h3 {
       margin: $spacing-0 $spacing-2;
     }
@@ -69,7 +68,6 @@
   }
 
   .content:hover {
-    h2,
     h3 {
       color: $color-theme-2;
     }

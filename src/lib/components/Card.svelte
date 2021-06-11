@@ -21,13 +21,5 @@
     border-radius: $spacing-3;
     margin: $spacing-6 auto;
     padding: $spacing-4;
-
-    h2 {
-      margin: $spacing-0 $spacing-2;
-    }
-    p {
-      font-size: $mobile-font-size-2;
-      margin: $spacing-2;
-    }
   }
 </style>

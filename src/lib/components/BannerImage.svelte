@@ -4,7 +4,7 @@
 
   const { imgixDomain, imgixSecureToken } = website;
 
-  export let image;
+  // export let image;
   export let alt;
   export let featuredImageSrc;
   export let featuredImageSrcset;
