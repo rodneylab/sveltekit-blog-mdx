@@ -6,7 +6,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby 3 Starter Climate
+  SvelteKit MDsvex Blog Starter
 </h1>
 
 
@@ -23,10 +23,9 @@ Everything you need to build a Svelte blog site, powered by [`sveltekit-blog-mdx
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-git clone https://github.com/rodneylab/sveltekit-blog-mdx.git && cd $_
-git clone https://github.com/rodneylab/sveltekit-blog-mdx.git
-cd sveltekit-blog-mdx
-npm install
+git clone https://github.com/rodneylab/sveltekit-blog-mdx.git my-new-mdsvex-blog
+cd my-new-mdsvex-blog
+pnpm install # or npm install
 npm run dev
 ```
 
