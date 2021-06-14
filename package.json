@@ -17,16 +17,15 @@
     "@sveltejs/kit": "^1.0.0-next.115",
     "dayjs": "^1.10.5",
     "eslint": "^7.28.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
     "mdsvex": "^0.9.7",
     "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
+    "prettier-plugin-svelte": "^2.3.0",
     "sass": "^1.34.1",
-    "svelte": "^3.34.0",
+    "svelte": "^3.38.2",
     "svelte-feather-icons": "^3.5.0",
     "svelte-preprocess": "^4.7.3"
   },
-  "type": "module",
-  "dependencies": {}
+  "type": "module"
 }
