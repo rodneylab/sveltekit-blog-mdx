@@ -18,7 +18,7 @@ See the [Sveltekit Blog Starter blog post on the Rodney Lab site](https://rodney
 
 Everything you need to build a Svelte blog site, powered by [`sveltekit-blog-mdx`](https://github.com/rodneylab/sveltekit-blog-mdx.git).
 
-## Creating a project
+## Creating your Own MDsveX Blog Site
 
 If you're seeing this, you've probably already done this step. Congrats!
 
