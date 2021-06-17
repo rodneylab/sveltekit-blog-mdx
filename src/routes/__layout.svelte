@@ -1,3 +1,24 @@
+<script context="module">
+  /**
+   * @type {import('@sveltejs/kit').Load}
+   */
+  export const prerender = true;
+  export async function load({ page, fetch, context }) {
+    const { slug } = page.params;
+    const url = `${page.path}.json`;
+    const res = await fetch(url);
+  
+    if (res.ok) {
+      const { post } = await res.json();
+      return {
+        props: { post, slug  },
+      };
+    }
+  
+    return {
+      };
+    }
+</script>
 <script>
   // Lora - supported variants:
   // weights: [400, 500, 600, 700]
@@ -17,16 +38,21 @@
   import '$lib/styles/index.scss';
 
   import { COPYRIGHT_ENTITY } from '$lib/constants/entities';
-  import ExternalLink from '$lib/components/ExternalLink.svelte';
-  import website from '$lib/config/website';
-  const { facebookPage, githubPage, linkedinProfile, tiktokUsername, twitterUsername } = website;
+  import BlogPost from '$lib/components/BlogPost.svelte';
   import CameraIcon from '$lib/components/Icons/Camera.svelte';
+  import ExternalLink from '$lib/components/ExternalLink.svelte';
+  const { facebookPage, githubPage, linkedinProfile, tiktokUsername, twitterUsername } = website;
   import FacebookIcon from '$lib/components/Icons/Facebook.svelte';
   import GitHubIcon from '$lib/components/Icons/GitHub.svelte';
   import LinkedinIcon from '$lib/components/Icons/LinkedIn.svelte';
+  import RodneyLabCredit from '$lib/components/RodneyLabCredit.svelte';
   import TiktokIcon from '$lib/components/Icons/Tiktok.svelte';
   import TwitterIcon from '$lib/components/Icons/Twitter.svelte';
-  import RodneyLabCredit from '$lib/components/RodneyLabCredit.svelte';
+  import website from '$lib/config/website';
+
+  export let post;
+
+  $: isBlogPost = post !== undefined;
 </script>
 
 <div class="container">
@@ -42,6 +68,9 @@
     </nav>
   </header>
   <main class="main-container">
+    {#if isBlogPost}
+      <BlogPost {post} />
+    {/if}
     <slot />
   </main>
   <footer class="footer-container">
