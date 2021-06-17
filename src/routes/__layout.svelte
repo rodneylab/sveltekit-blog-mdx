@@ -5,6 +5,12 @@
   export const prerender = true;
   export async function load({ page, fetch, context }) {
     const { slug } = page.params;
+
+    // return nothing if the page is not a blog post
+    if (slug === '.json' || slug === undefined) {
+      return {};
+    }
+
     const url = `${page.path}.json`;
     const res = await fetch(url);
   
