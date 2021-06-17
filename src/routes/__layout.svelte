@@ -4,10 +4,23 @@
    */
   export const prerender = true;
   export async function load({ page, fetch, context }) {
-    const { slug } = page.params;
+    const {path} = page;
+        const { slug } = page.params;
 
-    // return nothing if the page is not a blog post
-    if (slug === '.json' || slug === undefined) {
+    // make sure this is not a blog post
+    if (path === '/') {
+      const url = `./index.json`;
+        const response = await fetch(url);
+
+        if (response.ok) {
+          const { posts } = await response.json();
+          return {
+            props: { posts },
+          };
+        }
+
+        return {};
+    } else if (path === '/contact') {
       return {};
     }
 
