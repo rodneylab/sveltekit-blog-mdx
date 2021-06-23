@@ -163,6 +163,12 @@ a {
   color: $color-theme-4;
 }
 
+a,
+button {
+  // browser will not anticipate double click so proceeds with action quicker (300 ms quicker)
+  touch-action: manipulation;
+}
+
 h1 > a {
   color: inherit;
   text-decoration: none;
