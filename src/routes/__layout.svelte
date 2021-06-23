@@ -4,40 +4,40 @@
    */
   export const prerender = true;
   export async function load({ page, fetch, context }) {
-    const {path} = page;
-        const { slug } = page.params;
+    const { path } = page;
+    const { slug } = page.params;
 
     // make sure this is not a blog post
     if (path === '/') {
       const url = `./index.json`;
-        const response = await fetch(url);
+      const response = await fetch(url);
 
-        if (response.ok) {
-          const { posts } = await response.json();
-          return {
-            props: { posts },
-          };
-        }
+      if (response.ok) {
+        const { posts } = await response.json();
+        return {
+          props: { posts },
+        };
+      }
 
-        return {};
+      return {};
     } else if (path === '/contact') {
       return {};
     }
 
     const url = `${page.path}.json`;
     const res = await fetch(url);
-  
+
     if (res.ok) {
       const { post } = await res.json();
       return {
-        props: { post, slug  },
+        props: { post, slug },
       };
     }
-  
-    return {
-      };
-    }
+
+    return {};
+  }
 </script>
+
 <script>
   // Lora - supported variants:
   // weights: [400, 500, 600, 700]

@@ -9,7 +9,6 @@
   SvelteKit MDsvex Blog Starter
 </h1>
 
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8d9d4d4d-6fdf-439c-944f-7a73791b676d/deploy-status)](https://app.netlify.com/sites/zealous-jackson-f2037b/deploys)
 
 # sveltekit-blog-mdx
