@@ -2,11 +2,12 @@
 import adapter from '@sveltejs/adapter-netlify';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
+import toc from '@jsdevtools/rehype-toc';
 
 const config = {
   extensions: ['.svelte', '.md', '.svelte.md'],
   preprocess: [
-    mdsvex({ extensions: ['.svelte.md', '.md', '.svx'] }),
+    mdsvex({ extensions: ['.svelte.md', '.md', '.svx'], rehypePlugins: [toc] }),
     preprocess({
       scss: {
         prependData: "@import 'src/lib/styles/variables.scss';",

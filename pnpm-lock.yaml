@@ -5,6 +5,7 @@ specifiers:
   '@fontsource/lora': ^4.4.5
   '@fontsource/source-sans-pro': ^4.4.5
   '@imgix/js-core': ^3.2.0
+  '@jsdevtools/rehype-toc': ^3.0.2
   '@sveltejs/adapter-netlify': ^1.0.0-next.17
   '@sveltejs/kit': ^1.0.0-next.116
   dayjs: ^1.10.5
@@ -25,6 +26,7 @@ devDependencies:
   '@fontsource/lora': 4.4.5
   '@fontsource/source-sans-pro': 4.4.5
   '@imgix/js-core': 3.2.0
+  '@jsdevtools/rehype-toc': 3.0.2
   '@sveltejs/adapter-netlify': 1.0.0-next.17
   '@sveltejs/kit': 1.0.0-next.116_svelte@3.38.3
   dayjs: 1.10.5
@@ -100,6 +102,11 @@ packages:
     dependencies:
       js-base64: 3.6.1
       md5: 2.3.0
+    dev: true
+
+  /@jsdevtools/rehype-toc/3.0.2:
+    resolution: {integrity: sha512-n5JEf16Wr4mdkRMZ8wMP/wN9/sHmTjRPbouXjJH371mZ2LEGDl72t8tEsMRNFerQN/QJtivOxqK1frdGa4QK5Q==}
+    engines: {node: '>=10'}
     dev: true
 
   /@rollup/pluginutils/4.1.0:
