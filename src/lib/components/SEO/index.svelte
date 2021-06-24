@@ -4,6 +4,8 @@
 
   const { siteLanguage, siteTitle } = website;
 
+  /* uncomment to use in Twitter, OpenGraph or SchemaOrg meta components if needed */
+  // export let article = false;
   export let metadescription;
   export let title;
 

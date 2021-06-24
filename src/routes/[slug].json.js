@@ -10,6 +10,6 @@ export async function get({ params }) {
   const post = await getPost(article.content, true);
 
   if (post) {
-    return { body: JSON.stringify({ post }) };
+    return { body: JSON.stringify({ post: { ...post, slug } }) };
   }
 }

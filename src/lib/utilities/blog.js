@@ -44,6 +44,7 @@ export const getPost = async (content, body = true) => {
     featuredImageSrcset,
     postTitle,
     seoMetaDescription,
+    twitterImage,
   } = transformedContent.data.fm;
   let result = {
     datePublished,
@@ -53,6 +54,7 @@ export const getPost = async (content, body = true) => {
     featuredImageSrcset,
     postTitle,
     seoMetaDescription,
+    twitterImage,
   };
   if (body) {
     result = { ...result, body: transformedContent.code };

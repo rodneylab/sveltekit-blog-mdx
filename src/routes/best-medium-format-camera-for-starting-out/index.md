@@ -28,11 +28,14 @@ https://rodneylab-climate-starter.imgix.net/best-medium-format-camera-for-starti
 https://rodneylab-climate-starter.imgix.net/best-medium-format-camera-for-starting-out.jpg?ixlib=js-v3.1.3&auto=format&w=1344&s=4dd9a23d20918fb2f098658653c5689d 1344w'
 ogImage: ''
 ogSquareImage: ''
-twitterImage: ''
+twitterImage: 'https://rodneylab-climate-starter.imgix.net/best-medium-format-camera-for-starting-out-twitter.jpg?ixlib=js-3.2.0&w=800&h=418&s=5a4968759b838f0209894062d815e045'
 categories: ''
 tags: ''
 ---
 
+<script context="module">
+  export const prerender = true;
+</script>
 <script>
   import ExternalLink from '$lib/components/ExternalLink.svelte';
   import Link from '$lib/components/Link.svelte';
