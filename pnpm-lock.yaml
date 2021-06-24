@@ -11,6 +11,7 @@ specifiers:
   eslint: ^7.29.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.0
+  husky: ^6.0.0
   mdsvex: ^0.9.7
   prettier: ~2.3.1
   prettier-plugin-svelte: ^2.3.1
@@ -30,6 +31,7 @@ devDependencies:
   eslint: 7.29.0
   eslint-config-prettier: 8.3.0_eslint@7.29.0
   eslint-plugin-svelte3: 3.2.0_eslint@7.29.0+svelte@3.38.3
+  husky: 6.0.0
   mdsvex: 0.9.7_svelte@3.38.3
   prettier: 2.3.1
   prettier-plugin-svelte: 2.3.1_prettier@2.3.1+svelte@3.38.3
@@ -687,6 +689,11 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: true
+
+  /husky/6.0.0:
+    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
+    hasBin: true
     dev: true
 
   /ignore/4.0.6:

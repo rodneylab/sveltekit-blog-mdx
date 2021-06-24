@@ -6,7 +6,8 @@
     "build": "svelte-kit build",
     "preview": "svelte-kit preview --port 3000",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "prettier:check": "prettier --check --plugin-search-dir=. ."
   },
   "devDependencies": {
     "@fontsource/lato": "^4.4.5",
@@ -19,6 +20,7 @@
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
+    "husky": "^6.0.0",
     "mdsvex": "^0.9.7",
     "prettier": "~2.3.1",
     "prettier-plugin-svelte": "^2.3.1",
@@ -26,6 +28,19 @@
     "svelte": "^3.38.3",
     "svelte-feather-icons": "^3.5.0",
     "svelte-preprocess": "^4.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodneylab/sveltekit-seo"
+  },
+  "bugs": {
+    "url": "https://github.com/rodneylab/sveltekit-seo/issues"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run prettier:check"
+    }
   },
   "type": "module"
 }
