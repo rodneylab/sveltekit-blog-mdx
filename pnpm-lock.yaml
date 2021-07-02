@@ -11,7 +11,7 @@ specifiers:
   eslint: ^7.29.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.0
-  husky: ^6.0.0
+  husky: ^7.0.0
   mdsvex: ^0.9.7
   prettier: ~2.3.2
   prettier-plugin-svelte: ^2.3.1
@@ -31,7 +31,7 @@ devDependencies:
   eslint: 7.29.0
   eslint-config-prettier: 8.3.0_eslint@7.29.0
   eslint-plugin-svelte3: 3.2.0_eslint@7.29.0+svelte@3.38.3
-  husky: 6.0.0
+  husky: 7.0.0
   mdsvex: 0.9.7_svelte@3.38.3
   prettier: 2.3.2
   prettier-plugin-svelte: 2.3.1_prettier@2.3.2+svelte@3.38.3
@@ -96,7 +96,7 @@ packages:
     dev: true
 
   /@imgix/js-core/3.2.1:
-    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==}
+    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==, tarball: '@imgix/js-core/-/js-core-3.2.1.tgz'}
     dependencies:
       js-base64: 3.6.1
       md5: 2.3.0
@@ -670,8 +670,9 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /husky/6.0.0:
-    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
+  /husky/7.0.0:
+    resolution: {integrity: sha512-xK7lO0EtSzfFPiw+oQncQVy/XqV7UVVjxBByc+Iv5iK3yhW9boDoWgvZy3OGo48QKg/hUtZkzz0hi2HXa0kn7w==}
+    engines: {node: '>=12'}
     hasBin: true
     dev: true
 
