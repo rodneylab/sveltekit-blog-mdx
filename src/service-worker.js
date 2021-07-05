@@ -33,7 +33,7 @@ worker.addEventListener('activate', (event) => {
       ),
     ),
   );
-  worker.ClientRectList.claim();
+  worker.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
