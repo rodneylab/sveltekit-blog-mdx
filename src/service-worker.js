@@ -1,3 +1,4 @@
+// based on https://github.com/tretapey/svelte-pwa/blob/master/public/service-worker.js
 import { build, files, timestamp } from '$service-worker';
 
 const worker = self;
