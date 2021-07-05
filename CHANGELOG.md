@@ -1,3 +1,10 @@
+## 0.2.1 (2021-07-05)
+
+### Fix
+
+- **service-worker**: ✅ fixed typo
+- 🔧 removed optional chaining in website config file
+
 ## 0.2.0 (2021-07-05)
 
 ### Feat
