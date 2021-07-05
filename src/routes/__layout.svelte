@@ -64,6 +64,7 @@
   import FacebookIcon from '$lib/components/Icons/Facebook.svelte';
   import GitHubIcon from '$lib/components/Icons/GitHub.svelte';
   import LinkedinIcon from '$lib/components/Icons/LinkedIn.svelte';
+  import PWA from '$lib/components/PWA.svelte';
   import RodneyLabCredit from '$lib/components/RodneyLabCredit.svelte';
   import TiktokIcon from '$lib/components/Icons/Tiktok.svelte';
   import TwitterIcon from '$lib/components/Icons/Twitter.svelte';
@@ -74,6 +75,7 @@
   $: isBlogPost = post !== undefined;
 </script>
 
+<PWA />
 <div class="container">
   <header class="header-container">
     <a aria-label="Jump to Home page" class="hover-jump" href="./"

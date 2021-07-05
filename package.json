@@ -2,11 +2,12 @@
   "name": "sveltekit-blog-mdx",
   "version": "0.1.0",
   "scripts": {
-    "dev": "svelte-kit dev --port 3030",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview --port 3030",
+    "dev": "svelte-kit dev --port 3000",
+    "build": "npm run generate:manifest && svelte-kit build",
+    "preview": "svelte-kit preview --port 3000",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
+    "generate:manifest": "node ./generate-manifest.js",
     "prettier:check": "prettier --check --plugin-search-dir=. ."
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "prettier": "~2.3.2",
     "prettier-plugin-svelte": "^2.3.1",
     "sass": "^1.35.1",
+    "sharp": "^0.28.3",
     "svelte": "^3.38.3",
     "svelte-feather-icons": "^3.5.0",
     "svelte-preprocess": "^4.7.3"
