@@ -53,7 +53,7 @@ const main = async () => {
 };
 
 console.log('Generating manifest.json');
-fs.mkdir(iconsDirectory, (err) => {
+fs.mkdir(iconsDirectory, { recursive: true }, (err) => {
   if (err) {
     return console.error(err);
   }
