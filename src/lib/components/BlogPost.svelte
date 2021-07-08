@@ -7,8 +7,6 @@
   const {
     featuredImage,
     featuredImageAlt,
-    featuredImageSrc,
-    featuredImageSrcset,
     postTitle: title,
     seoMetaDescription: metadescription,
     slug,
@@ -16,11 +14,8 @@
   const bannerImageProps = {
     image: featuredImage,
     alt: featuredImageAlt,
-    // featuredImageAlt,
-    // featuredImageSrc,
-    // featuredImageSrcset,
   };
 </script>
 
-<SEO article={true} {slug} {title} {metadescription} />
+<SEO article {slug} {title} {metadescription} />
 <BannerImage {...bannerImageProps} />
