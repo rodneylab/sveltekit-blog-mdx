@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-blog-mdx",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "dev": "svelte-kit dev --port 3000",
     "build": "npm run generate:manifest && svelte-kit build",

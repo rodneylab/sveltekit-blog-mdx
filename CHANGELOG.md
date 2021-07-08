@@ -1,7 +1,25 @@
+## 0.2.2 (2021-07-08)
+
+### Fix
+
+- 📸 updated BannerImage component to use Imgix to source images
+- **post**: 🔧 added prerender to post
+- **post**: ✅ linted files and fixed some typos
+- **post**: 🔧 removed prerender
+- **bannerimage**: 💄 tweaked css to avoid CLS
+- 📸 linked blog post images to imgix sources
+- **gitignore**: ✅ typo
+- **dependencies**: 💫 updated packages
+
+### Refactor
+
+- 🏄🏽‍♂️ removed npm-lockfile sinceusing pnpm now
+
 ## 0.2.1 (2021-07-05)
 
 ### Fix
 
+- 🚧 revert back to report only csp
 - **service-worker**: ✅ fixed typo
 - 🔧 removed optional chaining in website config file
 
