@@ -14,10 +14,11 @@
     slug,
   } = post;
   const bannerImageProps = {
-    featuredImage,
-    featuredImageAlt,
-    featuredImageSrc,
-    featuredImageSrcset,
+    image: featuredImage,
+    alt: featuredImageAlt,
+    // featuredImageAlt,
+    // featuredImageSrc,
+    // featuredImageSrcset,
   };
 </script>
 
