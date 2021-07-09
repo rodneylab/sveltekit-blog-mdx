@@ -182,6 +182,13 @@ h6 > a {
   color: inherit;
 }
 
+.toc {
+  .toc-level-1 {
+    font-size: $font-size-3;
+    font-weight: $font-weight-bold;
+  }
+}
+
 a:hover,
 a:focus {
   text-decoration: none;

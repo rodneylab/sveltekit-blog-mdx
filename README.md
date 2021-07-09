@@ -13,6 +13,10 @@
 
 # sveltekit-blog-mdx
 
+SveletKit blog starter which helps you hit the ground running when creating a new SvelteKit blog. The project <a aria-label="Read about how to customise the P W A functionality" href="https://rodneylab.com/sveltekit-pwa/">creates a Progressive Web App (PWA)</a> out of the box. You just need to customise with your logos etc.
+
+<img src="./images/rodneylab-github-sveltekit-blog-mdx-lighthouse.png" alt="Rodney Lab sveltekit-blog-mdx Github banner">
+
 See the [Sveltekit Blog Starter blog post on the Rodney Lab site](https://rodneylab.com/sveltekit-blog-starter/) for some explanation of what's inside and how to customise. Please drop questions into a comment at the bottom of that page. Here's the quick start:
 
 Everything you need to build a Svelte blog site, powered by [`sveltekit-blog-mdx`](https://github.com/rodneylab/sveltekit-blog-mdx.git).
