@@ -11,6 +11,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8d9d4d4d-6fdf-439c-944f-7a73791b676d/deploy-status)](https://app.netlify.com/sites/zealous-jackson-f2037b/deploys)
 
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://github.com/rodneylab/sveltekit-blog-mdx/tree/dev__mdsvex_toc)
+
 # sveltekit-blog-mdx
 
 SveletKit blog starter which helps you hit the ground running when creating a new SvelteKit blog. The project <a aria-label="Read about how to customise the P W A functionality" href="https://rodneylab.com/sveltekit-pwa/">creates a Progressive Web App (PWA)</a> out of the box. You just need to customise with your logos etc.
