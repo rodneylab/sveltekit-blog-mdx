@@ -15,8 +15,8 @@
     "@fontsource/lora": "^4.5.0",
     "@fontsource/source-sans-pro": "^4.5.0",
     "@imgix/js-core": "^3.2.1",
-    "@sveltejs/adapter-netlify": "^1.0.0-next.19",
-    "@sveltejs/kit": "^1.0.0-next.122",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.23",
+    "@sveltejs/kit": "^1.0.0-next.131",
     "dayjs": "^1.10.6",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
@@ -29,7 +29,7 @@
     "sharp": "^0.28.3",
     "svelte": "^3.38.3",
     "svelte-feather-icons": "^3.5.0",
-    "svelte-preprocess": "^4.7.3"
+    "svelte-preprocess": "^4.7.4"
   },
   "repository": {
     "type": "git",
