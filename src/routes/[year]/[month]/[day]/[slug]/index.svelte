@@ -1,4 +1,7 @@
 <script context="module">
+  /* this file will redirect browser from example.com/2021/06/25/folding-camera to
+   * example.com/folding-camera
+   */
   export async function load({ page }) {
     const { slug } = page.params;
     return {
@@ -6,9 +9,3 @@
 			redirect: `/${slug}` };
   }
 </script>
-
-
-localhost:3030/2021/06/25/folding-camera
-
-
-http://localhost:3030/folding-camera
