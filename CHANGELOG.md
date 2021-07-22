@@ -1,3 +1,18 @@
+## 0.3.0 (2021-07-22)
+
+### Fix
+
+- **contact**: 🔥 set contact page to prerender
+- 💫 updated config
+- 🔧 switched to static adapter
+- **dependencies**: 💫 update packages
+- **.nvmrc**: 💫 set neode version to 14
+- **dependencies**: 💫 update package
+
+### Feat
+
+- 🤖 added SEO meta generation
+
 ## 0.2.2 (2021-07-08)
 
 ### Fix

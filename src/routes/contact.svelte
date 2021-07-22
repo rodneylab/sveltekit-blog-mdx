@@ -1,6 +1,7 @@
 <script context="module">
   export const prerender = true;
 </script>
+
 <script>
   import Card from '$lib/components/Card.svelte';
   import EmailIcon from '$lib/components/Icons/Email.svelte';
