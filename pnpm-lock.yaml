@@ -6,6 +6,7 @@ specifiers:
   '@fontsource/source-sans-pro': ^4.5.0
   '@imgix/js-core': ^3.2.1
   '@sveltejs/adapter-netlify': ^1.0.0-next.25
+  '@sveltejs/adapter-static': ^1.0.0-next.13
   '@sveltejs/kit': ^1.0.0-next.134
   dayjs: ^1.10.6
   eslint: ^7.31.0
@@ -27,6 +28,7 @@ devDependencies:
   '@fontsource/source-sans-pro': 4.5.0
   '@imgix/js-core': 3.2.1
   '@sveltejs/adapter-netlify': 1.0.0-next.25
+  '@sveltejs/adapter-static': 1.0.0-next.13
   '@sveltejs/kit': 1.0.0-next.134_svelte@3.40.0
   dayjs: 1.10.6
   eslint: 7.31.0
@@ -113,7 +115,7 @@ packages:
     dev: true
 
   /@imgix/js-core/3.2.1:
-    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==}
+    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==, tarball: '@imgix/js-core/-/js-core-3.2.1.tgz'}
     dependencies:
       js-base64: 3.6.1
       md5: 2.3.0
@@ -132,6 +134,10 @@ packages:
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.12.15
+    dev: true
+
+  /@sveltejs/adapter-static/1.0.0-next.13:
+    resolution: {integrity: sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==}
     dev: true
 
   /@sveltejs/kit/1.0.0-next.134_svelte@3.40.0:
