@@ -19,9 +19,27 @@
 
   let title = 'Contact';
   let metadescription = 'Get in touch with Rodneylab, the developer of Climate SvelteKit Starter.';
+  const breadcrumbs = [
+    {
+      name: 'Home',
+      slug: '',
+    },
+    {
+      name: 'Contact Us',
+      slug: 'contact',
+    },
+  ];
+  const seoProps = {
+    breadcrumbs,
+    title,
+    metadescription,
+    slug: 'contact',
+    datePublished: '2021-07-07T14:19:33.000+0100',
+    lastUpdated: '2021-07-07T14:19:33.000+0100',
+  };
 </script>
 
-<SEO {title} {metadescription} />
+<SEO {...seoProps} />
 <Card>
   <h1>Contact me</h1>
   <p>I would love to hear from you. Please get in touch!</p>
