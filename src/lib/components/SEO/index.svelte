@@ -112,7 +112,7 @@
     content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
   />
   <html lang={siteLanguage} />
-  <Twitter {...twitterProps} />
-  <OpenGraph {...openGraphProps} />
-  <SchemaOrg {...schemaOrgProps} />
 </svelte:head>
+<Twitter {...twitterProps} />
+<OpenGraph {...openGraphProps} />
+<SchemaOrg {...schemaOrgProps} />
