@@ -24,7 +24,7 @@
     display: 'flex';
     align-items: 'center';
     color: #032539;
-    font-family: 'Lato';
+    font-family: Lato;
   }
 
   .rodneylab-text {
