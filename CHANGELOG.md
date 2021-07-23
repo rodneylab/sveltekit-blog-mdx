@@ -1,3 +1,11 @@
+## 0.3.1 (2021-07-23)
+
+### Fix
+
+- **dependencies**: 💫 update package
+- 🐞 removed extra head wrap on SEO components
+- 🔧 removed prerender from load functions, since using adapter-static now
+
 ## 0.3.0 (2021-07-22)
 
 ### Fix
