@@ -2,19 +2,30 @@
   import ImgixClient from '@imgix/js-core';
   import website from '$lib/config/website';
 
+  /* code here shows how to set up Imgix to generate responsive, NextGen images you need to add your
+   * Imgix credentials to your .env file.  If these aren't defined we use static images in the
+   * /static/assets/images folder, these aren't responsive or generated in NextGen formats. Also edit
+   * $lib/BlogPost.svelte if you change image related stuff here.
+   */
+
   const { imgixDomain, imgixSecureToken } = website;
 
   export let image;
   export let alt;
 
-  const client = new ImgixClient({
-    domain: imgixDomain,
-    secureURLToken: imgixSecureToken,
-  });
+  const client =
+    imgixDomain && imgixSecureToken
+      ? new ImgixClient({
+          domain: imgixDomain,
+          secureURLToken: imgixSecureToken,
+        })
+      : null;
 
-  const src = client.buildURL(image, { w: 672, h: 448 });
+  const src = client ? client.buildURL(image, { w: 672, h: 448 }) : `/assets/images/${image}`;
   const sizes = '(max-width: 672px) calc(100vw - 32px), 672px';
-  const srcset = client.buildSrcSet(image, { auto: 'format' }, { maxWidth: 1344 });
+  const srcset = client
+    ? client.buildSrcSet(image, { auto: 'format' }, { maxWidth: 1344 })
+    : `/assets/images/${image} 672w`;
 </script>
 
 <picture>
