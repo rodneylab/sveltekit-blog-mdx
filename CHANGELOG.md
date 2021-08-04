@@ -1,3 +1,13 @@
+## 0.4.0 (2021-08-04)
+
+### Feat
+
+- ✨ added static (non-responsive) images as fallback so repo works out of the box without Imgix credentials
+
+### Fix
+
+- **dependencies**: 💫 update packages
+
 ## 0.3.1 (2021-07-23)
 
 ### Fix
