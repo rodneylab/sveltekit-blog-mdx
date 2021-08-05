@@ -36,7 +36,7 @@ npm run dev
 
 ### Responsive Images
 
-Currently the repo relies on Imgix to create responsive, NextGen images.  Out of the box, it uses static images (non-responsive) stored in `static/assets/images`.  The code in `src/lib/BannerImage.svelte` and `src/lib/BlogPost.svelte` shows how you can generate responsive images with Imgix when using this code for your own projects.  You just need to create an Imgix account and add your own photos.  Next, define `VITE_IMGIX_DOMAIN` and `VITE_IMGIX_SECURE_TOKEN` in `.env`, using your account credentials.  Now, for example, the banner image for a post will take whatever you define as the featuredImage in the blog post markdown frontmatter. So if the full Imgix path to an image is `my-example-site.imgix.net/folding-camera.jpg`, you can refer to the image in post frontmatter as `folding-camera.jpg`.  Let me know if that needs a clearer explanation.
+Currently the repo relies on Imgix to create responsive, NextGen images. Out of the box, it uses static images (non-responsive) stored in `static/assets/images`. The code in `src/lib/BannerImage.svelte` and `src/lib/BlogPost.svelte` shows how you can generate responsive images with Imgix when using this code for your own projects. You just need to create an Imgix account and add your own photos. Next, define `VITE_IMGIX_DOMAIN` and `VITE_IMGIX_SECURE_TOKEN` in `.env`, using your account credentials. Now, for example, the banner image for a post will take whatever you define as the featuredImage in the blog post markdown frontmatter. So if the full Imgix path to an image is `my-example-site.imgix.net/folding-camera.jpg`, you can refer to the image in post frontmatter as `folding-camera.jpg`. Let me know if that needs a clearer explanation.
 
 ## Building
 
