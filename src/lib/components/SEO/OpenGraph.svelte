@@ -30,7 +30,7 @@
     <meta property="og:image" content={squareImage.url} />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="400" />
-    <meta property="og:image:alt" content={image.alt} />
+    <meta property="og:image:alt" content={squareImage.alt} />
   {/if}
   {#if article}
     <meta property="article:publisher" content={facebookPage} />
