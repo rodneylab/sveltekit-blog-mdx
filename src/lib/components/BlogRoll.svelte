@@ -16,7 +16,7 @@
 
 <section role="feed">
   <h2>BLOG POSTS</h2>
-  {#if postCount > 0}
+  <!-- {#if postCount > 0} -->
     {#each displayPosts as post, index}
       <article aria-posinset={index + 1} aria-setsize={postCount}>
         <BlogPostSummary
@@ -26,10 +26,10 @@
           slug={post.slug}
         />
       </article>
-    {/each}
+    <!-- {/each} -->
   {:else}
     <p>No posts yet!</p>
-  {/if}
+  {/each}
   {#if showPosts < postCount}
     <button type="submit" on:click={handleClick}>See more {H_ELLIPSIS_ENTITY}</button>
   {/if}
