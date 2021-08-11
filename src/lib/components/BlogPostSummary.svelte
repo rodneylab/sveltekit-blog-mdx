@@ -67,6 +67,7 @@
     }
   }
 
+  .content:focus,
   .content:hover {
     h3 {
       color: $color-theme-2;

@@ -20,6 +20,7 @@ specifiers:
   sass: ^1.37.5
   sharp: ^0.28.3
   stylelint: ^13.13.1
+  stylelint-a11y: ^1.2.3
   stylelint-config-recommended-scss: ^4.3.0
   stylelint-config-standard: ^22.0.0
   stylelint-scss: ^3.20.1
@@ -47,6 +48,7 @@ devDependencies:
   sass: 1.37.5
   sharp: 0.28.3
   stylelint: 13.13.1
+  stylelint-a11y: 1.2.3_stylelint@13.13.1
   stylelint-config-recommended-scss: 4.3.0_fd1d61e57b9553f3887f804324f52132
   stylelint-config-standard: 22.0.0_stylelint@13.13.1
   stylelint-scss: 3.20.1_stylelint@13.13.1
@@ -320,7 +322,7 @@ packages:
     dev: true
 
   /@imgix/js-core/3.2.1:
-    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==}
+    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==, tarball: '@imgix/js-core/-/js-core-3.2.1.tgz'}
     dependencies:
       js-base64: 3.6.1
       md5: 2.3.0
@@ -2527,6 +2529,15 @@ packages:
 
   /style-search/0.1.0:
     resolution: {integrity: sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=}
+    dev: true
+
+  /stylelint-a11y/1.2.3_stylelint@13.13.1:
+    resolution: {integrity: sha512-S/iiKFUsYBfa4suxP0pYQqoPB9R1+SnvxVuzHHlz9al0IWxLZzXlnZEqEez0zNOhVh5iO3rATUmDnbZE5wm/pQ==}
+    engines: {node: '>=8.7.0'}
+    peerDependencies:
+      stylelint: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
+    dependencies:
+      stylelint: 13.13.1
     dev: true
 
   /stylelint-config-recommended-scss/4.3.0_fd1d61e57b9553f3887f804324f52132:

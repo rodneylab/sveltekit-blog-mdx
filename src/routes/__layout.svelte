@@ -213,10 +213,13 @@
     }
   }
 
-  .hover-jump {
-    transition: all 0.25s ease-in-out;
+  @media (prefers-reduced-motion: no-preference) {
+    .hover-jump {
+      transition: all 0.25s ease-in-out;
+    }
   }
 
+  .hover-jump:focus,
   .hover-jump:hover {
     transform: translateY(-$spacing-2);
   }
