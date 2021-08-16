@@ -23,8 +23,8 @@ export const getPosts = async (postsContent, body = false) => {
   let result = postsContent.map(async (element) => {
     const { content, slug } = element;
     const transformedContent = await compile(content);
-    const { datePublished, postTitle, seoMetaDescription } = transformedContent.data.fm;
-    let resultElement = { datePublished, postTitle, seoMetaDescription, slug };
+    const { datePublished, lastUpdated, postTitle, seoMetaDescription } = transformedContent.data.fm;
+    let resultElement = { datePublished, lastUpdated, postTitle, seoMetaDescription, slug };
     if (body) {
       resultElement = { ...resultElement, body: transformedContent.code };
     }

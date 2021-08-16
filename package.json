@@ -9,6 +9,7 @@
     "lint:scss": "stylelint \"src/**/*.{css,scss,svelte}\"",
     "format": "prettier --write --plugin-search-dir=. .",
     "generate:manifest": "node ./generate-manifest.js",
+    "generate:sitemap": "node ./generate-sitemap.js",
     "prettier:check": "prettier --check --plugin-search-dir=. ."
   },
   "devDependencies": {
