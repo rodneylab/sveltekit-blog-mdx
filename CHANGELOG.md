@@ -1,3 +1,22 @@
+## Unreleased
+
+### Fix
+
+- **seo**: ✅ remove duplicate variable
+- **dependencies**: 💫 update package
+- 🤗 improve accessibility
+- **opengraph**: ✅ correct typo
+- **dependencies**: 💫 update packages
+
+### Feat
+
+- ✨ add sitemap for static and SSR builds
+- ✨ add sitemap for static and SSR builds
+
+### Refactor
+
+- **blogroll**: 🏄🏽‍♂️ small refactor using Tan Li Hau tip
+
 ## 0.4.0 (2021-08-04)
 
 ### Feat
