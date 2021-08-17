@@ -52,16 +52,16 @@ this will be output to `static/sitemap.xml`.  You can work this into your build 
     "build": "npm run generate:manifest && npm run generate:sitemap && svelte-kit build",
 ```
 
-The generation javascript code is in the file `generate-sitemap.js` in the root folder of the project.
+The generation JavaScript code is in the file `generate-sitemap.js` in the root folder of the project.
 
-- Alternatively, the sitemap is automatically served at `https://exmaple.xom/sitemap.xml`.  It is served by the file at `src/routes/sitemap.xml.js`.
+- Alternatively, the sitemap is automatically served at `https://example.com/sitemap.xml`.  It is served by the file at `src/routes/sitemap.xml.js`.
 
 
 Either way, make sure your site's URL is defined in `.env` as the `VITE_SITE_URL` variable so the correct URLs are output to the site map.
 
 ### Progressive Web App (PWA)
 
-The starter mostly generates PWA config automatically, including adding meta to the HTML head section.  A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices.  The starter can generate the logo in different sizes automatically if you create a 512&nbsp;px&nbsp;&times;&nbsp;512&nbsp;px logo and save it as `static/icon.png`.  Then run
+The starter mostly generates PWA config automatically, including service worker for offline availability and adding meta to the HTML head section.  A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices.  The starter can generate the logo in different sizes automatically if you create a 512&nbsp;px&nbsp;&times;&nbsp;512&nbsp;px logo and save it as `static/icon.png`.  Then run
 
 ```shell
 npm run generate:manifest
@@ -95,6 +95,8 @@ npm run build
 ```
 .
 ├── README.md
+├── generate-manifest.js
+├── generate-sitemap.js
 ├── jsconfig.json
 ├── netlify.toml
 ├── package.json
@@ -126,6 +128,12 @@ npm run build
 │       └── index.svelte
 └── svelte.config.js
 ```
+
+### `/`
+
+- `generate-manifest.js` script for generating the PWA manifest.json as well as the icons in different sizes.
+
+- `generate-sitemap.js` script for generating an XML sitemap, only needed for static sites, otherwise SvelteKit creates an endpoint from which the sitemap is served (see `src/routes/sitemap.xml.js`).
 
 ### `src/content`
 
