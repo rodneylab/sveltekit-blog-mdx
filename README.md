@@ -15,7 +15,7 @@
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/rodneylab/sveltekit-blog-mdx)
 
-SveletKit blog starter which helps you hit the ground running when creating a new SvelteKit blog. The project <a aria-label="Read about how to customise the P W A functionality" href="https://rodneylab.com/sveltekit-pwa/">creates a Progressive Web App (PWA)</a> out of the box. You just need to customise with your logos etc.
+SvelteKit blog starter which helps you hit the ground running when creating a new SvelteKit blog. The project <a aria-label="Read about how to customise the P W A functionality" href="https://rodneylab.com/sveltekit-pwa/">creates a Progressive Web App (PWA)</a> out of the box. You just need to customise with your logos etc.
 
 <img src="./images/rodneylab-github-sveltekit-blog-mdx-lighthouse.png" alt="Rodney Lab sveltekit-blog-mdx Github banner">
 
@@ -37,6 +37,50 @@ npm run dev
 ### Responsive Images
 
 Currently the repo relies on Imgix to create responsive, NextGen images. Out of the box, it uses static images (non-responsive) stored in `static/assets/images`. The code in `src/lib/BannerImage.svelte` and `src/lib/BlogPost.svelte` shows how you can generate responsive images with Imgix when using this code for your own projects. You just need to create an Imgix account and add your own photos. Next, define `VITE_IMGIX_DOMAIN` and `VITE_IMGIX_SECURE_TOKEN` in `.env`, using your account credentials. Now, for example, the banner image for a post will take whatever you define as the featuredImage in the blog post markdown frontmatter. So if the full Imgix path to an image is `my-example-site.imgix.net/folding-camera.jpg`, you can refer to the image in post frontmatter as `folding-camera.jpg`. Let me know if that needs a clearer explanation.
+
+### XML Sitemap
+
+- If your site is completely static, then you can generate an XML sitemap by running
+
+```shell
+npm run generate:sitemap
+```
+
+this will be output to `static/sitemap.xml`.  You can work this into your build process by updating the `build` script in `package.json` to something like:
+
+```shell
+    "build": "npm run generate:manifest && npm run generate:sitemap && svelte-kit build",
+```
+
+The generation javascript code is in the file `generate-sitemap.js` in the root folder of the project.
+
+- Alternatively, the sitemap is automatically served at `https://exmaple.xom/sitemap.xml`.  It is served by the file at `src/routes/sitemap.xml.js`.
+
+
+Either way, make sure your site's URL is defined in `.env` as the `VITE_SITE_URL` variable so the correct URLs are output to the site map.
+
+### Progressive Web App (PWA)
+
+The starter mostly generates PWA config automatically, including adding meta to the HTML head section.  A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices.  The starter can generate the logo in different sizes automatically if you create a 512&nbsp;px&nbsp;&times;&nbsp;512&nbsp;px logo and save it as `static/icon.png`.  Then run
+
+```shell
+npm run generate:manifest
+```
+
+The script outputs the manifest file to `static/manifest.json` and it is then automatically included in your build.
+
+The HTML meta for PWAs is added in the component at `src/lib/components/PWA.svelte`.
+
+You can customise the manifest (including icon file path) by editing `src/lib/config/website.js`. The following variables feed into the generated `manifest.json` file:
+
+- `siteTitle`,
+- `siteShortTitle`,
+- `siteUrl`,
+- `icon` &mdash; path to template icon,
+- `backgroundColor`,
+- `themeColor`.
+
+See <a aria-label="Lean more about Progressive Web Apps in Svelte Kit" href="https://rodneylab.com/sveltekit-pwa/">article on Progressive Web Apps in SvelteKit</a> for more.
 
 ## Building
 
