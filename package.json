@@ -30,7 +30,7 @@
     "prettier": "~2.3.2",
     "prettier-plugin-svelte": "^2.3.1",
     "reading-time": "^1.4.0",
-    "sass": "^1.37.5",
+    "sass": "^1.38.0",
     "sharp": "^0.28.3",
     "stylelint": "^13.13.1",
     "stylelint-a11y": "^1.2.3",
