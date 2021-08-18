@@ -20,7 +20,7 @@ specifiers:
   prettier-plugin-svelte: ^2.3.1
   reading-time: ^1.4.0
   sass: ^1.38.0
-  sharp: ^0.28.3
+  sharp: ^0.29.0
   stylelint: ^13.13.1
   stylelint-a11y: ^1.2.3
   stylelint-config-recommended-scss: ^4.3.0
@@ -52,7 +52,7 @@ devDependencies:
   prettier-plugin-svelte: 2.3.1_prettier@2.3.2+svelte@3.42.1
   reading-time: 1.4.0
   sass: 1.38.0
-  sharp: 0.28.3
+  sharp: 0.29.0
   stylelint: 13.13.1
   stylelint-a11y: 1.2.3_stylelint@13.13.1
   stylelint-config-recommended-scss: 4.3.0_fd1d61e57b9553f3887f804324f52132
@@ -328,7 +328,7 @@ packages:
     dev: true
 
   /@imgix/js-core/3.2.1:
-    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==}
+    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==, tarball: '@imgix/js-core/-/js-core-3.2.1.tgz'}
     dependencies:
       js-base64: 3.6.1
       md5: 2.3.0
@@ -765,10 +765,10 @@ packages:
       simple-swizzle: 0.2.2
     dev: true
 
-  /color/3.2.1:
-    resolution: {integrity: sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==}
+  /color/4.0.1:
+    resolution: {integrity: sha512-rpZjOKN5O7naJxkH2Rx1sZzzBgaiWECc6BYXjeCE6kF0kcASJYbUq02u7JqIHwCb/j3NhV+QhRL2683aICeGZA==}
     dependencies:
-      color-convert: 1.9.3
+      color-convert: 2.0.1
       color-string: 1.6.0
     dev: true
 
@@ -1840,8 +1840,8 @@ packages:
       semver: 5.7.1
     dev: true
 
-  /node-addon-api/3.2.1:
-    resolution: {integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==}
+  /node-addon-api/4.0.0:
+    resolution: {integrity: sha512-ALmRVBFzfwldBfk3SbKfl6+PVMXiCPKZBEfsJqB/EjXAMAI+MfFrEHR+GMRBuI162DihZ1QjEZ8ieYKuRCJ8Hg==}
     dev: true
 
   /node-releases/1.1.74:
@@ -2367,14 +2367,14 @@ packages:
     resolution: {integrity: sha1-BF+XgtARrppoA93TgrJDkrPYkPc=}
     dev: true
 
-  /sharp/0.28.3:
-    resolution: {integrity: sha512-21GEP45Rmr7q2qcmdnjDkNP04Ooh5v0laGS5FDpojOO84D1DJwUijLiSq8XNNM6e8aGXYtoYRh3sVNdm8NodMA==}
-    engines: {node: '>=10'}
+  /sharp/0.29.0:
+    resolution: {integrity: sha512-mdN1Up0eN+SwyForPls59dWO0nx64J1XRQYy5ZiKSADAccGYCB10UAGJHSVG9VObzJdhHqrVJzQcq6gx8USyoA==}
+    engines: {node: '>=12.13.0'}
     requiresBuild: true
     dependencies:
-      color: 3.2.1
+      color: 4.0.1
       detect-libc: 1.0.3
-      node-addon-api: 3.2.1
+      node-addon-api: 4.0.0
       prebuild-install: 6.1.4
       semver: 7.3.5
       simple-get: 3.1.0
