@@ -3,11 +3,11 @@
  *   node ./generate-sitemap.js
  *
  * into your build script (before build).  This will create sitemap.xml in the static/ folder
- * 
+ *
  * alternatively run
- * 
+ *
  *   pnpm run generate:sitemap
- * 
+ *
  * as and when static sitemap needs creating/updating
  */
 

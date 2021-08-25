@@ -46,7 +46,7 @@ Currently the repo relies on Imgix to create responsive, NextGen images. Out of 
 npm run generate:sitemap
 ```
 
-this will be output to `static/sitemap.xml`.  You can work this into your build process by updating the `build` script in `package.json` to something like:
+this will be output to `static/sitemap.xml`. You can work this into your build process by updating the `build` script in `package.json` to something like:
 
 ```shell
     "build": "npm run generate:manifest && npm run generate:sitemap && svelte-kit build",
@@ -54,14 +54,13 @@ this will be output to `static/sitemap.xml`.  You can work this into your build 
 
 The generation JavaScript code is in the file `generate-sitemap.js` in the root folder of the project.
 
-- Alternatively, the sitemap is automatically served at `https://example.com/sitemap.xml`.  It is served by the file at `src/routes/sitemap.xml.js`.
-
+- Alternatively, the sitemap is automatically served at `https://example.com/sitemap.xml`. It is served by the file at `src/routes/sitemap.xml.js`.
 
 Either way, make sure your site's URL is defined in `.env` as the `VITE_SITE_URL` variable so the correct URLs are output to the site map.
 
 ### Progressive Web App (PWA)
 
-The starter mostly generates PWA config automatically, including service worker for offline availability and adding meta to the HTML head section.  A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices.  The starter can generate the logo in different sizes automatically if you create a 512&nbsp;px&nbsp;&times;&nbsp;512&nbsp;px logo and save it as `static/icon.png`.  Then run
+The starter mostly generates PWA config automatically, including service worker for offline availability and adding meta to the HTML head section. A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices. The starter can generate the logo in different sizes automatically if you create a 512&nbsp;px&nbsp;&times;&nbsp;512&nbsp;px logo and save it as `static/icon.png`. Then run
 
 ```shell
 npm run generate:manifest
