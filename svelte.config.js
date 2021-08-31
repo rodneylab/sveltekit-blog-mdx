@@ -3,12 +3,10 @@ import adapter from '@sveltejs/adapter-static';
 import { imagetools } from 'vite-imagetools';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
-// import importAssets from 'svelte-preprocess-import-assets';
 
 const config = {
   extensions: ['.svelte', '.md', '.svelte.md'],
   preprocess: [
-    // importAssets(),
     mdsvex({ extensions: ['.svelte.md', '.md', '.svx'] }),
     preprocess({
       scss: {
