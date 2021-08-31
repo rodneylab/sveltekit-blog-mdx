@@ -1,3 +1,12 @@
+## Unreleased
+
+### Fix
+
+- **seo**: 🤖 add canonical links to all pages
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update package
+- **dependencies**: 💫 update package
+
 ## 0.5.0 (2021-08-16)
 
 ### Fix

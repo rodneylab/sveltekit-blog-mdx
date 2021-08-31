@@ -4,7 +4,9 @@
   import BannerImage from '$lib/components/BannerImage.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
   import website from '$lib/config/website';
+  import { generateImageMeta } from '$lib/utilities/import-image';
 
+  // import.meta.glob('../assets/blog/*.jpg?w=672&metadata');
   export let post;
 
   /* code here shows how to set up Imgix to generate responsive, NextGen images you need to add your
@@ -81,10 +83,12 @@
       }
     : null;
 
-  const bannerImageProps = {
-    image: featuredImage,
-    alt: featuredImageAlt,
-  };
+  // const imageBasename = featuredImage.split('.')[0];
+  // (async () => {
+  //   await import(`../assets/blog/folding-camera/folding-camera.jpg?w=672&metadata`);
+  // })();
+  const bannerImagePropsPromise = generateImageMeta(featuredImageAlt, slug, featuredImage);
+  // console.log('bannerImage: ', bannerImage);
 </script>
 
 <SEO
@@ -101,4 +105,8 @@
   ogSquareImage={ogSquareImageObject}
   twitterImage={twitterImageObject}
 />
-<BannerImage {...bannerImageProps} />
+{#await bannerImagePropsPromise}
+  <p>Loading...</p>
+{:then bannerImageProps}
+  <BannerImage {...bannerImageProps} />
+{/await}
