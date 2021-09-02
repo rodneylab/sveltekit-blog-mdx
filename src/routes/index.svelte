@@ -93,6 +93,14 @@
 </Card>
 <BlogRoll {posts} />
 
+{#each posts as { body }, index}
+  <article aria-posinset={index + 1} aria-setsize={posts.length}>
+    {@html body}
+  </article>
+{:else}
+  <p>No posts yet!</p>
+{/each}
+
 <style lang="scss">
   header > h2 {
     font-size: $font-size-3;
