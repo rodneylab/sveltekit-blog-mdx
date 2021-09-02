@@ -1,3 +1,13 @@
+## 0.5.2 (2021-09-02)
+
+### Fix
+
+- **dependencies**: 💫 update package
+- 💫 add editor settings
+- 💫 update props returned by load functions
+- **.env.example**: 💫 update so works out of box with no Imgix setup
+- ✅ revert premature commit
+
 ## 0.5.1 (2021-08-31)
 
 ### Fix
