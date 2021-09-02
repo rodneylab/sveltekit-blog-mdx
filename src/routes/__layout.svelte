@@ -12,9 +12,8 @@
       const response = await fetch(url);
 
       if (response.ok) {
-        const { posts } = await response.json();
         return {
-          props: { posts },
+          props: { ...(await response.json()) },
         };
       }
 
@@ -27,9 +26,8 @@
     const res = await fetch(url);
 
     if (res.ok) {
-      const { post } = await res.json();
       return {
-        props: { post, slug },
+        props: { ...(await res.json()), slug },
       };
     }
 
