@@ -7,9 +7,8 @@
     const response = await fetch(url);
 
     if (response.ok) {
-      const { posts } = await response.json();
       return {
-        props: { posts },
+        props: { ...(await response.json()) },
       };
     }
 
