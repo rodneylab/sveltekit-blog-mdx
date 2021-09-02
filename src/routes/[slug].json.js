@@ -1,6 +1,5 @@
 import path from 'path';
 import { getPost, getPostsContent } from '$lib/utilities/blog';
-// import { generateImageMeta } from '$lib/utilities/import-image';
 
 export async function get({ params }) {
   const { slug } = params;
