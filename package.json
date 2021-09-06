@@ -10,7 +10,8 @@
     "format": "prettier --write --plugin-search-dir=. .",
     "generate:manifest": "node ./generate-manifest.js",
     "generate:sitemap": "node ./generate-sitemap.js",
-    "prettier:check": "prettier --check --plugin-search-dir=. ."
+    "prettier:check": "prettier --check --plugin-search-dir=. .",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@fontsource/lato": "^4.5.0",
@@ -24,7 +25,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
-    "husky": "^7.0.2",
+    "husky": "^7.0.0",
     "mdsvex": "^0.9.8",
     "object-hash": "^2.2.0",
     "prettier": "~2.3.2",
@@ -50,12 +51,6 @@
   },
   "bugs": {
     "url": "https://github.com/rodneylab/sveltekit-seo/issues"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pnpm run prettier:check && pnpm run lint:scss"
-    }
   },
   "type": "module",
   "dependencies": {

@@ -13,7 +13,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.0
   front-matter: ^4.0.2
-  husky: ^7.0.2
+  husky: ^7.0.0
   mdsvex: ^0.9.8
   object-hash: ^2.2.0
   prettier: ~2.3.2
@@ -334,7 +334,7 @@ packages:
     dev: true
 
   /@imgix/js-core/3.2.1:
-    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==}
+    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==, tarball: '@imgix/js-core/-/js-core-3.2.1.tgz'}
     dependencies:
       js-base64: 3.6.1
       md5: 2.3.0
