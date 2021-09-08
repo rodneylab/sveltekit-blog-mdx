@@ -8,8 +8,6 @@ export async function get({ params }) {
   const articles = await getPostsContent(location);
   const article = articles.find((element) => element.slug === slug);
   const post = await getPost(article.content, true);
-  // const { featuredImage, featuredImageAlt } = post;
-  // const bannerImageProps = await generateImageMeta(featuredImageAlt, slug, featuredImage);
   if (post) {
     return {
       body: JSON.stringify({ post: { ...post, slug } }),
