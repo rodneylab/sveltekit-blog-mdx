@@ -1,3 +1,16 @@
+## 1.0.0 (2021-09-08)
+
+### Feat
+
+- ✨ add responsive images with low res placeholders and remove imgix dependency
+
+### Fix
+
+- **dependencies**: 💫 update packages
+- **seo**: add missing article SchemaOrg
+- **seo**: 🤖 add missing article SchemaOrg
+- **dependencies**: 💫 update packages
+
 ## 0.5.2 (2021-09-02)
 
 ### Fix
