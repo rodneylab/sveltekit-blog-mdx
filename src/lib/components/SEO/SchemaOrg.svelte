@@ -188,7 +188,7 @@
     schemaOrgImageObject,
     schemaOrgWebPage,
     schemaOrgBreadcrumbList,
-    ...(schemaOrgArticle != null ? { schemaOrgArticle } : {}),
+    ...(article ? [schemaOrgArticle] : []),
     schemaOrgPublisher,
   ];
   const schemaOrgObject = {
