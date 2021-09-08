@@ -4,7 +4,7 @@ import srcsetauto from '$lib/assets/blog/folding-camera/folding-camera.jpg?w=134
 import ogImage from '$lib/assets/blog/folding-camera/folding-camera-open-graph.jpg';
 import ogSquareImage from '$lib/assets/blog/folding-camera/folding-camera-open-graph-square.jpg';
 import twitterImage from '$lib/assets/blog/folding-camera/folding-camera-twitter.jpg';
-		
+
 const { height, src, width } = meta;
 
 const data = {

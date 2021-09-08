@@ -4,7 +4,7 @@ import srcsetauto from '$lib/assets/blog/best-medium-format-camera-for-starting-
 import ogImage from '$lib/assets/blog/best-medium-format-camera-for-starting-out/best-medium-format-camera-for-starting-out-open-graph.jpg';
 import ogSquareImage from '$lib/assets/blog/best-medium-format-camera-for-starting-out/best-medium-format-camera-for-starting-out-open-graph-square.jpg';
 import twitterImage from '$lib/assets/blog/best-medium-format-camera-for-starting-out/best-medium-format-camera-for-starting-out-twitter.jpg';
-		
+
 const { height, src, width } = meta;
 
 const data = {

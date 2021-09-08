@@ -103,7 +103,7 @@ ${srcsetImportArray.join('\n')}
 import ogImage from '${ogImageSource}';
 import ogSquareImage from '${ogSquareImageSource}';
 import twitterImage from '${twitterImageSource}';
-		
+
 const { height, src, width } = meta;
 
 const data = {
