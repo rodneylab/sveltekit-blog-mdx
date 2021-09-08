@@ -26,8 +26,9 @@
     const res = await fetch(url);
 
     if (res.ok) {
+      const imageData = await import(`../lib/generated/posts/${path.slice(1)}.js`);
       return {
-        props: { ...(await res.json()), slug },
+        props: { ...(await res.json()), slug, imageData: { ...imageData.default } },
       };
     }
 
@@ -36,6 +37,8 @@
 </script>
 
 <script>
+  import lazyload from 'vanilla-lazyload';
+  import { browser } from '$app/env';
   // Lora - supported variants:
   // weights: [400, 500, 600, 700]
   // styles: italic, normal
@@ -67,7 +70,11 @@
   import TwitterIcon from '$lib/components/Icons/Twitter.svelte';
   import website from '$lib/config/website';
 
-  export let post;
+  export let post, imageData;
+
+  if (browser && !document.lazyloadInstance) {
+    document.lazyloadInstance = new lazyload();
+  }
 
   $: isBlogPost = post !== undefined;
 </script>
@@ -87,7 +94,7 @@
   </header>
   <main class="main-container">
     {#if isBlogPost}
-      <BlogPost {post} />
+      <BlogPost {post} {imageData} />
     {/if}
     <slot />
   </main>

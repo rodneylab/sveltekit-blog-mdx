@@ -1,4 +1,9 @@
 <script>
+  import defaultFeaturedImage from '$lib/assets/home/home.jpg';
+  import defaultOgImage from '$lib/assets/home/home-open-graph.jpg';
+  import defaultOgSquareImage from '$lib/assets/home/home-open-graph-square.jpg';
+  import defaultTwitterImage from '$lib/assets/home/home-twitter.jpg';
+
   import website from '$lib/config/website';
   import { VERTICAL_LINE_ENTITY } from '$lib/constants/entities';
   import OpenGraph from './OpenGraph.svelte';
@@ -37,22 +42,22 @@
 
   // imported props with fallback defaults
   export let featuredImage = {
-    url: 'https://rodneylab-climate-starter.imgix.net/home-open-graph.jpg?ixlib=js-3.2.1&w=1200&h=627&s=81c4407df7d9782806b78d698dbcbc75',
+    url: defaultFeaturedImage,
     alt: defaultAlt,
     width: 672,
     height: 448,
     caption: 'Home page',
   };
   export let ogImage = {
-    url: 'https://rodneylab-climate-starter.imgix.net/home-open-graph.jpg?ixlib=js-3.2.1&w=1200&h=627&s=81c4407df7d9782806b78d698dbcbc75',
+    url: defaultOgImage,
     alt: defaultAlt,
   };
   export let ogSquareImage = {
-    url: 'https://rodneylab-climate-starter.imgix.net/home-open-graph-square.jpg?ixlib=js-3.2.1&w=400&h=400&s=f98299427341f6f66d1c2460bad224e2',
+    url: defaultOgSquareImage,
     alt: defaultAlt,
   };
   export let twitterImage = {
-    url: 'https://rodneylab-climate-starter.imgix.net/home-twitter.jpg?ixlib=js-3.2.0&w=800&h=418&s=1b08b7276d34486234a4e2c1ccb49a74',
+    url: defaultTwitterImage,
     alt: defaultAlt,
   };
 

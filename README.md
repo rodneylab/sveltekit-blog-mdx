@@ -36,7 +36,27 @@ npm run dev
 
 ### Responsive Images
 
-Currently the repo relies on Imgix to create responsive, NextGen images. Out of the box, it uses static images (non-responsive) stored in `static/assets/images`. The code in `src/lib/BannerImage.svelte` and `src/lib/BlogPost.svelte` shows how you can generate responsive images with Imgix when using this code for your own projects. You just need to create an Imgix account and add your own photos. Next, define `VITE_IMGIX_DOMAIN` and `VITE_IMGIX_SECURE_TOKEN` in `.env`, using your account credentials. Now, for example, the banner image for a post will take whatever you define as the featuredImage in the blog post markdown frontmatter. So if the full Imgix path to an image is `my-example-site.imgix.net/folding-camera.jpg`, you can refer to the image in post frontmatter as `folding-camera.jpg`. Let me know if that needs a clearer explanation.
+The starter creates and caches responsive images using the `vite-imagetools` plugin. This is straightforward to use when you know ahead of time which image you want to include. You just import it on the page you want to use it on:
+
+```javascript
+import featuredImageSrc from '$lib/assets/home/home.jpg';
+```
+
+The `vite-imagetools` plugin will then generate and hash the image. See examples in `src/routes/index.svelte`.
+
+The example where you want to have a different featured image for each blog post is a little more complicated, though manageable. In this case, you can run a script (see `generate-responsive-image-data.js`) to iterate though all blog posts, taking the featured image from the blog post front matter. This script can then output the necessary imports into a generated javascript file, one for each blog post (see `src/lib/generated` directory). Finally you can dynamically import that JavaScript file in the blog template load function.
+
+To run the included script at the command like type:
+
+```shell
+pnpm run gen:images
+```
+
+This should be done each time you add new blog posts. It also generates a low resolution placeholder, to minimise Content Layout shift during page load.
+
+For the script to find your blog post images, add them under the `src/lib/assets/blog` folder. In that folder, create a new folder whose name matches the post slug and add the images to the new folder. The name of the file needs to match the name you use is the post frontmatter (for featuredImage, for example).
+
+The script may need some tweaking for your use case. Let me know how it can be improved.
 
 ### XML Sitemap
 

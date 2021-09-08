@@ -10,7 +10,7 @@ const directives = {
   'child-src': ["'self'"],
   'connect-src': ["'self'", 'ws://localhost:*'],
   // 'connect-src': ["'self'", 'ws://localhost:*', 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
-  'img-src': ["'self'", 'data:', import.meta.env.VITE_IMGIX_DOMAIN],
+  'img-src': ["'self'", 'data:'],
   'font-src': ["'self'", 'data:'],
   'form-action': ["'self'"],
   'frame-ancestors': ["'self'"],
