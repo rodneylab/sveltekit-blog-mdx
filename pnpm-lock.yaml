@@ -17,7 +17,7 @@ specifiers:
   object-hash: ^2.2.0
   prettier: ~2.3.2
   prettier-plugin-svelte: ^2.4.0
-  reading-time: ^1.5.0
+  reading-time: 1.4.0
   sass: ^1.41.0
   sharp: ^0.29.1
   stylelint: ^13.13.1
@@ -50,7 +50,7 @@ devDependencies:
   object-hash: 2.2.0
   prettier: 2.3.2
   prettier-plugin-svelte: 2.4.0_prettier@2.3.2+svelte@3.42.6
-  reading-time: 1.5.0
+  reading-time: 1.4.0
   sass: 1.41.0
   sharp: 0.29.1
   stylelint: 13.13.1
@@ -2237,8 +2237,8 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /reading-time/1.5.0:
-    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
+  /reading-time/1.4.0:
+    resolution: {integrity: sha512-0I9aP583rqQhm6T6Y+pYgYaM4w649VHgQPC24xSWXpn/4qRs08Zu6KgXRf0da6/k7IHoC6idm76fU6vz4mmzHQ==}
     dev: true
 
   /redent/3.0.0:
