@@ -1,5 +1,5 @@
 ---
-postTitle: 'Best Medium Format Camera for Starting out'
+postTitle: 'Best Medium Format Camera for Starting Out'
 focusKeyphrase: 'best medium format camera'
 datePublished: '2021-04-07T16:04:42.000+0100'
 lastUpdated: '2021-04-14T10:17:52.000+0100'
