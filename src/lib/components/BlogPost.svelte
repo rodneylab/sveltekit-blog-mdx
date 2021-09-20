@@ -70,3 +70,4 @@
 />
 
 <BannerImage {imageData} />
+<h1>{title}</h1>

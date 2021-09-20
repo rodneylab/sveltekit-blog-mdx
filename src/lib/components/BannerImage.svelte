@@ -35,5 +35,6 @@
     border-radius: $spacing-3;
     background-size: cover;
     background-color: $color-theme-4;
+    margin-bottom: $spacing-12;
   }
 </style>
