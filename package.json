@@ -2,7 +2,7 @@
   "name": "sveltekit-blog-mdx",
   "version": "1.0.0",
   "scripts": {
-    "dev": "svelte-kit dev --port 3060",
+    "dev": "svelte-kit dev --port 3000",
     "build": "npm run generate:manifest && svelte-kit build",
     "preview": "svelte-kit preview --port 3000",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -33,7 +33,7 @@
     "prettier": "~2.3.2",
     "prettier-plugin-svelte": "^2.4.0",
     "reading-time": "1.4.0",
-    "sass": "^1.41.0",
+    "sass": "^1.41.1",
     "sharp": "^0.29.1",
     "stylelint": "^13.13.1",
     "stylelint-a11y": "^1.2.3",
