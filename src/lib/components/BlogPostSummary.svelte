@@ -18,7 +18,7 @@
 
   const handleMouseDown = async () => {
     await prefetch(`/${slug}`);
-    goto(`/${slug}/`);
+    goto(`/${slug}`);
   };
 
   const date = dayjs(datePublished);
