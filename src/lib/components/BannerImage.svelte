@@ -17,11 +17,12 @@
 
 <Image
   {alt}
+  {width}
+  loading="eager"
   {height}
   {src}
   {sources}
   {placeholder}
-  {width}
   {sizes}
   style={'border-radius:12px;margin-bottom:48px'}
 />
