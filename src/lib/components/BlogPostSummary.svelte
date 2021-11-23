@@ -81,8 +81,7 @@
     }
     border-color: $color-theme-4;
     background-color: $color-theme-4;
-    box-shadow: $spacing-0 $spacing-0 $spacing-1 $spacing-0
-      adjust-color($color-theme-4, $alpha: 0.2);
+    box-shadow: $spacing-0 $spacing-0 $spacing-1 $spacing-0 $color-theme-4-alpha-20;
     color: $color-accent;
   }
 </style>

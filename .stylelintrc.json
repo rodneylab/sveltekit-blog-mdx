@@ -25,5 +25,6 @@
     ]
   },
   "ignoreFiles": ["node_modules/*", "src/assets/**", "build/**", "src/lib/styles/normalise.css"],
-  "defaultSeverity": "error"
+  "defaultSeverity": "error",
+  "customSyntax": "postcss-html"
 }

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@use 'sass:color';
+
 /* SCSS Custom Properties Definitions */
 // Widths
 $max-width-none: 'none';
@@ -81,6 +83,8 @@ $color-theme-1: #d62828; // maximum red
 $color-theme-2: #5cc8ff; // maya blue
 $color-theme-3: #fff275; // corn
 $color-theme-4: #1b4079; // dark cornflower blue
+
+$color-theme-4-alpha-20: color.adjust($color-theme-4, $alpha: 0.2);
 
 $color-primary: #005b99;
 $color-text: #0d1821; // rich black FOGRA 29
