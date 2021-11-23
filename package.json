@@ -16,6 +16,7 @@
     "svelte-check": "svelte-check"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^15.0.0",
     "@fontsource/lato": "^4.5.0",
     "@fontsource/lora": "^4.5.1",
     "@fontsource/source-sans-pro": "^4.5.1",
