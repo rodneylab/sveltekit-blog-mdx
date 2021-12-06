@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { compile } from 'mdsvex';
 
-export const BLOG_PATH = 'src/routes';
+export const BLOG_PATH = 'src/content/blog';
 
 export const getPostsContent = (location) => {
   const directories = fs
