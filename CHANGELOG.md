@@ -2,11 +2,11 @@
 
 ### Feat
 
-- 🐝  merge update from dev__post_routing branch
+- 🐝 merge update from dev\_\_post_routing branch
 
 ### Refactor
 
-- 🏄‍♂️  refactor blog templates for cleaner layout based on @matfantinel post
+- 🏄‍♂️ refactor blog templates for cleaner layout based on @matfantinel post
 - 💄 update styling
 - **layout**: 🏄🏽‍♂️ place header and footer in their own components
 
