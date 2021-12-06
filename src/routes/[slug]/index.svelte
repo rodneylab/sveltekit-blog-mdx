@@ -10,13 +10,13 @@
 
     if (res.ok) {
       const imageData = await import(`../../lib/generated/posts/${path.slice(1)}.js`);
-      const markdownPath = `../../content/blog/${slug}/index.md`;
+
       return {
         props: {
           ...(await res.json()),
           slug,
           imageData: { ...imageData.default },
-          page: (await import(/* @vite-ignore */ markdownPath)).default,
+          page: (await import(`../../content/blog/${slug}/index.md`)).default,
         },
       };
     }
