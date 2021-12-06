@@ -1,3 +1,37 @@
+## 1.1.0 (2021-12-06)
+
+### Feat
+
+- 🐝  merge update from dev__post_routing branch
+
+### Refactor
+
+- 🏄‍♂️  refactor blog templates for cleaner layout based on @matfantinel post
+- 💄 update styling
+- **layout**: 🏄🏽‍♂️ place header and footer in their own components
+
+### Fix
+
+- **dependencies**: 💫 update packages
+- **dependencies**: update packages
+- **bannerimage**: 💫 set loading to eager on banner images
+- **bannerimage**: 💫 update BannerImage component to use responive image component
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- **styles.scss**: 💄 add smooth scrolling to html element
+- **package.json**: 💫 update default port
+- **config/ebsite**: 💫 update config
+- 💫 update blog post template
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- **blogpostsummary**: ✅ add prefetch to post links
+- **dependencies**: 💫 update package
+- 💄 tweak styling
+- **post**: ✅ correct typo
+- 💫 roll back reading-time to 1.4.0 updated BlogPost.svelte
+- **dependencies**: 💫 and update packages
+
 ## 1.0.0 (2021-09-08)
 
 ### Feat
