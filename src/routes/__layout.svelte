@@ -1,6 +1,4 @@
 <script>
-  import lazyload from 'vanilla-lazyload';
-  import { browser } from '$app/env';
   // Lora - supported variants:
   // weights: [400, 500, 600, 700]
   // styles: italic, normal
