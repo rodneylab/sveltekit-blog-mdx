@@ -3,7 +3,7 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ fetch }) {
-    const url = `./index.json`;
+    const url = './index.json';
     const response = await fetch(url);
 
     if (response.ok) {
@@ -17,10 +17,10 @@
 </script>
 
 <script>
-  import featuredImageSrc from '$lib/assets/home/home.jpg';
-  import ogImageSrc from '$lib/assets/home/home-open-graph.jpg';
   import ogSquareImageSrc from '$lib/assets/home/home-open-graph-square.jpg';
+  import ogImageSrc from '$lib/assets/home/home-open-graph.jpg';
   import twitterImageSrc from '$lib/assets/home/home-twitter.jpg';
+  import featuredImageSrc from '$lib/assets/home/home.jpg';
   import BlogRoll from '$lib/components/BlogRoll.svelte';
   import Card from '$lib/components/Card.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
