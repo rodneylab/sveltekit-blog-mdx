@@ -5,6 +5,8 @@
     "dev": "svelte-kit dev --port 3030",
     "build": "npm run generate:manifest && svelte-kit build",
     "preview": "svelte-kit preview --port 3030",
+    "check": "svelte-check --fail-on-warnings",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "lint:scss": "stylelint \"src/**/*.{css,scss,svelte}\"",
     "format": "prettier --write --plugin-search-dir=. .",
@@ -12,8 +14,7 @@
     "generate:manifest": "node ./generate-manifest.js",
     "generate:sitemap": "node ./generate-sitemap.js",
     "prettier:check": "prettier --check --plugin-search-dir=. .",
-    "prepare": "husky install",
-    "svelte-check": "svelte-check"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^15.0.0",
