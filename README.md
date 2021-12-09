@@ -15,11 +15,13 @@
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/rodneylab/sveltekit-blog-mdx)
 
-SvelteKit blog starter which helps you hit the ground running when creating a new SvelteKit blog. The project <a aria-label="Read about how to customise the P W A functionality" href="https://rodneylab.com/sveltekit-pwa/">creates a Progressive Web App (PWA)</a> out of the box. You just need to customise with your logos etc.
+SvelteKit blog starter to help you get going on your next Svelte blog site. The project <a aria-label="Read about how to customise the P W A functionality" href="https://rodneylab.com/sveltekit-pwa/">creates a Progressive Web App (PWA)</a> out of the box. You just need to customise with your logos etc.
 
 <img src="./images/rodneylab-github-sveltekit-blog-mdx-lighthouse.png" alt="Rodney Lab sveltekit-blog-mdx Github banner">
 
-See the [Sveltekit Blog Starter blog post on the Rodney Lab site](https://rodneylab.com/sveltekit-blog-starter/) for some explanation of what's inside and how to customise. Please drop questions into a comment at the bottom of that page. Here's the quick start:
+See the [Sveltekit Blog Starter blog post on the Rodney Lab site](https://rodneylab.com/sveltekit-blog-starter/) for some explanation of what's inside and how to customise. Please drop questions into a comment at the bottom of that page.
+
+Here's the quick start:
 
 Everything you need to build a Svelte blog site, powered by [`sveltekit-blog-mdx`](https://github.com/rodneylab/sveltekit-blog-mdx.git).
 
@@ -44,7 +46,7 @@ import featuredImageSrc from '$lib/assets/home/home.jpg';
 
 The `vite-imagetools` plugin will then generate and hash the image. See examples in `src/routes/index.svelte`.
 
-The example where you want to have a different featured image for each blog post is a little more complicated, though manageable. In this case, you can run a script (see `generate-responsive-image-data.js`) to iterate though all blog posts, taking the featured image from the blog post front matter. This script can then output the necessary imports into a generated javascript file, one for each blog post (see `src/lib/generated` directory). Finally you can dynamically import that JavaScript file in the blog template load function.
+The example where you want to have a different featured image for each blog post is a little more complicated, though manageable. In this case, you can run a script (see `generate-responsive-image-data.js`) to iterate though all blog posts, taking the featured image from the blog post front matter. This script can then output the necessary imports into a generated JavaScript file, one for each blog post (see `src/lib/generated` directory). Finally you can dynamically import that JavaScript file in the blog template load function.
 
 To run the included script at the command like type:
 
@@ -74,7 +76,7 @@ this will be output to `static/sitemap.xml`. You can work this into your build p
 
 The generation JavaScript code is in the file `generate-sitemap.js` in the root folder of the project.
 
-- Alternatively, the sitemap is automatically served at `https://example.com/sitemap.xml`. It is served by the file at `src/routes/sitemap.xml.js`.
+- Alternatively, (if your app has server side rendering) the sitemap is automatically served at `https://example.com/sitemap.xml`. It is served by the file at `src/routes/sitemap.xml.js`.
 
 Either way, make sure your site's URL is defined in `.env` as the `VITE_SITE_URL` variable so the correct URLs are output to the site map.
 
@@ -115,6 +117,7 @@ npm run build
 .
 ├── README.md
 ├── generate-manifest.js
+├── generate-responsive-image-data.js
 ├── generate-sitemap.js
 ├── jsconfig.json
 ├── netlify.toml
@@ -126,25 +129,52 @@ npm run build
 │   │       ├── best-medium-format-camera-for-starting-out
 │   │       ├── folding-camera
 │   │       └── twin-lens-reflex-camera
+│   ├── global.d.ts
 │   ├── hooks.js
 │   ├── lib
+│   │   ├── assets
+│   │   │   ├── blog
+│   │   │   └── home
 │   │   ├── components
 │   │   │   ├── BannerImage.svelte
-│   │   │   ├── ...
+│   │   │   └── ...
 │   │   ├── config
 │   │   │   └── website.js
 │   │   ├── constants
 │   │   │   └── entities.js
+│   │   ├── generated
+│   │   │   └── posts
 │   │   ├── styles
 │   │   └── utilities
-│   │       └── blog.js
-│   └── routes
-│       ├── [slug].json.js
-│       ├── [slug].svelte
-│       ├── __layout.svelte
-│       ├── contact.svelte
-│       ├── index.json.js
-│       └── index.svelte
+│   │       ├── blog.js
+│   │       ├── file.js
+│   │       └── image.js
+│   ├── routes
+│   │   ├── [slug]
+│   │   │   ├── __layout.svelte
+│   │   │   ├── index.json.js
+│   │   │   └── index.svelte
+│   │   ├── __error.svelte
+│   │   ├── __layout.svelte
+│   │   ├── contact.svelte
+│   │   ├── index.json.js
+│   │   ├── index.svelte
+│   │   └── sitemap.xml.js
+│   └── service-worker.js
+├── static
+│   ├── assets
+│   ├── favicon.png
+│   ├── icon.png
+│   ├── icons
+│   │   ├── icon-128x128.png
+│   │   ├── icon-144x144.png
+│   │   ├── icon-152x152.png
+│   │   ├── icon-192x192.png
+│   │   ├── icon-256x256.png
+│   │   └── icon-512x512.png
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── sitemap.xml
 └── svelte.config.js
 ```
 
@@ -156,11 +186,11 @@ npm run build
 
 ### `src/content`
 
-- The `src/content/blog` is where we need to put our blog posts. Just clean out the sample content and replace it with your views on the world! There is a separate folder for each post, which allows you to keep images, video and other related media specific to a post better organised. We set the browser path for the based based on this folder name, so keep that in mind when naming the folders. Write the actual post in a file called `index.md` within post's folder. Although the file has an `.md` extension, you can write Svelte in it.
+- The `src/content/blog` is where we need to put our blog posts. Just clean out the sample content and replace it with your views on the world! There is a separate folder for each post, which allows you to keep images, video and other related media specific to a post better organised. We set the browser path from this folder name, so keep that in mind when naming the folders. Write the actual post in a file called `index.md` within post's folder. Although the file has an `.md` extension, you can write Svelte in it.
 
 ### `src`
 
-- `hooks.js` we define Content Security Policy (CSP) and other HTTP security headers in here. More on this later.
+- `hooks.js` we define Content Security Policy (CSP) and other HTTP security headers in here, effective for server side rendered apps. See <a aria-label="Open post on Svelte Kit stati site H T T P headers" href="https://rodneylab.com/sveltekit-static-site-http-headers/">post on SvelteKit static site HTTP headers</a> to see how to set up CSP etc for static sites.
 
 ### `src/components`
 
@@ -178,8 +208,8 @@ npm run build
 
 ### `src/routes`
 
-- `src/routes/[slug].json.js` this is essentially a template for blog post data. One of these file is generated at build for each blog post. It is used to extract data needed in the Svelte file used to generate the post's HTML.
+- `src/routes/[slug]/index.json.js` this is essentially a template for blog post data. One of these files is generated at build for each blog post. It is used to extract data needed in the Svelte file used to generate the post's HTML.
 
-- `src/routes/[slug].svelte` similarly to the previous file, one of these is generated for each blog post. This time it is the Svelte code which SvelteKit uses to generate the HTML for our blog posts.
+- `src/routes/[slug]/index.svelte` similarly to the previous file, one of these is generated for each blog post. This time it is the Svelte code which SvelteKit uses to generate the HTML and JavaScript for our blog posts.
 
 I mention most of the other files in the <a aria-label="Read recent Rodney Lab post on Getting Started with Svelte Kit" href="https://rodneylab.com/getting-started-with-sveltekit/">Getting Started with SvelteKit blog post</a>, but let me know if I have missed anything which needs more explanation.
