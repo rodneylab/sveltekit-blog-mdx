@@ -55,10 +55,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodneylab/sveltekit-seo"
+    "url": "https://github.com/rodneylab/sveltekit-blog-mdx"
   },
   "bugs": {
-    "url": "https://github.com/rodneylab/sveltekit-seo/issues"
+    "url": "https://github.com/rodneylab/sveltekit-blog-mdx/issues"
   },
   "type": "module"
 }
