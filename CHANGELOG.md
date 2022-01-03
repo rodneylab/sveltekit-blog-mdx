@@ -1,3 +1,20 @@
+## Unreleased
+
+### Fix
+
+- 💫 update stylelint config
+- 💫 replace deprecated page Load function parameter with url and params
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- 💫 update feather icons
+- 💫 bump cloud build node version to 16
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+
+### Refactor
+
+- 🏄‍♂️ update blog post template
+
 ## 1.1.0 (2021-12-06)
 
 ### Feat
