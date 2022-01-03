@@ -42,7 +42,6 @@
     "sass": "^1.45.2",
     "sharp": "^0.29.3",
     "stylelint": "^14.2.0",
-    "stylelint-a11y": "^1.2.3",
     "stylelint-config-recommended-scss": "^5.0.2",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-scss": "^4.1.0",
