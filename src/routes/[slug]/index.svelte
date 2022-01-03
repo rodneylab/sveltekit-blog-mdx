@@ -2,14 +2,13 @@
   /**
    * @type {import('@sveltejs/kit').Load}
    */
-  export async function load({ page, fetch }) {
-    const { path } = page;
-    const { slug } = page.params;
-    const url = `${page.path}.json`;
-    const res = await fetch(url);
+  export async function load({ fetch, params, url }) {
+    const { pathname } = url;
+    const { slug } = params;
+    const res = await fetch(`${pathname}.json`);
 
     if (res.ok) {
-      const imageData = await import(`../../lib/generated/posts/${path.slice(1)}.js`);
+      const imageData = await import(`../../lib/generated/posts/${pathname.slice(1)}.js`);
 
       return {
         props: {
