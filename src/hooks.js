@@ -67,31 +67,32 @@ const csp = Object.entries(directives)
   .map(([key, arr]) => key + ' ' + arr.join(' '))
   .join('; ');
 
-export async function handle({ request, resolve }) {
-  const response = await resolve(request);
-  console.log('handle', { ...response.headers });
-  return {
-    ...response,
-    headers: {
-      ...response.headers,
-      'X-Frame-Options': 'SAMEORIGIN',
-      'Referrer-Policy': 'no-referrer',
-      'Permissions-Policy':
-        'accelerometer=(), autoplay=(), camera=(), document-domain=(), encrypted-media=(), fullscreen=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()',
-      'X-Content-Type-Options': 'nosniff',
-      /* Switch from Content-Security-Policy-Report-Only to Content-Security-Policy once you are satisifed policy is what you want
-       * on switch comment out the Report-Only line
-       */
-      'Content-Security-Policy-Report-Only': csp,
-      // 'Content-Security-Policy': csp,
-      'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-      // remove/change lines below if you do not want to use sentry for reporting
-      'Expect-CT': `max-age=86400, report-uri="https://sentry.io/api/${
-        import.meta.env.VITE_SENTRY_PROJECT_ID
-      }/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"`,
-      'Report-To': `{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${
-        import.meta.env.VITE_SENTRY_PROJECT_ID
-      }/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`,
-    },
-  };
+export async function handle({ event, resolve }) {
+  const response = await resolve(event);
+  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  response.headers.set('Referrer-Policy', 'no-referrer');
+  response.headers.set(
+    'Permissions-Policy',
+    'accelerometer=(), autoplay=(), camera=(), document-domain=(), encrypted-media=(), fullscreen=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()',
+  );
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  /* Switch from Content-Security-Policy-Report-Only to Content-Security-Policy once you are satisifed policy is what you want
+   * on switch comment out the Report-Only line
+   */
+  response.headers.set('Content-Security-Policy-Report-Only', csp);
+  // response.headers.set('Content-Security-Policy', csp);
+  response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  response.headers.set(
+    'Expect-CT',
+    `max-age=86400, report-uri="https://sentry.io/api/${
+      import.meta.env.VITE_SENTRY_PROJECT_ID
+    }/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"`,
+  );
+  response.headers.set(
+    'Report-To',
+    `{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${
+      import.meta.env.VITE_SENTRY_PROJECT_ID
+    }/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`,
+  );
+  return response;
 }
