@@ -60,7 +60,7 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 export async function get() {
   const __dirname = path.resolve();
   const location = path.join(__dirname, BLOG_PATH);
-  const postsContent = await getPostsContent(location);
+  const postsContent = getPostsContent(location);
   const posts = await getPosts(postsContent, false);
 
   const pages = Object.keys(import.meta.glob('/src/routes/**/!(_)*.svelte'))
