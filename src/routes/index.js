@@ -7,5 +7,5 @@ export async function get() {
   const location = path.join(__dirname, BLOG_PATH);
   const postsContent = getPostsContent(location);
   const posts = await getPosts(postsContent, false);
-  return { body: JSON.stringify({ posts }) };
+  return { body: { ...{ posts } } };
 }

@@ -1,21 +1,3 @@
-<script context="module">
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
-  export async function load({ fetch }) {
-    const url = './index.json';
-    const response = await fetch(url);
-
-    if (response.ok) {
-      return {
-        props: { ...(await response.json()) },
-      };
-    }
-
-    return {};
-  }
-</script>
-
 <script>
   import ogSquareImageSrc from '$lib/assets/home/home-open-graph-square.jpg';
   import ogImageSrc from '$lib/assets/home/home-open-graph.jpg';
