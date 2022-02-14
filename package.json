@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "svelte-kit dev --port 3000",
     "build": "npm run generate:manifest && svelte-kit build",
-    "preview": "svelte-kit preview --port 3030",
+    "preview": "svelte-kit preview --port 3000",
     "check": "svelte-check --fail-on-hints",
     "check:watch": "svelte-check --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
