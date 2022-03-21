@@ -1,5 +1,5 @@
-<span role="img" aria-label="wire">
-  <span role="img" aria-label="wire" style={{ width: '24px', height: '24px' }}>
+<span role="img" aria-label="tik tok">
+  <span role="img" aria-label="tik tok">
     <svg
       aria-hidden="true"
       focusable="false"

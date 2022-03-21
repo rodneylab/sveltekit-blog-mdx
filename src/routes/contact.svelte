@@ -51,7 +51,7 @@
       </li>
       <li>
         <FacebookIcon /><ExternalLink
-          aria-label="D M Rodney Lab on Facebook Messenger"
+          ariaLabel="D M Rodney Lab on Facebook Messenger"
           href={`https://m.me.${facebookPageName}`}
         >
           <span class="contact-address"> {facebookPageName}</span>
@@ -59,7 +59,7 @@
       </li>
       <li>
         <TwitterIcon /><ExternalLink
-          aria-label="D M Rodney Lab on Twitter"
+          ariaLabel="D M Rodney Lab on Twitter"
           href={`https://twitter.com/messages/compose?recipient-id=${twitterUserId}`}
         >
           <span class="contact-address">@{twitterUsername}</span>
@@ -67,7 +67,7 @@
       </li>
       <li>
         <TelegramIcon /><ExternalLink
-          aria-label="Message Rodney Lab on Telegram"
+          ariaLabel="Message Rodney Lab on Telegram"
           href={`https://t.me/${telegramUsername}`}
         >
           <span class="contact-address">{telegramUsername}</span>

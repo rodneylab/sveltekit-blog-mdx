@@ -8,12 +8,20 @@
   export let seoMetaDescription;
   export let slug;
 
+  /**
+   * @param event {MouseEvent} - click
+   */
   const handleMouseEnter = (event) => {
-    event.target.style.cursor = 'pointer';
+    let element = /** @type {HTMLElement} */ (event.target);
+    element.style.cursor = 'pointer';
   };
 
+  /**
+   * @param event {MouseEvent} - click
+   */
   const handleMouseLeave = (event) => {
-    event.target.style.cursor = 'default';
+    let element = /** @type {HTMLElement} */ (event.target);
+    element.style.cursor = 'default';
   };
 
   const handleMouseDown = async () => {

@@ -2,7 +2,12 @@
   import hash from 'object-hash';
   export let article = false;
   export let author;
+
+  /**
+   * @type {{ name: string; slug: string }[]}
+   */
   export let breadcrumbs;
+
   export let datePublished;
   export let entity;
   export let lastUpdated;
@@ -20,6 +25,10 @@
   export let telegramUsername;
   export let tiktokUsername;
   export let twitterUsername;
+
+  /**
+   * @type {{ url: string; faviconWidth: number; faviconHeight: number } | null}
+   */
   export let entityMeta = null;
 
   const entityHash = hash({ author }, { algorithm: 'md5' });
