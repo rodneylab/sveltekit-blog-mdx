@@ -84,7 +84,7 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     .join('')}</urlset>`;
 
 const location = path.join(__dirname, BLOG_PATH);
-const pages = getPages(location);
+const pages = getPages('src/routes');
 const posts = getPosts(location);
 
 fs.writeFileSync(sitemapFile, render(pages, posts));
