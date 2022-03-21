@@ -2,6 +2,7 @@ import path from 'path';
 
 import { BLOG_PATH, getPosts, getPostsContent } from '$lib/utilities/blog';
 
+/** @type {import('./index').RequestHandler} */
 export async function get() {
   const __dirname = path.resolve();
   const location = path.join(__dirname, BLOG_PATH);

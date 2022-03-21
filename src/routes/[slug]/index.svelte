@@ -1,7 +1,5 @@
 <script context="module">
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
+  /** @type {import('./index').Load} */
   export async function load({ fetch, params, url }) {
     const { pathname } = url;
     const { slug } = params;
@@ -20,7 +18,10 @@
       };
     }
 
-    return {};
+    return {
+      error: `No page ${slug} :/`,
+      status: 404,
+    };
   }
 </script>
 

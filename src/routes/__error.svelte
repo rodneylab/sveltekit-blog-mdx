@@ -1,4 +1,5 @@
 <script context="module">
+  /** @type {import('./__error').ErrorLoad} */
   export function load({ error, status }) {
     return {
       props: {
