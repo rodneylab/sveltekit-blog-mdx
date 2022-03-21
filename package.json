@@ -2,9 +2,9 @@
   "name": "sveltekit-blog-mdx",
   "version": "2.0.0",
   "scripts": {
-    "dev": "svelte-kit dev --port 3000",
+    "dev": "svelte-kit dev --port 3030",
     "build": "npm run generate:manifest && svelte-kit build",
-    "preview": "svelte-kit preview --port 3000",
+    "preview": "svelte-kit preview --port 3030",
     "check": "svelte-check --fail-on-hints",
     "check:watch": "svelte-check --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
