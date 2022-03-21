@@ -19,7 +19,6 @@
     }
 
     return {
-      error: `No page ${slug} :/`,
       status: 404,
     };
   }

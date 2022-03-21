@@ -1,7 +1,7 @@
 import path from 'path';
 import { BLOG_PATH, getPost, getPostsContent } from '$lib/utilities/blog';
 
-/** @type {import('./index').RequestHandler} */
+/** @type {import('./index.json').RequestHandler} */
 export async function get({ params }) {
   const { slug } = params;
   const __dirname = path.resolve();
@@ -15,7 +15,6 @@ export async function get({ params }) {
     };
   }
   return {
-    body: `No post: ${slug}`,
     status: 404,
   };
 }
