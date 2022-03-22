@@ -46,11 +46,11 @@
   <div class="contact-details">
     <ul>
       <li>
-        <EmailIcon />
+        <span class="icon"><EmailIcon /></span>
         <span class="contact-address">{contactEmail}</span>
       </li>
       <li>
-        <FacebookIcon /><ExternalLink
+        <span class="icon"><FacebookIcon /></span><ExternalLink
           ariaLabel="D M Rodney Lab on Facebook Messenger"
           href={`https://m.me.${facebookPageName}`}
         >
@@ -58,7 +58,7 @@
         </ExternalLink>
       </li>
       <li>
-        <TwitterIcon /><ExternalLink
+        <span class="icon"><TwitterIcon /></span><ExternalLink
           ariaLabel="D M Rodney Lab on Twitter"
           href={`https://twitter.com/messages/compose?recipient-id=${twitterUserId}`}
         >
@@ -66,7 +66,7 @@
         </ExternalLink>
       </li>
       <li>
-        <TelegramIcon /><ExternalLink
+        <span class="icon"><TelegramIcon /></span><ExternalLink
           ariaLabel="Message Rodney Lab on Telegram"
           href={`https://t.me/${telegramUsername}`}
         >
@@ -74,7 +74,7 @@
         </ExternalLink>
       </li>
       <li>
-        <WireIcon />
+        <span class="icon"><WireIcon /></span>
         <span class="contact-address">{wireUsername}</span>
       </li>
     </ul>
@@ -91,13 +91,16 @@
       align-items: center;
 
       li {
-        display: flex;
+        display: inline;
         padding-left: $spacing-2;
         font-size: $font-size-2;
       }
     }
   }
 
+  .icon {
+    vertical-align: middle;
+  }
   .contact-address {
     margin-left: $spacing-2;
   }

@@ -1,25 +1,22 @@
-<span role="img" aria-label="wire">
-  <span role="img" aria-label="wire">
-    <svg
-      aria-hidden="true"
-      focusable="false"
-      data-prefix="fab"
-      data-icon="telegram-plane"
-      class="svg-inline--fa fa-telegram-plane fa-w-14"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 448 512"
-      ><path
-        fill="currentColor"
-        d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
-      /></svg
-    >
-  </span>
-</span>
+<script>
+  import Icon, { addCollection } from '@iconify/svelte/dist/OfflineIcon.svelte';
 
-<style>
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-</style>
+  export let label = 'Telegram app icon';
+  export let colour = 'inherit';
+  export let ariaHidden = false;
+
+  addCollection({
+    prefix: 'simple-icons',
+    icons: {
+      telegram: {
+        body: '<path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345c-.48.33-.913.49-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789c.027-.216.325-.437.893-.663c3.498-1.524 5.83-2.529 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635z"/>',
+      },
+    },
+    width: 24,
+    height: 24,
+  });
+
+  // https://api.iconify.design/simple-icons.json?icons=telegram
+</script>
+
+<Icon icon="simple-icons:telegram" {label} {ariaHidden} color={colour} />

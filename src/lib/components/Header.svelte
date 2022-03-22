@@ -4,7 +4,7 @@
 
 <header class="header-container">
   <a aria-label="Jump to Home page" class="hover-jump" href="./"
-    ><span class="logo"><CameraIcon size="96" /></span></a
+    ><span class="logo"><CameraIcon width={96} /></span></a
   >
   <nav class="nav">
     <ul>

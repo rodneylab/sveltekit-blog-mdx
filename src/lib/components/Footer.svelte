@@ -79,6 +79,7 @@
       li {
         display: flex;
         margin: $spacing-0 $spacing-4 $spacing-0 $spacing-0;
+        font-size: $font-size-3;
       }
     }
   }
