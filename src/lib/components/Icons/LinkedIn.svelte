@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=linkedin
 </script>
 
-<Icon icon="simple-icons:linkedin" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:linkedin" {ariaHidden} aria-label={label} color={colour} />

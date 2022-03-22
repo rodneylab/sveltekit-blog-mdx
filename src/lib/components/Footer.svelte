@@ -21,7 +21,7 @@
       rel="noopener noreferrer">Rodney Lab</a
     >. Copyright {COPYRIGHT_ENTITY} 2021–2022.
   </div>
-  <nav class="footer-icons">
+  <nav class="footer-icons" aria-label="Links to external sites">
     <ul>
       <li class="hover-jump">
         <ExternalLink

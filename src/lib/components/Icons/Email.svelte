@@ -21,4 +21,4 @@
   // https://api.iconify.design/simple-line-icons.json?icons=envelope
 </script>
 
-<Icon icon="simple-line-icons:envelope" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-line-icons:envelope" aria-label={label} {ariaHidden} color={colour} />

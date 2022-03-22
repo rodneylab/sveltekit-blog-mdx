@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=tiktok
 </script>
 
-<Icon icon="simple-icons:tiktok" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:tiktok" {ariaHidden} aria-label={label} color={colour} />

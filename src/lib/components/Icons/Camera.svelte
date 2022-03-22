@@ -20,4 +20,4 @@
   // https://api.iconify.design/simple-line-icons.json?icons=camera
 </script>
 
-<Icon icon="simple-line-icons:camera" {label} {ariaHidden} color={colour} {width} />
+<Icon icon="simple-line-icons:camera" {ariaHidden} aria-label={label} color={colour} {width} />

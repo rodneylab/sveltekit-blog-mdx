@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=github
 </script>
 
-<Icon icon="simple-icons:github" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:github" {ariaHidden} aria-label={label} color={colour} />

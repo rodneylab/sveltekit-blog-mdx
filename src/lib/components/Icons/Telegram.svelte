@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=telegram
 </script>
 
-<Icon icon="simple-icons:telegram" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:telegram" {ariaHidden} aria-label={label} color={colour} />

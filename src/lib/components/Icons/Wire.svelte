@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=wire
 </script>
 
-<Icon icon="simple-icons:wire" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:wire" {ariaHidden} aria-label={label} color={colour} />

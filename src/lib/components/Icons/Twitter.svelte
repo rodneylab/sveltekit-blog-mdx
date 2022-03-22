@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=twitter
 </script>
 
-<Icon icon="simple-icons:twitter" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:twitter" {ariaHidden} aria-label={label} color={colour} />

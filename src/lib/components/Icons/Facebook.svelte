@@ -19,4 +19,4 @@
   // https://api.iconify.design/simple-icons.json?icons=facebook
 </script>
 
-<Icon icon="simple-icons:facebook" {label} {ariaHidden} color={colour} />
+<Icon icon="simple-icons:facebook" {ariaHidden} aria-label={label} color={colour} />
