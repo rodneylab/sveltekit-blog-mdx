@@ -13,7 +13,6 @@
 
 import website from '$lib/config/website';
 import { getPosts, getPostsContent } from '$lib/utilities/blog';
-// import path from 'path';
 
 const { siteUrl } = website;
 
@@ -67,7 +66,7 @@ function render(pages, posts) {
 export async function get() {
   // const __dirname = path.resolve();
   // const location = path.join(__dirname, BLOG_PATH);
-  const postsContent = await getPostsContent();
+  const postsContent = getPostsContent();
   const posts = await getPosts(postsContent, false);
 
   const pages = Object.keys(import.meta.glob('/src/routes/**/!(_)*.svelte'))
