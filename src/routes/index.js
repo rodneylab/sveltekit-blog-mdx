@@ -1,12 +1,8 @@
-import path from 'path';
-
-import { BLOG_PATH, getPosts, getPostsContent } from '$lib/utilities/blog';
+import { getPosts, getPostsContent } from '$lib/utilities/blog';
 
 /** @type {import('./index').RequestHandler} */
 export async function get() {
-  const __dirname = path.resolve();
-  const location = path.join(__dirname, BLOG_PATH);
-  const postsContent = getPostsContent(location);
+  const postsContent = await getPostsContent();
   const posts = await getPosts(postsContent, false);
   return { body: { ...{ posts } } };
 }

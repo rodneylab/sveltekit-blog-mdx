@@ -12,12 +12,18 @@
  */
 
 import website from '$lib/config/website';
-import { BLOG_PATH, getPosts, getPostsContent } from '$lib/utilities/blog';
-import path from 'path';
+import { getPosts, getPostsContent } from '$lib/utilities/blog';
+// import path from 'path';
 
 const { siteUrl } = website;
 
-const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
+/**
+ * @returns string
+ * @param {string[]} pages
+ * @param {{lastUpdated: string; slug: string;}[]} posts
+ */
+function render(pages, posts) {
+  return `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
@@ -56,11 +62,12 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     })
     .join('')}
 </urlset>`;
+}
 
 export async function get() {
-  const __dirname = path.resolve();
-  const location = path.join(__dirname, BLOG_PATH);
-  const postsContent = getPostsContent(location);
+  // const __dirname = path.resolve();
+  // const location = path.join(__dirname, BLOG_PATH);
+  const postsContent = await getPostsContent();
   const posts = await getPosts(postsContent, false);
 
   const pages = Object.keys(import.meta.glob('/src/routes/**/!(_)*.svelte'))
