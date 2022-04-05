@@ -170,6 +170,11 @@ button {
   touch-action: manipulation;
 }
 
+button:focus,
+button:hover {
+  cursor: pointer;
+}
+
 h1 > a {
   color: inherit;
   text-decoration: none;
