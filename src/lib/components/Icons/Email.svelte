@@ -4,6 +4,7 @@
   export let label = 'Email icon';
   export let colour = 'inherit';
   export let ariaHidden = false;
+  export let width = 24;
 
   addCollection({
     prefix: 'simple-line-icons',
@@ -21,4 +22,4 @@
   // https://api.iconify.design/simple-line-icons.json?icons=envelope
 </script>
 
-<Icon icon="simple-line-icons:envelope" aria-label={label} {ariaHidden} color={colour} />
+<Icon icon="simple-line-icons:envelope" aria-label={label} {ariaHidden} color={colour} {width} />

@@ -4,6 +4,7 @@
   export let label = 'Facebook icon';
   export let colour = 'inherit';
   export let ariaHidden = false;
+  export let width = 24;
 
   addCollection({
     prefix: 'simple-icons',
@@ -19,4 +20,4 @@
   // https://api.iconify.design/simple-icons.json?icons=facebook
 </script>
 
-<Icon icon="simple-icons:facebook" {ariaHidden} aria-label={label} color={colour} />
+<Icon icon="simple-icons:facebook" {ariaHidden} aria-label={label} color={colour} {width} />

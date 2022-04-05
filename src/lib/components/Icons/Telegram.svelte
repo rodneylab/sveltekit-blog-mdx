@@ -4,6 +4,7 @@
   export let label = 'Telegram app icon';
   export let colour = 'inherit';
   export let ariaHidden = false;
+  export let width = 24;
 
   addCollection({
     prefix: 'simple-icons',
@@ -19,4 +20,4 @@
   // https://api.iconify.design/simple-icons.json?icons=telegram
 </script>
 
-<Icon icon="simple-icons:telegram" {ariaHidden} aria-label={label} color={colour} />
+<Icon icon="simple-icons:telegram" {ariaHidden} aria-label={label} color={colour} {width} />
