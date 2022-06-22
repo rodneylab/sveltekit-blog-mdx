@@ -13,7 +13,7 @@ specifiers:
   commitlint: ^17.0.2
   dayjs: ^1.11.3
   dotenv: ^16.0.1
-  eslint: ^8.17.0
+  eslint: ^8.18.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
   front-matter: ^4.0.2
@@ -22,11 +22,11 @@ specifiers:
   object-hash: ^3.0.0
   postcss: ^8.4.14
   postcss-html: ^1.4.1
-  prettier: ~2.6.2
+  prettier: ~2.7.1
   prettier-plugin-svelte: ^2.7.0
   reading-time: 1.4.0
   sass: ^1.52.3
-  sharp: '0.30'
+  sharp: '>=0.30.5'
   stylelint: ^14.9.1
   stylelint-config-recommended-scss: ^6.0.0
   stylelint-config-standard: ^26.0.0
@@ -51,17 +51,17 @@ devDependencies:
   commitlint: 17.0.2
   dayjs: 1.11.3
   dotenv: 16.0.1
-  eslint: 8.17.0
-  eslint-config-prettier: 8.5.0_eslint@8.17.0
-  eslint-plugin-svelte3: 4.0.0_3aft6623ti3qaietkx5ojwfh2e
+  eslint: 8.18.0
+  eslint-config-prettier: 8.5.0_eslint@8.18.0
+  eslint-plugin-svelte3: 4.0.0_wy4erphnvhealet26qderqv6bu
   front-matter: 4.0.2
   husky: 8.0.1
   mdsvex: 0.10.6_svelte@3.48.0
   object-hash: 3.0.0
   postcss: 8.4.14
   postcss-html: 1.4.1
-  prettier: 2.6.2
-  prettier-plugin-svelte: 2.7.0_kkjbqzpydplecjtkxrgomroeru
+  prettier: 2.7.1
+  prettier-plugin-svelte: 2.7.0_nakrehnrzdf7fdea5k3a4dfy4m
   reading-time: 1.4.0
   sass: 1.52.3
   sharp: 0.30.6
@@ -1224,22 +1224,22 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.5.0_eslint@8.17.0:
+  /eslint-config-prettier/8.5.0_eslint@8.18.0:
     resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      eslint: 8.17.0
+      eslint: 8.18.0
     dev: true
 
-  /eslint-plugin-svelte3/4.0.0_3aft6623ti3qaietkx5ojwfh2e:
+  /eslint-plugin-svelte3/4.0.0_wy4erphnvhealet26qderqv6bu:
     resolution: {integrity: sha512-OIx9lgaNzD02+MDFNLw0GEUbuovNcglg+wnd/UY0fbZmlQSz7GlQiQ1f+yX0XvC07XPcDOnFcichqI3xCwp71g==}
     peerDependencies:
       eslint: '>=8.0.0'
       svelte: ^3.2.0
     dependencies:
-      eslint: 8.17.0
+      eslint: 8.18.0
       svelte: 3.48.0
     dev: true
 
@@ -1251,13 +1251,13 @@ packages:
       estraverse: 5.3.0
     dev: true
 
-  /eslint-utils/3.0.0_eslint@8.17.0:
+  /eslint-utils/3.0.0_eslint@8.18.0:
     resolution: {integrity: sha512-uuQC43IGctw68pJA1RgbQS8/NP7rch6Cwd4j3ZBtgo4/8Flj4eGE7ZYSZRN3iq5pVUv6GPdW5Z1RFleo84uLDA==}
     engines: {node: ^10.0.0 || ^12.0.0 || >= 14.0.0}
     peerDependencies:
       eslint: '>=5'
     dependencies:
-      eslint: 8.17.0
+      eslint: 8.18.0
       eslint-visitor-keys: 2.1.0
     dev: true
 
@@ -1271,8 +1271,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /eslint/8.17.0:
-    resolution: {integrity: sha512-gq0m0BTJfci60Fz4nczYxNAlED+sMcihltndR8t9t1evnU/azx53x3t2UHXC/uRjcbvRw/XctpaNygSTcQD+Iw==}
+  /eslint/8.18.0:
+    resolution: {integrity: sha512-As1EfFMVk7Xc6/CvhssHUjsAQSkpfXvUGMFC3ce8JDe6WvqCgRrLOBQbVpsBFr1X1V+RACOadnzVvcUS5ni2bA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -1285,7 +1285,7 @@ packages:
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.1.1
-      eslint-utils: 3.0.0_eslint@8.17.0
+      eslint-utils: 3.0.0_eslint@8.18.0
       eslint-visitor-keys: 3.3.0
       espree: 9.3.2
       esquery: 1.4.0
@@ -2313,18 +2313,18 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.7.0_kkjbqzpydplecjtkxrgomroeru:
+  /prettier-plugin-svelte/2.7.0_nakrehnrzdf7fdea5k3a4dfy4m:
     resolution: {integrity: sha512-fQhhZICprZot2IqEyoiUYLTRdumULGRvw0o4dzl5jt0jfzVWdGqeYW27QTWAeXhoupEZJULmNoH3ueJwUWFLIA==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
     dependencies:
-      prettier: 2.6.2
+      prettier: 2.7.1
       svelte: 3.48.0
     dev: true
 
-  /prettier/2.6.2:
-    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true

@@ -1,5 +1,4 @@
 import { compile } from 'mdsvex';
-import fs from 'node:fs';
 import { join, resolve } from 'node:path';
 export const BLOG_PATH = 'src/content/blog';
 
@@ -24,44 +23,27 @@ export async function getSlugs() {
   }
 }
 
-// /**
-//  * Returns array of objects containing the slug and post Markdown content
-//  * @returns {Promise<{slug: string; content: string;}[]>}
-//  */
-// export async function getPostsContent() {
-//   try {
-//     const postFiles = await import.meta.glob('../../content/blog/**/index.md');
-//     const postPromises = Object.keys(postFiles).map(async (element) => {
-//       const lastIndex = element.lastIndexOf('/index.md');
-//       const firstIndex = element.lastIndexOf('/', lastIndex - 1) + 1;
-//       const slug = element.slice(firstIndex, lastIndex);
-//       const content = (await import(`${element}?raw`)).default;
-//       return { slug, content: content };
-//     });
-
-//     return Promise.all(postPromises);
-//   } catch (error) {
-//     console.error(`Error importing blog posts in getPostsContent: ${error}`);
-//   }
-// }
-
 /**
  * Returns array of objects containing the slug and post Markdown content
- * @returns {{slug: string; content: string;}[]}
+ * @returns {Promise<{slug: string; content: string;}[]>}
  */
-export function getPostsContent() {
-  const directories = fs
-    .readdirSync(location)
-    .filter((element) => fs.lstatSync(`${location}/${element}`).isDirectory());
-  const articles = [];
-  directories.forEach((element) => {
-    const contentPath = `${location}/${element}/index.md`;
-    if (fs.existsSync(contentPath)) {
-      const content = fs.readFileSync(contentPath, { encoding: 'utf-8' });
-      articles.push({ slug: element, content });
-    }
-  });
-  return articles;
+export async function getPostsContent() {
+  try {
+    const postFiles = await import.meta.glob('../../content/blog/**/index.md');
+    const postPromises = Object.keys(postFiles).map(async (element) => {
+      await postFiles[element]();
+      const lastIndex = element.lastIndexOf('/index.md');
+      const firstIndex = element.lastIndexOf('/', lastIndex - 1) + 1;
+      const slug = element.slice(firstIndex, lastIndex);
+      const content = (await import(`${element}?raw`)).default;
+
+      return { slug, content };
+    });
+
+    return Promise.all(postPromises);
+  } catch (error) {
+    console.error(`Error importing blog posts in getPostsContent: ${error}`);
+  }
 }
 
 /**
@@ -86,40 +68,4 @@ export const getPosts = async (postsContent, body = false) => {
   });
   const result = await Promise.all(postPromises);
   return result.sort((a, b) => Date.parse(b.datePublished) - Date.parse(a.datePublished));
-};
-
-/**
- * Returns post meta together with compiled body
- * @param {string} content
- * @param {boolean} body
- * @returns
- */
-export const getPost = async (content, body = true) => {
-  const transformedContent = await compile(content);
-  const {
-    datePublished,
-    featuredImage,
-    featuredImageAlt,
-    ogImage,
-    ogSquareImage,
-    postTitle,
-    seoMetaDescription,
-    twitterImage,
-  } = /** @type {{datePublished: string; featuredImage: string; featuredImageAlt: string; lastUpdated: string; ogImage: string; ogSquareImage: string; postTitle: string; seoMetaDescription: string; twitterImage: string}} */ (
-    transformedContent.data.fm
-  );
-  let result = {
-    datePublished,
-    featuredImage,
-    featuredImageAlt,
-    ogImage,
-    ogSquareImage,
-    postTitle,
-    seoMetaDescription,
-    twitterImage,
-  };
-  if (body) {
-    result = { ...result, body: transformedContent.code };
-  }
-  return result;
 };
