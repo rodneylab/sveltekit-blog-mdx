@@ -5,9 +5,8 @@ export async function get() {
     Object.keys(mdModules).map(async (path) => {
       mdModules[path]();
       const slug = path.split('/').at(-2);
-      const { datePublished, lastUpdated, postTitle, seoMetaDescription } = (
-        await mdModules[path]()
-      ).metadata;
+      const { metadata } = await mdModules[path]();
+      const { datePublished, lastUpdated, postTitle, seoMetaDescription } = metadata;
       return { datePublished, lastUpdated, postTitle, seoMetaDescription, slug };
     }),
   );
