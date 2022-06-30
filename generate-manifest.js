@@ -29,7 +29,7 @@ const main = async () => {
     const manifest = {
       name: siteTitle,
       short_name: siteShortTitle,
-      start_url: '/index.html',
+      start_url: '/',
       background_color: backgroundColor,
       theme_color: themeColor,
       display: 'standalone',
