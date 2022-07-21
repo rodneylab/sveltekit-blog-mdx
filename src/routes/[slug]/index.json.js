@@ -1,5 +1,5 @@
-/** @type {import('./index.json').RequestHandler} */
-export async function get({ params }) {
+/** @type {import('./__types/index.json').RequestHandler} */
+export async function GET({ params }) {
   const { slug } = params;
 
   const { default: body, metadata } = await import(`../../content/blog/${slug}/index.md`);

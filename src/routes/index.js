@@ -1,6 +1,6 @@
-/** @type {import('./index').RequestHandler} */
-export async function get() {
-  const mdModules = await import.meta.glob('../content/blog/**/index.md');
+/** @type {import('./__types/index').RequestHandler} */
+export async function GET() {
+  const mdModules = import.meta.glob('../content/blog/**/index.md');
   const posts = await Promise.all(
     Object.keys(mdModules).map(async (path) => {
       const slug = path.split('/').at(-2);
