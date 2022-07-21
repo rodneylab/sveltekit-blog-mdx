@@ -2,9 +2,9 @@
   "name": "sveltekit-blog-mdx",
   "version": "2.0.0",
   "scripts": {
-    "dev": "svelte-kit dev --port 3000",
-    "build": "npm run generate:manifest && svelte-kit build",
-    "preview": "svelte-kit preview --port 3000",
+    "dev": "vite dev --port 3030",
+    "build": "npm run generate:manifest && vite build",
+    "preview": "vite preview --port 3030",
     "check": "svelte-check --fail-on-hints",
     "check:watch": "svelte-check --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -44,7 +44,7 @@
     "sass": "^1.53.0",
     "sharp": "^0.30.7",
     "stylelint": "^14.9.1",
-    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-config-recommended-scss": "^7.0.0",
     "stylelint-config-standard": "^26.0.0",
     "stylelint-scss": "^4.2.0",
     "svelte": "^3.48.0",
@@ -52,6 +52,7 @@
     "svelte-preprocess": "^4.10.7",
     "svelte-preprocess-import-assets": "^0.1.6",
     "vanilla-lazyload": "^17.8.2",
+    "vite": "^3.0.2",
     "vite-imagetools": "^4.0.4"
   },
   "repository": {
@@ -61,5 +62,8 @@
   "bugs": {
     "url": "https://github.com/rodneylab/sveltekit-blog-mdx/issues"
   },
-  "type": "module"
+  "type": "module",
+  "peerDependencies": {
+    "vite": "^3.0.2"
+  }
 }
