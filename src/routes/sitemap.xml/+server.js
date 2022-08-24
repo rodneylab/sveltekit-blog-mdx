@@ -63,7 +63,8 @@ function render(pages, posts) {
 </urlset>`;
 }
 
-export async function get() {
+/** @type {import('./$types').RequestHandler} */
+export async function GET() {
   // const __dirname = path.resolve();
   // const location = path.join(__dirname, BLOG_PATH);
   const postsContent = getPostsContent();

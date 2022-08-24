@@ -1,7 +1,7 @@
 {
   "name": "SvelteKit Blog Mdx",
   "short_name": "SvelteKit Blog",
-  "start_url": "/index.html",
+  "start_url": "/",
   "background_color": "#1b4079",
   "theme_color": "#d62828",
   "display": "standalone",

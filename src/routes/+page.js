@@ -1,5 +1,5 @@
-/** @type {import('./__types/index').RequestHandler} */
-export async function GET() {
+/** @type {import('./$types').PageLoad} */
+export async function load() {
   const mdModules = import.meta.glob('../content/blog/**/index.md');
   const posts = await Promise.all(
     Object.keys(mdModules).map(async (path) => {
@@ -9,6 +9,5 @@ export async function GET() {
       return { datePublished, lastUpdated, postTitle, seoMetaDescription, slug };
     }),
   );
-
-  return { body: { ...{ posts } } };
+  return { posts };
 }

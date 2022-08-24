@@ -8,7 +8,8 @@
   import SEO from '$lib/components/SEO/index.svelte';
   import website from '$lib/config/website';
 
-  export let posts;
+  export let data;
+  const { posts } = data;
 
   const { author, siteUrl } = website;
 
