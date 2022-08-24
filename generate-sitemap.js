@@ -16,36 +16,36 @@ const __dirname = path.resolve();
 const sitemapFile = path.join(__dirname, 'static/sitemap.xml');
 
 function getPages(location) {
-  const pages = fs.readdirSync(location).reduce((accumulator, currentValue) => {
-    if (
-      path.extname(currentValue) === '.svelte' &&
-      path.basename(currentValue).indexOf('__') !== 0
-    ) {
-      accumulator.push(`${siteUrl}/${currentValue.replace('.svelte', '/').replace('index/', '')}`);
-    }
+	const pages = fs.readdirSync(location).reduce((accumulator, currentValue) => {
+		if (
+			path.extname(currentValue) === '.svelte' &&
+			path.basename(currentValue).indexOf('__') !== 0
+		) {
+			accumulator.push(`${siteUrl}/${currentValue.replace('.svelte', '/').replace('index/', '')}`);
+		}
 
-    return accumulator;
-  }, []);
-  return pages;
+		return accumulator;
+	}, []);
+	return pages;
 }
 
 export const getPosts = (location) => {
-  const directories = fs
-    .readdirSync(location)
-    .filter((element) => fs.lstatSync(`${location}/${element}`).isDirectory());
-  const articles = [];
+	const directories = fs
+		.readdirSync(location)
+		.filter((element) => fs.lstatSync(`${location}/${element}`).isDirectory());
+	const articles = [];
 
-  directories.forEach((element) => {
-    const contentPath = `${location}/${element}/index.md`;
-    if (fs.existsSync(contentPath)) {
-      const content = fs.readFileSync(contentPath, { encoding: 'utf-8' });
-      const frontmatter = fm(content);
-      const { lastUpdated } = frontmatter.attributes;
+	directories.forEach((element) => {
+		const contentPath = `${location}/${element}/index.md`;
+		if (fs.existsSync(contentPath)) {
+			const content = fs.readFileSync(contentPath, { encoding: 'utf-8' });
+			const frontmatter = fm(content);
+			const { lastUpdated } = frontmatter.attributes;
 
-      articles.push({ slug: element, lastUpdated });
-    }
-  });
-  return articles;
+			articles.push({ slug: element, lastUpdated });
+		}
+	});
+	return articles;
 };
 
 const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
@@ -61,27 +61,27 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 	>
 	${pages
-    .map(
-      (element) => `  <url>
+		.map(
+			(element) => `  <url>
 	    <loc>${element}</loc>
 		  <lastmod>${`${TIMESTAMP}`}</lastmod>
 		  <changefreq>monthly</changefreq>
 		  <priority>${DEFAULT_PAGE_PRIORITY}</priority>
 	  </url>`,
-    )
-    .join('')}
+		)
+		.join('')}
 	${posts
-    .map((element) => {
-      const { lastUpdated, slug } = element;
-      return `  <url>
+		.map((element) => {
+			const { lastUpdated, slug } = element;
+			return `  <url>
 	    <loc>${siteUrl}/${slug}/</loc>
 		  <lastmod>${`${lastUpdated}`}</lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>${DEFAULT_BLOG_POST_PRIORITY}</priority>
 	  </url>
 	`;
-    })
-    .join('')}</urlset>`;
+		})
+		.join('')}</urlset>`;
 
 const location = path.join(__dirname, BLOG_PATH);
 const pages = getPages('src/routes');

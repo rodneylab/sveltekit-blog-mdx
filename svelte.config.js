@@ -4,22 +4,22 @@ import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 
 const config = {
-  extensions: ['.svelte', '.md', '.svelte.md'],
-  preprocess: [
-    mdsvex({ extensions: ['.svelte.md', '.md', '.svx'] }),
-    preprocess({
-      scss: {
-        prependData: "@import 'src/lib/styles/variables.scss';",
-      },
-    }),
-  ],
-  kit: {
-    adapter: adapter({ precompress: true }),
-    files: {
-      hooks: 'src/hooks',
-    },
-    prerender: { default: true },
-  },
+	extensions: ['.svelte', '.md', '.svelte.md'],
+	preprocess: [
+		mdsvex({ extensions: ['.svelte.md', '.md', '.svx'] }),
+		preprocess({
+			scss: {
+				prependData: "@import 'src/lib/styles/variables.scss';",
+			},
+		}),
+	],
+	kit: {
+		adapter: adapter({ precompress: true }),
+		files: {
+			hooks: 'src/hooks',
+		},
+		prerender: { default: true },
+	},
 };
 
 export default config;

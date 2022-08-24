@@ -22,7 +22,7 @@ const { siteUrl } = website;
  * @param {{lastUpdated: string; slug: string;}[]} posts
  */
 function render(pages, posts) {
-  return `<?xml version="1.0" encoding="UTF-8" ?>
+	return `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
@@ -36,21 +36,21 @@ function render(pages, posts) {
 	>
 
 	${pages
-    .map(
-      (element) => `
+		.map(
+			(element) => `
 	<url>
 	  <loc>${element}</loc>
 		<lastmod>${`${process.env.VITE_BUILD_TIME}`}</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>`,
-    )
-    .join('\n')}
+		)
+		.join('\n')}
 	
 	${posts
-    .map((element) => {
-      const { lastUpdated, slug } = element;
-      return `
+		.map((element) => {
+			const { lastUpdated, slug } = element;
+			return `
 	<url>
 	  <loc>${siteUrl}/${slug}/</loc>
 		<lastmod>${`${lastUpdated}`}</lastmod>
@@ -58,33 +58,33 @@ function render(pages, posts) {
 		<priority>0.7</priority>
 	</url>
 	`;
-    })
-    .join('')}
+		})
+		.join('')}
 </urlset>`;
 }
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
-  // const __dirname = path.resolve();
-  // const location = path.join(__dirname, BLOG_PATH);
-  const postsContent = getPostsContent();
-  const posts = await getPosts(postsContent, false);
+	// const __dirname = path.resolve();
+	// const location = path.join(__dirname, BLOG_PATH);
+	const postsContent = getPostsContent();
+	const posts = await getPosts(postsContent, false);
 
-  const pages = Object.keys(import.meta.glob('/src/routes/**/!(_)*.svelte'))
-    .filter((page) => {
-      const filters = ['slug]', '_', 'private'];
+	const pages = Object.keys(import.meta.glob('/src/routes/**/!(_)*.svelte'))
+		.filter((page) => {
+			const filters = ['slug]', '_', 'private'];
 
-      return !filters.find((filter) => page.includes(filter));
-    })
-    .map((page) =>
-      page.replace('/src/routes', siteUrl).replace('/index.svelte', '').replace('.svelte', ''),
-    );
+			return !filters.find((filter) => page.includes(filter));
+		})
+		.map((page) =>
+			page.replace('/src/routes', siteUrl).replace('/index.svelte', '').replace('.svelte', ''),
+		);
 
-  return {
-    body: render(pages, posts),
-    headers: {
-      'Cache-Control': `max-age=0, s-max-age=${600}`,
-      'Content-Type': 'application/xml',
-    },
-  };
+	return {
+		body: render(pages, posts),
+		headers: {
+			'Cache-Control': `max-age=0, s-max-age=${600}`,
+			'Content-Type': 'application/xml',
+		},
+	};
 }

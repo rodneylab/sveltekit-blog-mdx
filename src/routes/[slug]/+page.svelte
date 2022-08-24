@@ -1,17 +1,17 @@
 <script>
-  import { browser } from '$app/env';
-  import BlogPost from '$lib/components/BlogPost.svelte';
-  import '$lib/styles/index.scss';
-  import '$lib/styles/normalise.css';
-  import lazyload from 'vanilla-lazyload';
+	import { browser } from '$app/env';
+	import BlogPost from '$lib/components/BlogPost.svelte';
+	import '$lib/styles/index.scss';
+	import '$lib/styles/normalise.css';
+	import lazyload from 'vanilla-lazyload';
 
-  export let data;
+	export let data;
 
-  const { page, post, imageData } = data;
+	const { page, post, imageData } = data;
 
-  if (browser && !document.lazyloadInstance) {
-    document.lazyloadInstance = new lazyload();
-  }
+	if (browser && !document.lazyloadInstance) {
+		document.lazyloadInstance = new lazyload();
+	}
 </script>
 
 <BlogPost {post} {imageData} />
