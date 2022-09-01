@@ -1,5 +1,5 @@
 <script>
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import '$lib/styles/index.scss';
 	import '$lib/styles/normalise.css';

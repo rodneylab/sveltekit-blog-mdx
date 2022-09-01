@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import { Image } from '@rodneylab/sveltekit-components';
 
 	export let imageData;
