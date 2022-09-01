@@ -7,7 +7,7 @@ const website = {
 	siteLanguage: 'en-GB',
 	siteTitle: 'SvelteKit Blog Mdx',
 	siteShortTitle: 'SvelteKit Blog',
-	siteUrl: import.meta.env ? /** @type {string} */ (import.meta.env.VITE_SITE_URL) : '',
+	siteUrl: import.meta.env ? /** @type {string} */ (import.meta.env.PUBLIC_SITE_URL) : '',
 	icon: 'static/icon.png',
 	backgroundColor: '#1b4079',
 	themeColor: '#d62828',

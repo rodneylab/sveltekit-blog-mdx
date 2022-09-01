@@ -76,9 +76,7 @@ this will be output to `static/sitemap.xml`. You can work this into your build p
 
 The generation JavaScript code is in the file `generate-sitemap.js` in the root folder of the project.
 
-- Alternatively, (if your app has server side rendering) the sitemap is automatically served at `https://example.com/sitemap.xml`. It is served by the file at `src/routes/sitemap.xml.js`.
-
-Either way, make sure your site's URL is defined in `.env` as the `VITE_SITE_URL` variable so the correct URLs are output to the site map.
+Make sure your site's URL is defined in `.env` as the `PUBLIC_SITE_URL` variable so the correct URLs are output to the site map.
 
 ### Progressive Web App (PWA)
 

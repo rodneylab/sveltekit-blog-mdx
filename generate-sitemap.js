@@ -8,7 +8,7 @@ config();
 
 const DEFAULT_BLOG_POST_PRIORITY = 0.7;
 const DEFAULT_PAGE_PRIORITY = 0.7;
-const siteUrl = process.env.VITE_SITE_URL;
+const siteUrl = process.env.PUBLIC_SITE_URL;
 
 const TIMESTAMP = new Date().toISOString();
 
