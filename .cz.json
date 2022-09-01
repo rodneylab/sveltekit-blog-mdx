@@ -1,8 +1,8 @@
 {
-  "commitizen": {
-    "name": "cz_conventional_commits",
-    "version": "2.0.0",
-    "tag_format": "$version",
-    "bump_message": "ci: release $current_version \u2192 $new_version [skip-ci]"
-  }
+	"commitizen": {
+		"name": "cz_conventional_commits",
+		"version": "2.0.0",
+		"tag_format": "$version",
+		"bump_message": "ci: release $current_version \u2192 $new_version [skip-ci]"
+	}
 }

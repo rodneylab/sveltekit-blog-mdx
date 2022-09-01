@@ -1,7 +1,56 @@
-## Unreleased
+## 2.0.0 (2022-08-24)
 
 ### Fix
 
+- 💫 update favicons
+- 💫 update for SvelteKit breaking changes
+- **dependencies**: 💫 update packages
+- 💫 address peer dependency issue
+- 💫 update to latest SvelteKit and adapter versions
+- 💫 revert to vite 2.9
+- 💫 update for SvelteKit breaking changes
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update package
+- 💫 update manifest script
+- 💫 update service-worker
+- **dependencies**: 💫 update packages
+- 💫 remove node fs from blog utilities for better compatibility
+- **dependencies**: 💫 update packages
+- 💫 updatea for SvelteKit breaking changes
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- 💫 update dependencies
+- 💫 update icon default sizing
+- 💄 update styling
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- 💫 revert back to using node for blog content imports
+- 💫 update package
+- 💫 replace sourceing blog posts using node with ESM imports
+- 🤗 improve acccessibility
+- 💫 switch to iconify for icons
+- **dependencies**: 💫 update package
+- 💫 update sitemap script
+- 💫 move lang to ap.html
+- 💫 remove error status messages
+- 💫 update for SvelteKit breaking changes
+- **dependencies**: 💫 update packages
+- 💫 add JSDoc types to load functions and endpoints
+- 💫 reset preview server port to default
+- **dependencies**: 💫 update packages
+- 💫 use shadow endpoint for home page
+- **dependencies**: 💫 update packages
+- 💫 update SvelteKit config for breaking changes
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- 💫 update hooks file for SvelteKit breaking changes
+- **dependencies**: 💫 update packages
+- **dependencies**: 💫 update packages
+- 🔥 update config to use new precompress feature
+- 💫 update copyright information
+- **dependencies**: 💫 update packages
+- 💫 update copyright
 - 💫 update stylelint config
 - 💫 replace deprecated page Load function parameter with url and params
 - **dependencies**: 💫 update packages
@@ -13,6 +62,7 @@
 
 ### Refactor
 
+- 🏄🏽 remove unused file
 - 🏄‍♂️ update blog post template
 
 ## 1.1.0 (2021-12-06)
@@ -20,12 +70,6 @@
 ### Feat
 
 - 🐝 merge update from dev\_\_post_routing branch
-
-### Refactor
-
-- 🏄‍♂️ refactor blog templates for cleaner layout based on @matfantinel post
-- 💄 update styling
-- **layout**: 🏄🏽‍♂️ place header and footer in their own components
 
 ### Fix
 
@@ -48,6 +92,12 @@
 - **post**: ✅ correct typo
 - 💫 roll back reading-time to 1.4.0 updated BlogPost.svelte
 - **dependencies**: 💫 and update packages
+
+### Refactor
+
+- 🏄‍♂️ refactor blog templates for cleaner layout based on @matfantinel post
+- 💄 update styling
+- **layout**: 🏄🏽‍♂️ place header and footer in their own components
 
 ## 1.0.0 (2021-09-08)
 
@@ -83,6 +133,11 @@
 
 ## 0.5.0 (2021-08-16)
 
+### Feat
+
+- ✨ add sitemap for static and SSR builds
+- ✨ add sitemap for static and SSR builds
+
 ### Fix
 
 - **seo**: ✅ remove duplicate variable
@@ -90,11 +145,6 @@
 - 🤗 improve accessibility
 - **opengraph**: ✅ correct typo
 - **dependencies**: 💫 update packages
-
-### Feat
-
-- ✨ add sitemap for static and SSR builds
-- ✨ add sitemap for static and SSR builds
 
 ### Refactor
 
@@ -120,6 +170,10 @@
 
 ## 0.3.0 (2021-07-22)
 
+### Feat
+
+- 🤖 added SEO meta generation
+
 ### Fix
 
 - **contact**: 🔥 set contact page to prerender
@@ -128,10 +182,6 @@
 - **dependencies**: 💫 update packages
 - **.nvmrc**: 💫 set neode version to 14
 - **dependencies**: 💫 update package
-
-### Feat
-
-- 🤖 added SEO meta generation
 
 ## 0.2.2 (2021-07-08)
 
@@ -172,6 +222,16 @@
 - **dependencies**: 💫 update packages
 
 ## 0.1.0 (2021-06-24)
+
+### Feat
+
+- ✨ added some examples to hooks.js for CSP policy
+- **routes/slug**: ✨ prerendering blog posts
+- **index**: ✨ prerendering home page
+- 🔐 added HTTP security headers
+- **bannerimage**: 📸 added responsive banner image component
+- **bannerimage**: 📸 added responsive banner image component
+- 💄 added styling
 
 ### Fix
 
@@ -219,13 +279,3 @@
 
 - 🛁 moved blog posts from src/content to src/routes for better integration with svelteKit and improved handling of mdsvex
 - **styles**: 🛁 removed all variables from global styles and included in separate file
-
-### Feat
-
-- ✨ added some examples to hooks.js for CSP policy
-- **routes/slug**: ✨ prerendering blog posts
-- **index**: ✨ prerendering home page
-- 🔐 added HTTP security headers
-- **bannerimage**: 📸 added responsive banner image component
-- **bannerimage**: 📸 added responsive banner image component
-- 💄 added styling
