@@ -21,7 +21,7 @@ const website = {
 	telegramUsername: import.meta.env ? import.meta.env.VITE_TELEGRAM_USERNAME : '',
 	tiktokUsername: import.meta.env ? import.meta.env.VITE_TIKTOK_USERNAME : '',
 	twitterUsername: import.meta.env ? import.meta.env.VITE_TWITTER_USERNAME : '',
-	twitterUserId: import.meta.env ? import.meta.env.VITE_TWITTER_ID : '',
+	twitterUserId: import.meta.env ? import.meta.env.VITE_TWITTER_USER_ID : '',
 	wireUsername: import.meta.env ? import.meta.env.VITE_WIRE_USERNAME : '',
 };
 
