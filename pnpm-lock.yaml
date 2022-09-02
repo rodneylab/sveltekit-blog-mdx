@@ -428,9 +428,9 @@ packages:
       svelte: ^3.44.0
       vite: ^3.1.0-beta.1
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.3_fhgkwirxvgjw2igda6zmhiisma
+      '@sveltejs/vite-plugin-svelte': 1.0.4_fhgkwirxvgjw2igda6zmhiisma
       cookie: 0.5.0
-      devalue: 3.1.2
+      devalue: 3.1.3
       kleur: 4.1.5
       magic-string: 0.26.3
       mime: 3.0.0
@@ -447,13 +447,13 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.3_fhgkwirxvgjw2igda6zmhiisma:
-    resolution: {integrity: sha512-0Qu51m2W9RBlxWPp8i31KJpnqmjWMOne8vAzgmOX6ZM9uX+/RAv6BNhEMcNoP5MsyLjyW1ZTCiJoaZZ5EeqpFg==}
+  /@sveltejs/vite-plugin-svelte/1.0.4_fhgkwirxvgjw2igda6zmhiisma:
+    resolution: {integrity: sha512-UZco2fdj0OVuRWC0SUJjEOftITc2IeHLFJNp00ym9MuQ9dShnlO4P29G8KUxRlcS7kSpzHuko6eCR9MOALj7lQ==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
       svelte: ^3.44.0
-      vite: ^3.0.0
+      vite: ^3.0.0 || ^3.1.0-beta.1
     peerDependenciesMeta:
       diff-match-patch:
         optional: true
@@ -960,8 +960,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /devalue/3.1.2:
-    resolution: {integrity: sha512-wUXbMGPAsBx79UF14nsWSsJlC7RcwPlf2w3bGheODWxKx57e9n68ceoijbqCJCEbjyo0S79nqfPwQgyijwLaqw==}
+  /devalue/3.1.3:
+    resolution: {integrity: sha512-9KO89Cb+qjzf2CqdrH+NuLaqdk9GhDP5EhR4zlkR51dvuIaiqtlkDkGzLMShDemwUy21raSMdu+kpX8Enw3yGQ==}
     dev: true
 
   /diff/4.0.2:
@@ -988,7 +988,7 @@ packages:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
-      entities: 4.3.1
+      entities: 4.4.0
     dev: true
 
   /domelementtype/2.3.0:
@@ -1032,8 +1032,8 @@ packages:
       once: 1.4.0
     dev: true
 
-  /entities/4.3.1:
-    resolution: {integrity: sha512-o4q/dYJlmyjP2zfnaWDUC6A3BQFmVTX+tZPezK7k0GLSU9QYCauscf5Y+qcEPzKL+EixVouYDgLQK5H9GrLpkg==}
+  /entities/4.4.0:
+    resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
     engines: {node: '>=0.12'}
     dev: true
 
@@ -1716,7 +1716,7 @@ packages:
       domelementtype: 2.3.0
       domhandler: 5.0.3
       domutils: 3.0.1
-      entities: 4.3.1
+      entities: 4.4.0
     dev: true
 
   /human-signals/2.1.0:
