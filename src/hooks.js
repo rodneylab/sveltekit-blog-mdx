@@ -3,7 +3,7 @@
 // https://scotthelme.co.uk/content-security-policy-an-introduction/
 // scanner: https://securityheaders.com/
 
-const rootDomain = import.meta.env.VITE_DOMAIN; // or your server IP for dev
+import { PUBLIC_DOMAIN, PUBLIC_SENTRY_PROJECT_ID, PUBLIC_SENTRY_KEY } from '$env/static/public';
 
 const directives = {
 	'base-uri': ["'self'"],
@@ -29,8 +29,8 @@ const directives = {
 	// 'style-src': ["'self'", "'unsafe-inline'", 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
 	'default-src': [
 		"'self'",
-		rootDomain,
-		`ws://${rootDomain}`,
+		PUBLIC_DOMAIN,
+		`ws://${PUBLIC_DOMAIN}`,
 		// 'https://*.google.com',
 		// 'https://*.googleapis.com',
 		// 'https://*.firebase.com',
@@ -57,9 +57,7 @@ const directives = {
 	// remove report-to & report-uri if you do not want to use Sentry reporting
 	'report-to': ["'csp-endpoint'"],
 	'report-uri': [
-		`https://sentry.io/api/${import.meta.env.VITE_SENTRY_PROJECT_ID}/security/?sentry_key=${
-			import.meta.env.VITE_SENTRY_KEY
-		}`,
+		`https://sentry.io/api/${PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${PUBLIC_SENTRY_KEY}`,
 	],
 };
 
@@ -84,15 +82,11 @@ export async function handle({ event, resolve }) {
 	response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
 	response.headers.set(
 		'Expect-CT',
-		`max-age=86400, report-uri="https://sentry.io/api/${
-			import.meta.env.VITE_SENTRY_PROJECT_ID
-		}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"`,
+		`max-age=86400, report-uri="https://sentry.io/api/${PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${PUBLIC_SENTRY_KEY}"`,
 	);
 	response.headers.set(
 		'Report-To',
-		`{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${
-			import.meta.env.VITE_SENTRY_PROJECT_ID
-		}/security/?sentry_key=${import.meta.env.VITE_SENTRY_KEY}"}]}`,
+		`{group: "csp-endpoint", "max_age": 10886400, "endpoints": [{"url": "https://sentry.io/api/${PUBLIC_SENTRY_PROJECT_ID}/security/?sentry_key=${PUBLIC_SENTRY_KEY}"}]}`,
 	);
 	return response;
 }
