@@ -11,7 +11,6 @@
 		"lint:scss": "stylelint \"src/**/*.{css,scss,svelte}\"",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"generate:images": "node ./generate-responsive-image-data.js",
-		"generate:manifest": "node ./generate-manifest.js",
 		"generate:sitemap": "node ./generate-sitemap.js",
 		"prettier:check": "prettier --check --plugin-search-dir=. .",
 		"prepare": "husky install"
