@@ -80,13 +80,15 @@ Make sure your site's URL is defined in `.env` as the `PUBLIC_SITE_URL` variable
 
 ### Progressive Web App (PWA)
 
-The starter mostly generates PWA config automatically, including service worker for offline availability and adding meta to the HTML head section. A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices. The starter can generate the logo in different sizes automatically if you create a 512&nbsp;px&nbsp;&times;&nbsp;512&nbsp;px logo and save it as `static/icon.png`. Then run
+The starter mostly generates PWA config automatically, including service worker for offline availability and adding meta to the HTML head section. A PWA needs a manifest file detailing logos (for favicons) in different sizes, compatible with various devices. You will need to generate a set of icons in `assets/`:
 
-```shell
-npm run generate:manifest
-```
+- apple-touch-icon.png
+- favicon.ico
+- icon.svg
+- icon-192.png
+- icon-512.png
 
-The script outputs the manifest file to `static/manifest.json` and it is then automatically included in your build.
+You can <a aria-label="Open article on Open Source Favicon Tooling" href="https://rodneylab.com/open-source-favicon-generation/">use free open source tools to generate and optimise these</a> from an input SVG. That resource includes a shell script you can run to automate generation.
 
 The HTML meta for PWAs is added in the component at `src/lib/components/PWA.svelte`.
 
@@ -95,7 +97,6 @@ You can customise the manifest (including icon file path) by editing `src/lib/co
 - `siteTitle`,
 - `siteShortTitle`,
 - `siteUrl`,
-- `icon` &mdash; path to template icon,
 - `backgroundColor`,
 - `themeColor`.
 
@@ -114,7 +115,6 @@ npm run build
 ```
 .
 ├── README.md
-├── generate-manifest.js
 ├── generate-responsive-image-data.js
 ├── generate-sitemap.js
 ├── jsconfig.json
@@ -162,23 +162,13 @@ npm run build
 ├── static
 │   ├── assets
 │   ├── favicon.png
-│   ├── icon.png
-│   ├── icons
-│   │   ├── icon-128x128.png
-│   │   ├── icon-144x144.png
-│   │   ├── icon-152x152.png
-│   │   ├── icon-192x192.png
-│   │   ├── icon-256x256.png
-│   │   └── icon-512x512.png
-│   ├── manifest.json
+│   ├── icon.svg
 │   ├── robots.txt
 │   └── sitemap.xml
 └── svelte.config.js
 ```
 
 ### `/`
-
-- `generate-manifest.js` script for generating the PWA manifest.json as well as the icons in different sizes.
 
 - `generate-sitemap.js` script for generating an XML sitemap, only needed for static sites, otherwise SvelteKit creates an endpoint from which the sitemap is served (see `src/routes/sitemap.xml.js`).
 
@@ -202,7 +192,7 @@ npm run build
 
 ### `src/utilities`
 
-- `src/utilities/blog.js` this file contains some code for helping us transform the markdown in blog posts to Svelte. As well as that they help extract fields in the frontmatter (this is the metadata we include at the top fo the blog post `index.md` files).
+- `src/utilities/blog.js` this file contains some code for helping us transform the markdown in blog posts to Svelte. As well as that they help extract fields in the frontmatter (this is the metadata we include at the top of the blog post `index.md` files).
 
 ### `src/routes`
 
