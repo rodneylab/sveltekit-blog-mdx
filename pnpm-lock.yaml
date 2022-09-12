@@ -5,7 +5,6 @@ specifiers:
   '@fontsource/lato': ^4.5.9
   '@fontsource/lora': ^4.5.11
   '@fontsource/source-sans-pro': ^4.5.11
-  '@iconify/svelte': ^2.2.1
   '@rodneylab/sveltekit-components': ^1.0.1
   '@sveltejs/adapter-static': 1.0.0-next.42
   '@sveltejs/kit': 1.0.0-next.480
@@ -18,6 +17,7 @@ specifiers:
   eslint-plugin-svelte3: ^4.0.0
   front-matter: ^4.0.2
   husky: ^8.0.1
+  iconify-icon: ^1.0.0
   leaflet: ^1.8.0
   mdsvex: ^0.10.6
   object-hash: ^3.0.0
@@ -48,7 +48,6 @@ devDependencies:
   '@fontsource/lato': 4.5.9
   '@fontsource/lora': 4.5.11
   '@fontsource/source-sans-pro': 4.5.11
-  '@iconify/svelte': 2.2.1
   '@rodneylab/sveltekit-components': 1.0.1_leaflet@1.8.0+vite@3.1.0
   '@sveltejs/adapter-static': 1.0.0-next.42
   '@sveltejs/kit': 1.0.0-next.480_svelte@3.50.1+vite@3.1.0
@@ -60,6 +59,7 @@ devDependencies:
   eslint-plugin-svelte3: 4.0.0_rhh4tpcyg7zwtq6pdnkzw5gxma
   front-matter: 4.0.2
   husky: 8.0.1
+  iconify-icon: 1.0.0
   leaflet: 1.8.0
   mdsvex: 0.10.6_svelte@3.50.1
   object-hash: 3.0.0
@@ -347,8 +347,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify/svelte/2.2.1:
-    resolution: {integrity: sha512-eWZq8CRrr3WfnKAj8SWknfE3S/d+j/AzEcypeJaHurS1s4zTdFnkjATcFa8lerGtcX0PAtXiVL94tbIEd69N+w==}
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
 
   /@jridgewell/resolve-uri/3.1.0:
@@ -1726,6 +1726,12 @@ packages:
     resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
     engines: {node: '>=14'}
     hasBin: true
+    dev: true
+
+  /iconify-icon/1.0.0:
+    resolution: {integrity: sha512-UY4PDCKQPpIGgDIx2yxM8wiOdMdLz0mb93dTV0Ox5hThwO8OA2zy8gDmjRReKqkPHK/mY7p/ivDaDGHE8O9xIw==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /ieee754/1.2.1:

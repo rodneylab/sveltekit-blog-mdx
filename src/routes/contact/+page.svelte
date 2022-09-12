@@ -91,7 +91,7 @@
 			align-items: center;
 
 			li {
-				display: inline;
+				display: flex;
 				padding-left: $spacing-2;
 				font-size: $font-size-2;
 			}
@@ -99,8 +99,11 @@
 	}
 
 	.icon {
-		vertical-align: middle;
+		display: flex;
+		align-items: center;
+		color: $color-theme-4;
 	}
+
 	.contact-address {
 		margin-left: $spacing-2;
 	}
