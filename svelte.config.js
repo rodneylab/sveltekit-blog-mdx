@@ -15,9 +15,6 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({ precompress: true }),
-		files: {
-			hooks: 'src/hooks',
-		},
 	},
 };
 
