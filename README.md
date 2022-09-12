@@ -116,7 +116,6 @@ npm run build
 .
 ├── README.md
 ├── generate-responsive-image-data.js
-├── generate-sitemap.js
 ├── jsconfig.json
 ├── netlify.toml
 ├── package.json
@@ -128,7 +127,7 @@ npm run build
 │   │       ├── folding-camera
 │   │       └── twin-lens-reflex-camera
 │   ├── global.d.ts
-│   ├── hooks.js
+│   ├── hooks.server.js
 │   ├── lib
 │   │   ├── assets
 │   │   │   ├── blog
@@ -148,16 +147,21 @@ npm run build
 │   │       ├── file.js
 │   │       └── image.js
 │   ├── routes
+│   │   ├── +error.svelte
+│   │   ├── +layout.js
+│   │   ├── +layout.svelte
+│   │   ├── +page.js
+│   │   ├── +page.svelte
 │   │   ├── [slug]
-│   │   │   ├── __layout.svelte
-│   │   │   ├── index.json.js
-│   │   │   └── index.svelte
-│   │   ├── __error.svelte
-│   │   ├── __layout.svelte
-│   │   ├── contact.svelte
-│   │   ├── index.json.js
-│   │   ├── index.svelte
-│   │   └── sitemap.xml.js
+│   │   │   ├── +layout.svelte
+│   │   │   ├── +page.js
+│   │   │   └── +page.svelte
+│   │   ├── contact
+│   │   │   └── +page.svelte
+│   │   ├── manifest.webmanifest
+│   │   │   └── +server.js
+│   │   └── sitemap.xml
+│   │       └── +server.js
 │   └── service-worker.js
 ├── static
 │   ├── assets
@@ -168,17 +172,13 @@ npm run build
 └── svelte.config.js
 ```
 
-### `/`
-
-- `generate-sitemap.js` script for generating an XML sitemap, only needed for static sites, otherwise SvelteKit creates an endpoint from which the sitemap is served (see `src/routes/sitemap.xml.js`).
-
 ### `src/content`
 
 - The `src/content/blog` is where we need to put our blog posts. Just clean out the sample content and replace it with your views on the world! There is a separate folder for each post, which allows you to keep images, video and other related media specific to a post better organised. We set the browser path from this folder name, so keep that in mind when naming the folders. Write the actual post in a file called `index.md` within post's folder. Although the file has an `.md` extension, you can write Svelte in it.
 
 ### `src`
 
-- `hooks.js` we define Content Security Policy (CSP) and other HTTP security headers in here, effective for server side rendered apps. See <a aria-label="Open post on Svelte Kit stati site H T T P headers" href="https://rodneylab.com/sveltekit-static-site-http-headers/">post on SvelteKit static site HTTP headers</a> to see how to set up CSP etc for static sites.
+- `hooks.server.js` we define Content Security Policy (CSP) and other HTTP security headers in here, effective for server side rendered apps. See <a aria-label="Open post on Svelte Kit stati site H T T P headers" href="https://rodneylab.com/sveltekit-static-site-http-headers/">post on SvelteKit static site HTTP headers</a> to see how to set up CSP etc for static sites.
 
 ### `src/components`
 
@@ -196,8 +196,8 @@ npm run build
 
 ### `src/routes`
 
-- `src/routes/[slug]/index.json.js` this is essentially a template for blog post data. One of these files is generated at build for each blog post. It is used to extract data needed in the Svelte file used to generate the post's HTML.
+- `src/routes/[slug]/+page.js` this is essentially a template for blog post data. One of these files is generated at build for each blog post. It is used to extract data needed in the Svelte file used to generate the post's HTML.
 
-- `src/routes/[slug]/index.svelte` similarly to the previous file, one of these is generated for each blog post. This time it is the Svelte code which SvelteKit uses to generate the HTML and JavaScript for our blog posts.
+- `src/routes/[slug]/+page.svelte` similarly to the previous file, one of these is generated for each blog post. This time it is the Svelte code which SvelteKit uses to generate the HTML and JavaScript for our blog posts.
 
 I mention most of the other files in the <a aria-label="Read recent Rodney Lab post on Getting Started with Svelte Kit" href="https://rodneylab.com/getting-started-with-sveltekit/">Getting Started with SvelteKit blog post</a>, but let me know if I have missed anything which needs more explanation.
