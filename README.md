@@ -62,19 +62,7 @@ The script may need some tweaking for your use case. Let me know how it can be i
 
 ### XML Sitemap
 
-- If your site is completely static, then you can generate an XML sitemap by running
-
-```shell
-npm run generate:sitemap
-```
-
-this will be output to `static/sitemap.xml`. You can work this into your build process by updating the `build` script in `package.json` to something like:
-
-```shell
-    "build": "npm run generate:manifest && npm run generate:sitemap && svelte-kit build",
-```
-
-The generation JavaScript code is in the file `generate-sitemap.js` in the root folder of the project.
+- The XML sitemap gets generated in the server route `src/routes/sitemap.xml/+server.js`. Tweak this file to adjust output.
 
 Make sure your site's URL is defined in `.env` as the `PUBLIC_SITE_URL` variable so the correct URLs are output to the site map.
 
