@@ -21,6 +21,8 @@ const website = {
 	siteLanguage: 'en-GB',
 	siteTitle: 'SvelteKit Blog Mdx',
 	siteShortTitle: 'SvelteKit Blog',
+	description:
+		'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site',
 	siteUrl: PUBLIC_SITE_URL,
 	backgroundColor: '#1b4079',
 	themeColor: '#d62828',

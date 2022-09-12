@@ -3,11 +3,12 @@ import website from '$lib/config/website';
 export const prerender = true;
 
 export const GET = function get({ setHeaders }) {
-	const { backgroundColor, siteShortTitle, siteTitle, themeColor } = website;
+	const { backgroundColor, description, siteShortTitle, siteTitle, themeColor } = website;
 
 	const manifest = {
 		name: siteTitle,
 		short_name: siteShortTitle,
+		description,
 		start_url: '/',
 		background_color: backgroundColor,
 		theme_color: themeColor,
