@@ -46,6 +46,7 @@ const render = (pages, posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 		.join('')}
 </urlset>`;
 
+/** @type {import('./$types').RequestHandler} */
 export async function GET() {
 	const __dirname = path.resolve();
 	const location = path.join(__dirname, BLOG_PATH);

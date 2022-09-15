@@ -2,6 +2,7 @@ import website from '$lib/config/website';
 
 export const prerender = true;
 
+/** @type {import('./$types').RequestHandler} */
 export const GET = function get({ setHeaders }) {
 	const { backgroundColor, description, siteShortTitle, siteTitle, themeColor } = website;
 

@@ -8,6 +8,7 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 	import website from '$lib/config/website';
 
+	/** @type {import('./$types').PageData} */
 	export let data;
 	const { posts } = data;
 

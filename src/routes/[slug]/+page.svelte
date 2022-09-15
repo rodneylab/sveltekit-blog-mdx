@@ -5,6 +5,7 @@
 	import '$lib/styles/normalise.css';
 	import lazyload from 'vanilla-lazyload';
 
+	/** @type {import('./$types').PageData} */
 	export let data;
 
 	const { page, post, imageData } = data;
