@@ -13,11 +13,6 @@ categories: ''
 tags: ''
 ---
 
-<script>
-  import ExternalLink from '$lib/components/ExternalLink.svelte';
-  import Link from '$lib/components/Link.svelte';
-</script>
-
 ## What is a Medium Format Camera?
 
 If you are old enough to remember the analogue film camera era, chances are it is the 35&nbsp;mm canisters with the track cut down the side that first come to mind. Shots normally had a 3:2 aspect ratio measuring 36&times;24&nbsp;mm. Medium format film is a whole lot bigger. There is no single prevalent form factor, the film is 60mm across and depending on the camera you can shoot negative frames from 60&times;60 mm to 60 &times; 170 &nbsp;mm. That said 1:1 and roughly 4:5 (from 60 &times; 70 frames) are probably most common. With 35mm film you could nominally get 24 or 36 exposures onto a film. Medium format film is most common in the 120 variety, which lets you shoot 12 exposures. Double length 220 film is less common now. If you do find a roll, you might need to adjust your camera when you load it. Cameras ,like the Pentax 67 have a pressure plate to hold the film flat in the camera. Since 220 film does not have backing paper, it needs a different pressure setting.
