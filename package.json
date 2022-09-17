@@ -50,6 +50,7 @@
 		"svelte-check": "^2.9.0",
 		"svelte-preprocess": "^4.10.7",
 		"svelte-preprocess-import-assets": "^0.1.6",
+		"sveltekit-autoimport": "^1.6.9",
 		"vanilla-lazyload": "^17.8.3",
 		"vite": "^3.1.0",
 		"vite-imagetools": "^4.0.9"

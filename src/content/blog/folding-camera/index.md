@@ -13,10 +13,6 @@ categories: ''
 tags: ''
 ---
 
-<script>
-  import ExternalLink from '$lib/components/ExternalLink.svelte';
-</script>
-
 ## What is a Folding Camera?
 
 Folding cameras are a well kept secret. Typically the optics are amazing, in fact often better than modern mirrorless and high end DSLR lenses. This is related to the physics, put simply, it is easier to make a good small lens than a large one. On top they are compact, something like the Agfa Isolette can fit into a pocket (they are expensive and quite old cameras so a padded camera bag would be safer!). One drawback is that you cannot usually swap lenses. If you want a halfway-house, try the Mamiya 6. It has a wide angle, normal and telephoto lens, though it does not collapse to as flat a profile as the Isolette.

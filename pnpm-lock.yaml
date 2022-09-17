@@ -36,6 +36,7 @@ specifiers:
   svelte-check: ^2.9.0
   svelte-preprocess: ^4.10.7
   svelte-preprocess-import-assets: ^0.1.6
+  sveltekit-autoimport: ^1.6.9
   vanilla-lazyload: ^17.8.3
   vite: ^3.1.0
   vite-imagetools: ^4.0.9
@@ -78,6 +79,7 @@ devDependencies:
   svelte-check: 2.9.0_shdnsuo55vjluqozcjtxyryg5e
   svelte-preprocess: 4.10.7_shdnsuo55vjluqozcjtxyryg5e
   svelte-preprocess-import-assets: 0.1.6_svelte@3.50.1
+  sveltekit-autoimport: 1.6.9
   vanilla-lazyload: 17.8.3
   vite: 3.1.0_sass@1.54.9
   vite-imagetools: 4.0.9
@@ -3088,6 +3090,15 @@ packages:
   /svelte/3.50.1:
     resolution: {integrity: sha512-bS4odcsdj5D5jEg6riZuMg5NKelzPtmsCbD9RG+8umU03TeNkdWnP6pqbCm0s8UQNBkqk29w/Bdubn3C+HWSwA==}
     engines: {node: '>= 8'}
+    dev: true
+
+  /sveltekit-autoimport/1.6.9:
+    resolution: {integrity: sha512-amnQpqIc24lJqkTP3ak+gItOagjBDMVZQok2JNPm3OeL5z6qMRQumEL7876FNNcpg9XrxmmSr5od/8MP5eBTbQ==}
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      estree-walker: 2.0.2
+      magic-string: 0.26.3
+      svelte: 3.50.1
     dev: true
 
   /svg-tags/1.0.0:
