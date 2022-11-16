@@ -20,7 +20,6 @@
 		"@fontsource/lato": "^4.5.10",
 		"@fontsource/lora": "^4.5.12",
 		"@fontsource/source-sans-pro": "^4.5.11",
-		"@rodneylab/sveltekit-components": "^1.0.2",
 		"@sveltejs/adapter-static": "1.0.0-next.48",
 		"@sveltejs/kit": "1.0.0-next.548",
 		"@types/object-hash": "^2.2.1",

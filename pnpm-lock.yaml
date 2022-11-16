@@ -5,7 +5,6 @@ specifiers:
   '@fontsource/lato': ^4.5.10
   '@fontsource/lora': ^4.5.12
   '@fontsource/source-sans-pro': ^4.5.11
-  '@rodneylab/sveltekit-components': ^1.0.2
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.548
   '@types/object-hash': ^2.2.1
@@ -43,7 +42,6 @@ devDependencies:
   '@fontsource/lato': 4.5.10
   '@fontsource/lora': 4.5.12
   '@fontsource/source-sans-pro': 4.5.11
-  '@rodneylab/sveltekit-components': 1.0.2_leaflet@1.9.2+vite@3.2.4
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.548_svelte@3.53.1+vite@3.2.4
   '@types/object-hash': 2.2.1
@@ -396,16 +394,6 @@ packages:
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
-    dev: true
-
-  /@rodneylab/sveltekit-components/1.0.2_leaflet@1.9.2+vite@3.2.4:
-    resolution: {integrity: sha512-JEr9jHFtDy6leFOWck80ijNVdBvIM2SYxuJeydiayivFFrZBNIYWBbnFsQIw+2UmKbHSmBhEhgeM6uU6/N9a7Q==}
-    peerDependencies:
-      leaflet: ^1.8.0
-      vite: ^3.1.0-beta.1
-    dependencies:
-      leaflet: 1.9.2
-      vite: 3.2.4_sass@1.56.1
     dev: true
 
   /@rollup/pluginutils/5.0.2:
