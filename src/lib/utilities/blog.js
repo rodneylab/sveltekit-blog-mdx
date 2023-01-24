@@ -1,9 +1,5 @@
 import { compile } from 'mdsvex';
-import { join, resolve } from 'node:path';
 export const BLOG_PATH = 'src/content/blog';
-
-const __dirname = resolve();
-const location = join(__dirname, BLOG_PATH);
 
 /**
  * Returns array of post slugs

@@ -1,3 +1,5 @@
+import readingTime from 'reading-time';
+
 /** @type {import('./$types').PageLoad} */
 export async function load({ params, url }) {
 	const { slug } = params;
@@ -5,18 +7,12 @@ export async function load({ params, url }) {
 
 	const postPromise = import(`../../content/blog/${slug}/index.md`);
 	const imageDataPromise = import(`../../lib/generated/posts/${pathname.slice(1)}.js`);
-	const pagePromise = import(`../../content/blog/${slug}/index.md`);
 
-	const [postResult, imageDataResult, pageResult] = await Promise.all([
-		postPromise,
-		imageDataPromise,
-		pagePromise,
-	]);
-	const { default: body, metadata } = postResult;
+	const [postResult, imageDataResult] = await Promise.all([postPromise, imageDataPromise]);
+	const { default: page, metadata } = postResult;
 	const { default: imageData } = imageDataResult;
-	const { default: page } = pageResult;
 
-	if (!body) {
+	if (!page) {
 		return {
 			status: 404,
 		};
@@ -42,9 +38,9 @@ export async function load({ params, url }) {
 			ogSquareImage,
 			postTitle,
 			seoMetaDescription,
+			timeToRead: Math.ceil(readingTime(page).minutes),
 			twitterImage,
 			slug,
-			body,
 		},
 		slug,
 		imageData,
