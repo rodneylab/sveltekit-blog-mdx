@@ -1,5 +1,4 @@
 <script>
-	import readingTime from 'reading-time';
 	import BannerImage from '$lib/components/BannerImage.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 
