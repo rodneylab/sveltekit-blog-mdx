@@ -12,7 +12,7 @@
 		"format": "prettier --write --plugin=prettier-plugin-svelte .",
 		"generate:images": "node ./generate-responsive-image-data.js",
 		"generate:sitemap": "node ./generate-sitemap.js",
-		"prettier:check": "prettier --check --plugin=prettier-plugin-svelte .",
+		"check:formatting": "prettier --check --plugin=prettier-plugin-svelte .",
 		"prepare": "husky install"
 	},
 	"devDependencies": {

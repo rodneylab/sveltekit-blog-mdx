@@ -59,7 +59,7 @@
 						`https://uk.linkedin.com/in/${linkedinProfile}`,
 						facebookPage,
 					],
-			  }
+				}
 			: null;
 
 	const schemaOrgWebsite = {
