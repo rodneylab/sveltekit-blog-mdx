@@ -2,10 +2,10 @@
 	import 'iconify-icon';
 	import { addCollection } from 'iconify-icon';
 
-	export let label: string = 'Twitter icon';
-	export let colour: string = 'inherit';
-	export let ariaHidden: boolean = false;
-	export let width: number = 24;
+	export let label = 'Twitter icon';
+	export let colour = 'inherit';
+	export let ariaHidden = false;
+	export let width = 24;
 
 	addCollection(
 		{
@@ -31,4 +31,4 @@
 	{ariaHidden}
 	icon="@custom:simple-icons:twitter"
 	{width}
-/>
+></iconify-icon>

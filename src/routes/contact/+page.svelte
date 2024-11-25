@@ -92,8 +92,8 @@
 
 			li {
 				display: flex;
-				padding-left: $spacing-2;
-				font-size: $font-size-2;
+				padding-left: variables.$spacing-2;
+				font-size: variables.$font-size-2;
 			}
 		}
 	}
@@ -101,10 +101,10 @@
 	.icon {
 		display: flex;
 		align-items: center;
-		color: $color-theme-4;
+		color: variables.$color-theme-4;
 	}
 
 	.contact-address {
-		margin-left: $spacing-2;
+		margin-left: variables.$spacing-2;
 	}
 </style>

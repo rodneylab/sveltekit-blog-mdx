@@ -18,9 +18,9 @@
 	.header-container {
 		display: flex;
 		align-items: flex-end;
-		max-width: $max-width-wrapper;
+		max-width: variables.$max-width-wrapper;
 		width: 100%;
-		margin: $spacing-0 auto $spacing-12;
+		margin: variables.$spacing-0 auto variables.$spacing-12;
 	}
 
 	.nav {
@@ -32,19 +32,19 @@
 			display: flex;
 			align-items: flex-end;
 			padding-bottom: 0;
-			margin-bottom: $spacing-0;
+			margin-bottom: variables.$spacing-0;
 
 			li {
 				display: flex;
-				font-size: $font-size-4;
-				margin-left: $spacing-6;
-				margin-bottom: $spacing-1;
+				font-size: variables.$font-size-4;
+				margin-left: variables.$spacing-6;
+				margin-bottom: variables.$spacing-1;
 			}
 		}
 	}
 
 	.logo {
-		color: $color-theme-1;
+		color: variables.$color-theme-1;
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -55,6 +55,6 @@
 
 	.hover-jump:focus,
 	.hover-jump:hover {
-		transform: translateY(-$spacing-2);
+		transform: translateY(-1 * variables.$spacing-2);
 	}
 </style>

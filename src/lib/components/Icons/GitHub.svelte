@@ -2,10 +2,10 @@
 	import 'iconify-icon';
 	import { addCollection } from 'iconify-icon';
 
-	export let label: string = 'Git hub icon';
-	export let colour: string = 'inherit';
-	export let ariaHidden: boolean = false;
-	export let width: number = 24;
+	export let label = 'Git hub icon';
+	export let colour = 'inherit';
+	export let ariaHidden = false;
+	export let width = 24;
 
 	addCollection(
 		{
@@ -31,4 +31,4 @@
 	icon="@custom:simple-icons:github"
 	{width}
 	role="img"
-/>
+></iconify-icon>

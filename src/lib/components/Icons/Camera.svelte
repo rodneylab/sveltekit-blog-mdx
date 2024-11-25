@@ -32,4 +32,4 @@
 	aria-label={label}
 	color={colour}
 	{width}
-/>
+></iconify-icon>

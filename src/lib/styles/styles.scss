@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @use 'sass:math';
 
-@import './variables.scss';
+@use './variables.scss';
 
 /* HTML elements */
 *,
@@ -11,26 +11,26 @@
 }
 
 html {
-	line-height: $line-height-normal;
-	font-size: $font-size-root;
+	line-height: variables.$line-height-normal;
+	font-size: variables.$font-size-root;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
 }
 
 body {
-	font-family: $font-body;
-	font-size: $font-size-1;
-	color: $color-text;
+	font-family: variables.$font-body;
+	font-size: variables.$font-size-1;
+	color: variables.$color-text;
 	text-rendering: optimizeLegibility;
 }
 
 footer {
-	padding: $spacing-6 $spacing-0;
+	padding: variables.$spacing-6 variables.$spacing-0;
 }
 
 hr {
-	background: $color-accent;
+	background: variables.$color-accent;
 	height: 1px;
 	border: 0;
 }
@@ -43,64 +43,64 @@ h4,
 h5,
 h6 {
 	// check imported weights and styles in gatsby-browser.jsx
-	font-family: $font-heading;
-	margin: $spacing-12 0 $spacing-6;
-	line-height: $line-height-tight;
+	font-family: variables.$font-heading;
+	margin: variables.$spacing-12 0 variables.$spacing-6;
+	line-height: variables.$line-height-tight;
 }
 
 h3,
 h4,
 h5,
 h6 {
-	font-weight: $font-weight-bold;
-	color: $color-heading;
+	font-weight: variables.$font-weight-bold;
+	color: variables.$color-heading;
 }
 
 h1 {
 	margin-top: 0;
-	font-weight: $font-weight-black;
-	font-size: $font-size-6;
+	font-weight: variables.$font-weight-black;
+	font-size: variables.$font-size-6;
 	font-style: italic;
-	color: $color-heading-black;
+	color: variables.$color-heading-black;
 }
 
 h2 {
-	font-size: $font-size-5;
-	font-weight: $font-weight-semibold;
-	color: $color-heading;
+	font-size: variables.$font-size-5;
+	font-weight: variables.$font-weight-semibold;
+	color: variables.$color-heading;
 }
 
 h3 {
-	font-size: $font-size-4;
+	font-size: variables.$font-size-4;
 }
 
 h4 {
-	font-size: $font-size-3;
+	font-size: variables.$font-size-3;
 }
 
 h5 {
-	font-size: $font-size-2;
+	font-size: variables.$font-size-2;
 }
 
 h6 {
-	font-size: $font-size-1;
+	font-size: variables.$font-size-1;
 }
 
 /* Prose */
 p {
-	line-height: $line-height-relaxed;
+	line-height: variables.$line-height-relaxed;
 	$baseline-multiplier: 0.179;
 	$x-height-multiplier: 0.35;
-	margin: $spacing-0 $spacing-0 $spacing-4 $spacing-0;
-	padding: $spacing-0;
+	margin: variables.$spacing-0 variables.$spacing-0 variables.$spacing-4 variables.$spacing-0;
+	padding: variables.$spacing-0;
 }
 
 ul,
 ol {
-	margin-left: $spacing-0;
-	margin-right: $spacing-0;
-	padding: $spacing-0;
-	margin-bottom: $spacing-8;
+	margin-left: variables.$spacing-0;
+	margin-right: variables.$spacing-0;
+	padding: variables.$spacing-0;
+	margin-bottom: variables.$spacing-8;
 	list-style-position: inside;
 	list-style-image: none;
 }
@@ -111,36 +111,36 @@ li p {
 
 ul li,
 ol li {
-	padding-left: $spacing-0;
-	margin-bottom: math.div($spacing-8, 2);
+	padding-left: variables.$spacing-0;
+	margin-bottom: math.div(variables.$spacing-8, 2);
 }
 
 li > p {
-	margin-bottom: math.div($spacing-8, 2);
+	margin-bottom: math.div(variables.$spacing-8, 2);
 }
 
 li *:last-child {
-	margin-bottom: $spacing-0;
+	margin-bottom: variables.$spacing-0;
 }
 
 li > ul {
-	margin-left: $spacing-8;
-	margin-top: math.div($spacing-8, 2);
+	margin-left: variables.$spacing-8;
+	margin-top: math.div(variables.$spacing-8, 2);
 }
 
 blockquote {
-	color: $color-theme-4;
-	margin-left: calc(#{-1 + $spacing-6});
-	margin-right: $spacing-8;
-	padding: $spacing-0 $spacing-0 $spacing-0 $spacing-6;
-	border-left: $spacing-1 solid $color-primary;
-	font-size: $font-size-2;
+	color: variables.$color-theme-4;
+	margin-left: calc(#{-1 + variables.$spacing-6});
+	margin-right: variables.$spacing-8;
+	padding: variables.$spacing-0 variables.$spacing-0 variables.$spacing-0 variables.$spacing-6;
+	border-left: variables.$spacing-1 solid variables.$color-primary;
+	font-size: variables.$font-size-2;
 	font-style: italic;
-	margin-bottom: $spacing-8;
+	margin-bottom: variables.$spacing-8;
 }
 
 blockquote > :last-child {
-	margin-bottom: $spacing-0;
+	margin-bottom: variables.$spacing-0;
 }
 
 blockquote > ul,
@@ -150,18 +150,18 @@ blockquote > ol {
 
 table {
 	width: 100%;
-	margin-bottom: $spacing-8;
+	margin-bottom: variables.$spacing-8;
 	border-collapse: collapse;
 	border-spacing: 0.25rem;
 }
 
 table thead tr th {
-	border-bottom: 1px solid $color-accent;
+	border-bottom: 1px solid variables.$color-accent;
 }
 
 /* Link */
 a {
-	color: $color-theme-4;
+	color: variables.$color-theme-4;
 }
 
 a,
@@ -195,70 +195,70 @@ a:focus {
 
 /* Custom classes */
 .global-wrapper {
-	margin: $spacing-0 auto;
-	max-width: $max-width-wrapper;
-	padding: $spacing-10 $spacing-5;
+	margin: variables.$spacing-0 auto;
+	max-width: variables.$max-width-wrapper;
+	padding: variables.$spacing-10 variables.$spacing-5;
 }
 
 .global-header {
-	margin-bottom: $spacing-12;
+	margin-bottom: variables.$spacing-12;
 }
 
 .post-list-item {
-	margin-bottom: $spacing-8;
-	margin-top: $spacing-8;
+	margin-bottom: variables.$spacing-8;
+	margin-top: variables.$spacing-8;
 }
 
 .post-list-item p {
-	margin-bottom: $spacing-0;
+	margin-bottom: variables.$spacing-0;
 }
 
 .post-list-item h2 {
-	font-size: $font-size-4;
-	color: $color-primary;
-	margin-bottom: $spacing-2;
-	margin-top: $spacing-0;
+	font-size: variables.$font-size-4;
+	color: variables.$color-primary;
+	margin-bottom: variables.$spacing-2;
+	margin-top: variables.$spacing-0;
 }
 
 .post-list-item header {
-	margin-bottom: $spacing-4;
+	margin-bottom: variables.$spacing-4;
 }
 
 .bio {
 	display: flex;
-	margin-bottom: $spacing-16;
+	margin-bottom: variables.$spacing-16;
 }
 
 .global-wrapper[data-is-root-path='true'] .bio {
-	margin-bottom: $spacing-20;
+	margin-bottom: variables.$spacing-20;
 }
 
 .bio p {
-	margin-bottom: $spacing-0;
+	margin-bottom: variables.$spacing-0;
 }
 
 .bio-avatar {
-	margin-right: $spacing-4;
-	margin-bottom: $spacing-0;
+	margin-right: variables.$spacing-4;
+	margin-bottom: variables.$spacing-0;
 	min-width: 50px;
 	border-radius: 100%;
 }
 
 .blog-post header h1 {
-	margin: $spacing-0 $spacing-0 $spacing-4 $spacing-0;
+	margin: variables.$spacing-0 variables.$spacing-0 variables.$spacing-4 variables.$spacing-0;
 }
 
 .blog-post header p {
-	font-size: $font-size-2;
-	font-family: $font-heading;
+	font-size: variables.$font-size-2;
+	font-family: variables.$font-heading;
 }
 
 .blog-post-nav ul {
-	margin: $spacing-0;
+	margin: variables.$spacing-0;
 }
 
 .gatsby-highlight {
-	margin-bottom: $spacing-8;
+	margin-bottom: variables.$spacing-8;
 }
 
 .screen-reader-text {
@@ -274,43 +274,43 @@ a:focus {
 }
 
 figure {
-	margin-bottom: $spacing-6;
-	padding-bottom: $spacing-6;
+	margin-bottom: variables.$spacing-6;
+	padding-bottom: variables.$spacing-6;
 }
 
 figure figcaption {
-	margin-top: $spacing-2;
+	margin-top: variables.$spacing-2;
 }
 
 /* Media queries */
-@media (max-width: $desktop-breakpoint) {
+@media (max-width: variables.$desktop-breakpoint) {
 	h1 {
-		font-size: $mobile-font-size-6;
+		font-size: variables.$mobile-font-size-6;
 	}
 
 	h2 {
-		font-size: $mobile-font-size-5;
+		font-size: variables.$mobile-font-size-5;
 	}
 
 	h3 {
-		font-size: $mobile-font-size-4;
+		font-size: variables.$mobile-font-size-4;
 	}
 
 	h4 {
-		font-size: $mobile-font-size-3;
+		font-size: variables.$mobile-font-size-3;
 	}
 
 	h5 {
-		font-size: $mobile-font-size-2;
+		font-size: variables.$mobile-font-size-2;
 	}
 
 	h6 {
-		font-size: $mobile-font-size-1;
+		font-size: variables.$mobile-font-size-1;
 	}
 
 	blockquote {
-		padding: $spacing-0 $spacing-0 $spacing-0 $spacing-4;
-		margin-left: $spacing-0;
+		padding: variables.$spacing-0 variables.$spacing-0 variables.$spacing-0 variables.$spacing-4;
+		margin-left: variables.$spacing-0;
 	}
 	ul,
 	ol {

@@ -63,8 +63,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		max-width: $max-width-wrapper;
-		margin: $spacing-12 auto $spacing-0;
+		max-width: variables.$max-width-wrapper;
+		margin: variables.$spacing-12 auto variables.$spacing-0;
 		width: 100%;
 	}
 
@@ -74,12 +74,12 @@
 
 		ul {
 			display: flex;
-			margin: $spacing-6 $spacing-0;
+			margin: variables.$spacing-6 variables.$spacing-0;
 
 			li {
 				display: flex;
-				margin: $spacing-0 $spacing-4 $spacing-0 $spacing-0;
-				font-size: $font-size-3;
+				margin: variables.$spacing-0 variables.$spacing-4 variables.$spacing-0 variables.$spacing-0;
+				font-size: variables.$font-size-3;
 			}
 		}
 	}
@@ -92,6 +92,6 @@
 
 	.hover-jump:focus,
 	.hover-jump:hover {
-		transform: translateY(-$spacing-2);
+		transform: translateY(-1 * variables.$spacing-2);
 	}
 </style>
