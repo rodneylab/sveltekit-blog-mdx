@@ -31,4 +31,4 @@
 	{ariaHidden}
 	icon="@custom:simple-icons:telegram"
 	{width}
-/>
+></iconify-icon>

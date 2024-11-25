@@ -56,37 +56,38 @@
 	.container {
 		display: flex;
 		width: 100%;
-		margin: $spacing-12 $spacing-0;
+		margin: variables.$spacing-12 variables.$spacing-0;
 	}
 
 	.content {
 		width: 80%;
-		border: $spacing-px-2 solid $color-theme-2;
-		border-radius: $spacing-3;
-		margin: $spacing-0 auto;
-		padding: $spacing-4;
+		border: variables.$spacing-px-2 solid variables.$color-theme-2;
+		border-radius: variables.$spacing-3;
+		margin: variables.$spacing-0 auto;
+		padding: variables.$spacing-4;
 
 		h3 {
-			margin: $spacing-0 $spacing-2;
+			margin: variables.$spacing-0 variables.$spacing-2;
 		}
 		p {
-			color: $color-theme-1;
-			font-size: $mobile-font-size-2;
-			margin: $spacing-2;
+			color: variables.$color-theme-1;
+			font-size: variables.$mobile-font-size-2;
+			margin: variables.$spacing-2;
 		}
 	}
 
 	.content:focus,
 	.content:hover {
 		h3 {
-			color: $color-theme-2;
+			color: variables.$color-theme-2;
 		}
 		p {
-			color: $color-theme-3;
+			color: variables.$color-theme-3;
 		}
-		border-color: $color-theme-4;
-		background-color: $color-theme-4;
-		box-shadow: $spacing-0 $spacing-0 $spacing-1 $spacing-0 $color-theme-4-alpha-20;
-		color: $color-accent;
+		border-color: variables.$color-theme-4;
+		background-color: variables.$color-theme-4;
+		box-shadow: variables.$spacing-0 variables.$spacing-0 variables.$spacing-1 variables.$spacing-0
+			variables.$color-theme-4-alpha-20;
+		color: variables.$color-accent;
 	}
 </style>

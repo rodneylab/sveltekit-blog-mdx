@@ -16,10 +16,10 @@
 
 	.content {
 		width: 80%;
-		border: $spacing-px-2 solid $color-theme-1;
-		background-color: $color-theme-3;
-		border-radius: $spacing-3;
-		margin: $spacing-6 auto;
-		padding: $spacing-4;
+		border: variables.$spacing-px-2 solid variables.$color-theme-1;
+		background-color: variables.$color-theme-3;
+		border-radius: variables.$spacing-3;
+		margin: variables.$spacing-6 auto;
+		padding: variables.$spacing-4;
 	}
 </style>

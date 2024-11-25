@@ -33,4 +33,4 @@
 	icon="@custom:simple-line-icons:envelope"
 	{width}
 	role="img"
-/>
+></iconify-icon>

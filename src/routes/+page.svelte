@@ -83,6 +83,6 @@
 
 <style lang="scss">
 	header > h2 {
-		font-size: $font-size-3;
+		font-size: variables.$font-size-3;
 	}
 </style>
