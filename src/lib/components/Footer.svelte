@@ -14,7 +14,8 @@
 
 <footer class="footer-container">
 	<div>
-		Created by <a
+		Created by
+		<a
 			aria-label="Open the Rodney Lab site"
 			href="https://rodneylab.com/"
 			target="_blank"
