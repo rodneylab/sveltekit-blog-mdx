@@ -6,14 +6,13 @@
 	import lazyload from 'vanilla-lazyload';
 
 	/** @type {import('./$types').PageData} */
-	export let data;
+	let { data } = $props();
 
-	const { page, post, imageData } = data;
+	let { sanitisedHtml, imageData, post } = $derived(data);
 
 	if (browser && !document.lazyloadInstance) {
 		document.lazyloadInstance = new lazyload();
 	}
 </script>
 
-<BlogPost {post} {imageData} />
-<svelte:component this={page} />
+<BlogPost {post} {imageData} {sanitisedHtml} />

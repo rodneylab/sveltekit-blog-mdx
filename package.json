@@ -12,8 +12,7 @@
 		"format": "prettier --write --plugin=prettier-plugin-svelte .",
 		"generate:images": "node ./generate-responsive-image-data.js",
 		"generate:sitemap": "node ./generate-sitemap.js",
-		"check:formatting": "prettier --check --plugin=prettier-plugin-svelte .",
-		"prepare": "husky install"
+		"check:formatting": "prettier --check --plugin=prettier-plugin-svelte ."
 	},
 	"devDependencies": {
 		"@commitlint/config-conventional": "^19.6.0",
@@ -26,19 +25,18 @@
 		"@types/object-hash": "^3.0.6",
 		"commitlint": "^19.6.0",
 		"dayjs": "^1.11.13",
+		"dompurify": "^3.2.1",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.46.0",
 		"front-matter": "^4.0.2",
 		"globals": "^15.12.0",
 		"husky": "^9.1.7",
 		"iconify-icon": "^1.0.8",
-		"mdsvex": "^0.12.3",
 		"object-hash": "^3.0.0",
 		"postcss": "^8.4.49",
 		"postcss-html": "^1.7.0",
 		"prettier": "~3.4.1",
 		"prettier-plugin-svelte": "^3.3.2",
-		"reading-time": "1.4.0",
 		"sass": "^1.81.0",
 		"sharp": "^0.33.5",
 		"stylelint": "^16.10.0",
@@ -51,7 +49,8 @@
 		"typescript-eslint": "^8.16.0",
 		"vanilla-lazyload": "^17.9.0",
 		"vite": "^5.4.11",
-		"vite-imagetools": "^7.0.4"
+		"vite-imagetools": "^7.0.4",
+		"yaml": "^2.6.1"
 	},
 	"repository": {
 		"type": "git",
@@ -62,6 +61,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/vite-plugin-svelte": "^4.0.2"
+		"@rodneylab/parsedown": "^1.4.3",
+		"@sveltejs/vite-plugin-svelte": "^4.0.2",
+		"jsdom": "^25.0.1"
 	}
 }

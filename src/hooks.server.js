@@ -74,8 +74,8 @@ export async function handle({ event, resolve }) {
 		'accelerometer=(), autoplay=(), camera=(), document-domain=(), encrypted-media=(), fullscreen=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), geolocation=()',
 	);
 	response.headers.set('X-Content-Type-Options', 'nosniff');
-	/* Switch from Content-Security-Policy-Report-Only to Content-Security-Policy once you are satisifed policy is what you want
-	 * on switch comment out the Report-Only line
+	/* Switch from Content-Security-Policy-Report-Only to Content-Security-Policy once you are satisfied
+	 * policy is what you want on switch comment out the Report-Only line
 	 */
 	response.headers.set('Content-Security-Policy-Report-Only', csp);
 	// response.headers.set('Content-Security-Policy', csp);

@@ -166,7 +166,7 @@ npm run build
 
 ### `src`
 
-- `hooks.server.js` we define Content Security Policy (CSP) and other HTTP security headers in here, effective for server side rendered apps. See <a aria-label="Open post on Svelte Kit stati site H T T P headers" href="https://rodneylab.com/sveltekit-static-site-http-headers/">post on SvelteKit static site HTTP headers</a> to see how to set up CSP etc for static sites.
+- `hooks.server.js` we define Content Security Policy (CSP) and other HTTP security headers in here, effective for server side rendered apps. See <a aria-label="Open post on Svelte Kit static site H T T P headers" href="https://rodneylab.com/sveltekit-static-site-http-headers/">post on SvelteKit static site HTTP headers</a> to see how to set up CSP etc. for static sites.
 
 ### `src/components`
 

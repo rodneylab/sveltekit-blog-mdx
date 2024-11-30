@@ -1,5 +1,6 @@
 import website from '$lib/config/website';
 import { error } from '@sveltejs/kit';
+import { separateFrontmatter } from '../../lib/utilities/blog';
 
 export const prerender = true;
 
@@ -48,9 +49,14 @@ export async function GET({ setHeaders }) {
 		const posts = await Promise.all(
 			Object.keys(mdModules).map(async (path) => {
 				const slug = path.split('/').at(-2);
-				const { metadata } = await mdModules[path]();
-				const { lastUpdated } = metadata;
-				return { lastUpdated, slug };
+				const markdown = (await import(`../../content/blog/${slug}/index.md?raw`)).default;
+				const {
+					frontmatter: { lastUpdated },
+				} = separateFrontmatter(markdown);
+				return {
+					lastUpdated,
+					slug,
+				};
 			}),
 		);
 
