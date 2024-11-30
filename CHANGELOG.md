@@ -26,8 +26,8 @@
 - **dependencies**: 💫 update packages
 - 💫 revert back to using node for blog content imports
 - 💫 update package
-- 💫 replace sourceing blog posts using node with ESM imports
-- 🤗 improve acccessibility
+- 💫 replace sourcing blog posts using node with ESM imports
+- 🤗 improve accessibility
 - 💫 switch to iconify for icons
 - **dependencies**: 💫 update package
 - 💫 update sitemap script
@@ -246,13 +246,13 @@
 - **dependencies**: 💫 update packages
 - **dependencies**: 💫 update packages:
 - **dependencies**: 💫 update package
-- 🔥 optimised scss prepend data only adding varaibles
+- 🔥 optimised scss prepend data only adding variables
 - 🔥 optimised CSS removing unused selectors
 - **Icon**: 🔥 optimised import of icons
 - 💫 updated packages
 - **package.json**: reset dev and preview server ports to 3000
 - **static**: 🤖 added robots.txt
-- 🤗 corrected a11y atribute
+- 🤗 corrected a11y attribute
 - 🔧 made all blog posts static
 - 💫 added hooks
 - **dependencies**: 💫 update package

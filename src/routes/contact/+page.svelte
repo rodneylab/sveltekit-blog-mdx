@@ -7,6 +7,8 @@
 	import TelegramIcon from '$lib/components/Icons/Telegram.svelte';
 	import TwitterIcon from '$lib/components/Icons/Twitter.svelte';
 	import website from '$lib/config/website';
+	import SEO from '$lib/components/SEO/index.svelte';
+
 	const {
 		contactEmail,
 		facebookPageName,
@@ -15,8 +17,6 @@
 		twitterUsername,
 		wireUsername,
 	} = website;
-	import SEO from '$lib/components/SEO/index.svelte';
-
 	let title = 'Contact';
 	let metadescription = 'Get in touch with Rodneylab, the developer of Climate SvelteKit Starter.';
 	const breadcrumbs = [

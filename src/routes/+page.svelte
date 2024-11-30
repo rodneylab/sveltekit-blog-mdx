@@ -9,8 +9,8 @@
 	import website from '$lib/config/website';
 
 	/** @type {import('./$types').PageData} */
-	export let data;
-	const { posts } = data;
+	let { data } = $props();
+	let { posts } = $derived(data);
 
 	const { author, siteUrl } = website;
 
@@ -68,8 +68,8 @@
 
 <SEO {...seoProps} />
 <header>
-	<h1>Climate &mdash; Sveltekit Starter</h1>
-	<h2>SvelteKit MDsveX (Markdown for Svelte) Blog</h2>
+	<h1>Climate &mdash; SvelteKit Starter</h1>
+	<h2>SvelteKit Markdown Blog</h2>
 </header>
 <Card>
 	<h2><span>About me</span></h2>
