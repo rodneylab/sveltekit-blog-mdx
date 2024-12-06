@@ -1,8 +1,11 @@
 <script>
-	export let rel = 'nofollow noopener noreferrer';
-	export let target = '_blank';
-	export let href;
-	export let ariaLabel;
+	let {
+		children,
+		rel = 'nofollow noopener noreferrer',
+		target = '_blank',
+		href,
+		ariaLabel,
+	} = $props();
 </script>
 
-<a aria-label={ariaLabel} {href} {rel} {target}><slot /></a>
+<a aria-label={ariaLabel} {href} {rel} {target}>{@render children?.()}</a>

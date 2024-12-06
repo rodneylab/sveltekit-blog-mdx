@@ -27,39 +27,39 @@
 		twitterUsername,
 	} = website;
 
-	export let article = false;
-	export let breadcrumbs = [];
-	export let entityMeta = null;
-	export let lastUpdated;
-	export let datePublished;
-	export let metadescription;
-	export let slug;
-	export let timeToRead = 0;
-	export let title;
-
 	const defaultAlt =
 		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
 
-	// imported props with fallback defaults
-	export let featuredImage = {
-		url: defaultFeaturedImage,
-		alt: defaultAlt,
-		width: 672,
-		height: 448,
-		caption: 'Home page',
-	};
-	export let ogImage = {
-		url: defaultOgImage,
-		alt: defaultAlt,
-	};
-	export let ogSquareImage = {
-		url: defaultOgSquareImage,
-		alt: defaultAlt,
-	};
-	export let twitterImage = {
-		url: defaultTwitterImage,
-		alt: defaultAlt,
-	};
+	let {
+		article = false,
+		breadcrumbs = [],
+		entityMeta = null,
+		lastUpdated,
+		datePublished,
+		metadescription,
+		slug,
+		timeToRead = 0,
+		title,
+		featuredImage = {
+			url: defaultFeaturedImage,
+			alt: defaultAlt,
+			width: 672,
+			height: 448,
+			caption: 'Home page',
+		},
+		ogImage = {
+			url: defaultOgImage,
+			alt: defaultAlt,
+		},
+		ogSquareImage = {
+			url: defaultOgSquareImage,
+			alt: defaultAlt,
+		},
+		twitterImage = {
+			url: defaultTwitterImage,
+			alt: defaultAlt,
+		},
+	} = $props();
 
 	const pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
 	const url = `${siteUrl}/${slug}`;

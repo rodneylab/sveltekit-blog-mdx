@@ -1,15 +1,17 @@
 <script>
-	export let alt;
-	export let height; // needed to reduce CLS
-	export let src;
-	export let sources;
-	export let placeholder;
-	export let width; // needed to reduce CLS
-	export let maxWidth = '1280px';
-	export let sizes = `(max-width: ${maxWidth}) 100vw, ${maxWidth}}`;
-	export let importance = undefined;
-	export let loading = 'lazy';
-	export let style = '';
+	let {
+		alt,
+		height, // needed to reduce CLS
+		src,
+		sources,
+		placeholder,
+		width, // needed to reduce CLS
+		maxWidth = '1280px',
+		sizes = `(max-width: ${maxWidth}) 100vw, ${maxWidth}}`,
+		importance = undefined,
+		loading = 'lazy',
+		style = '',
+	} = $props();
 </script>
 
 <picture>

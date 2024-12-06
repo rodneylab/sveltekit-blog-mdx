@@ -2,10 +2,7 @@
 	import 'iconify-icon';
 	import { addCollection } from 'iconify-icon';
 
-	export let label = 'Tik tok icon';
-	export let colour = 'inherit';
-	export let ariaHidden = false;
-	export let width = 24;
+	let { label = 'Tik tok icon', colour = 'inherit', ariaHidden = false, width = 24 } = $props();
 
 	addCollection(
 		{

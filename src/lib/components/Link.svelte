@@ -1,8 +1,5 @@
 <script>
-	export let rel = '';
-	export let target = '';
-	export let href;
-	export let ariaLabel;
+	let { children, rel = '', target = '', href, ariaLabel } = $props();
 </script>
 
-<a aria-label={ariaLabel} {href} {rel} {target}><slot /></a>
+<a aria-label={ariaLabel} {href} {rel} {target}> {@render children?.()}</a>

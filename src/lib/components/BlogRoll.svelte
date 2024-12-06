@@ -2,12 +2,11 @@
 	import BlogPostSummary from '$lib/components/BlogPostSummary.svelte';
 	import { H_ELLIPSIS_ENTITY } from '$lib/constants/entities';
 
-	export let initialPosts = 4;
-	export let posts;
+	let { initialPosts = 4, posts } = $props();
 
 	const postCount = posts.length;
-	$: showPosts = initialPosts;
-	$: displayPosts = posts.slice(0, showPosts);
+	let showPosts = $state(initialPosts);
+	let displayPosts = $derived(posts.slice(0, showPosts));
 
 	const handleClick = () => {
 		showPosts += initialPosts;
@@ -29,6 +28,6 @@
 		<p>No posts yet!</p>
 	{/each}
 	{#if showPosts < postCount}
-		<button type="submit" on:click={handleClick}>See more {H_ELLIPSIS_ENTITY}</button>
+		<button type="submit" onclick={handleClick}>See more {H_ELLIPSIS_ENTITY}</button>
 	{/if}
 </section>

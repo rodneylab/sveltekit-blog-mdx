@@ -19,13 +19,15 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import PWA from '$lib/components/PWA.svelte';
+
+	let { children } = $props();
 </script>
 
 <PWA />
 <div class="container">
 	<Header />
 	<main class="main-container">
-		<slot />
+		{@render children?.()}
 	</main>
 	<Footer />
 </div>
