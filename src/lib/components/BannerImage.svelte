@@ -3,7 +3,7 @@
 	import { browser } from '$app/environment';
 	import Image from '$lib/components/Image.svelte';
 
-	export let imageData;
+	let { imageData } = $props();
 
 	onMount(() => {
 		if (browser) {

@@ -1,7 +1,7 @@
 import { markdown_to_html as markdownToHtml } from '@rodneylab/parsedown';
 import createDOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
-import { separateFrontmatter } from '../../lib/utilities/blog';
+import { separateFrontmatter } from '$lib/utilities/blog';
 
 export const prerender = true;
 

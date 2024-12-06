@@ -1,10 +1,12 @@
 <script>
 	import '$lib/styles/index.scss';
+
+	let { children } = $props();
 </script>
 
 <section class="container">
 	<div class="content">
-		<slot />
+		{@render children?.()}
 	</div>
 </section>
 

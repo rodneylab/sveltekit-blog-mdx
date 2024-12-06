@@ -2,10 +2,12 @@
 	import 'iconify-icon';
 	import { addCollection } from 'iconify-icon';
 
-	export let label = 'Telegram app icon';
-	export let colour = 'inherit';
-	export let ariaHidden = false;
-	export let width = 24;
+	let {
+		label = 'Telegram app icon',
+		colour = 'inherit',
+		ariaHidden = false,
+		width = 24,
+	} = $props();
 
 	addCollection(
 		{

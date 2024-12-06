@@ -2,9 +2,11 @@
 	import lazyload from 'vanilla-lazyload';
 	import { browser } from '$app/environment';
 
+	let { children } = $props();
+
 	if (browser && !document.lazyloadInstance) {
 		document.lazyloadInstance = new lazyload();
 	}
 </script>
 
-<slot />
+{@render children?.()}

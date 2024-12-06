@@ -32,7 +32,7 @@ export async function getPostsContent() {
 			const lastIndex = element.lastIndexOf('/index.md');
 			const firstIndex = element.lastIndexOf('/', lastIndex - 1) + 1;
 			const slug = element.slice(firstIndex, lastIndex);
-			const content = (await import(`${element}?raw`)).default;
+			const content = (await import(/* @vite-ignore */ `${element}?raw`)).default;
 
 			return { slug, content };
 		});

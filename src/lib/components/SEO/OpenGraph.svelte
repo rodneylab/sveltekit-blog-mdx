@@ -1,16 +1,18 @@
 <script>
-	export let article = false;
-	export let datePublished;
-	export let lastUpdated;
-	export let facebookAuthorPage = '';
-	export let facebookPage = '';
-	export let image;
-	export let squareImage;
-	export let metadescription;
-	export let ogLanguage;
-	export let pageTitle;
-	export let siteTitle;
-	export let url;
+	let {
+		article = false,
+		datePublished,
+		lastUpdated,
+		facebookAuthorPage = '',
+		facebookPage = '',
+		image,
+		squareImage,
+		metadescription,
+		ogLanguage,
+		pageTitle,
+		siteTitle,
+		url,
+	} = $props();
 </script>
 
 <svelte:head>

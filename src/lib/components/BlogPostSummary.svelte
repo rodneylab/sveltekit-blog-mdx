@@ -3,10 +3,7 @@
 	import { H_ELLIPSIS_ENTITY } from '$lib/constants/entities';
 	import { goto } from '$app/navigation';
 
-	export let postTitle;
-	export let datePublished;
-	export let seoMetaDescription;
-	export let slug;
+	let { postTitle, datePublished, seoMetaDescription, slug } = $props();
 
 	/**
 	 * @param event {MouseEvent} - click
@@ -36,9 +33,9 @@
 <div
 	role="presentation"
 	class="container"
-	on:mouseenter={handleMouseEnter}
-	on:mouseleave={handleMouseLeave}
-	on:mousedown={handleMouseDown}
+	onmouseenter={handleMouseEnter}
+	onmouseleave={handleMouseLeave}
+	onmousedown={handleMouseDown}
 >
 	<div class="content" data-sveltekit-preload-data="hover">
 		<h3>

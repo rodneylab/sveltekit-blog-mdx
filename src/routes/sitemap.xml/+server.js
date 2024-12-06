@@ -1,6 +1,6 @@
 import website from '$lib/config/website';
 import { error } from '@sveltejs/kit';
-import { separateFrontmatter } from '../../lib/utilities/blog';
+import { separateFrontmatter } from '$lib/utilities/blog';
 
 export const prerender = true;
 
