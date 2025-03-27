@@ -4,7 +4,7 @@
 
 	let { initialPosts = 4, posts } = $props();
 
-	const postCount = posts.length;
+	const postCount = $derived(posts?.length ?? 0);
 	let showPosts = $state(initialPosts);
 	let displayPosts = $derived(posts.slice(0, showPosts));
 
