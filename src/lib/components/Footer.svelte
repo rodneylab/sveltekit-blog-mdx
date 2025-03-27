@@ -20,7 +20,7 @@
 			href="https://rodneylab.com/"
 			target="_blank"
 			rel="noopener noreferrer">Rodney Lab</a
-		>. Copyright {COPYRIGHT_ENTITY} 2021 – 2024.
+		>. Copyright {COPYRIGHT_ENTITY} 2021 – 2025.
 	</div>
 	<nav class="footer-icons" aria-label="Links to external sites">
 		<ul>
